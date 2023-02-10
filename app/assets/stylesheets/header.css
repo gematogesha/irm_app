@@ -13,6 +13,14 @@ header{
     padding-right: 25px;
 }
 
+.header-logo-img{
+    height: 100%;
+}
+
+.header-logo:hover{
+    opacity: 75%;
+}
+
 .header-menu{
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -39,9 +47,8 @@ header{
 
 .header-menu-item{
     line-height: 20px;
-    transition: all .3s ease-in-out;
     font-weight: 600;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .header-menu-item:hover{

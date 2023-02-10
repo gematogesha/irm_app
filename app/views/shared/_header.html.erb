@@ -1,7 +1,11 @@
 <header>
     <div class="wrapper">
         <div class="header">
-            <%= image_tag("logo.png", alt: "logo_irm", title: 'ИРМ', class: "header-logo") %>
+            <div class="header-logo">
+            <%= link_to root_path do %>
+                <%= image_tag("logo.png", alt: "logo_irm", title: 'ИРМ', class: "header-logo-img") %>
+            <% end %>
+            </div>
             <ul class="header-menu">
                 <li class="header-menu-item">О предприятии</li>
                 <li class="header-menu-item">Партнерам</li>
