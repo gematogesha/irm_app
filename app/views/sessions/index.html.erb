@@ -1,5 +1,90 @@
-<section class="slider-menu">
-    <div class="wrapper">
-    
+<section class="section-slider">
+    <div class="section-slider-item" id="section-slider-item-1">
+        <div class="wrapper">
+            <div class="section-slider-item-title">Эксперементальное производство и металлообработка
+            </div>
+        </div>
+    </div>
+    <div class="section-slider-item" id="section-slider-item-2">
+        <div class="wrapper">
+            <div class="section-slider-item-title">Пeрспективные реакторные технологии</div>
+        </div>
+    </div>
+    <div class="section-slider-item" id="section-slider-item-3">
+        <div class="wrapper">
+            <div class="section-slider-item-title">Материаловедческое направление</div>
+        </div>
+    </div>
+    <div style="text-align:center; margin-top:-35px">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
     </div>
 </section>
+
+<section class="section-news">
+    <div class="wrapper">
+        <h1 class="section-news-title section-title">Новости</h1>
+        <div class="section-news-grid">
+            <div class="section-news-grid-item section-news-grid-big" id="section-news-grid-item-1">
+                <div class="section-news-grid-item-date right"><span>11.02</span><br>2023</div>
+                    <div class="section-news-grid-item-text">
+                        <h4>Ученые АО “ИРМ” до конца 2022 года завершат основные испытания топлива для водородной энергетики</h4>
+                    </div>
+                </div>
+                <div class="section-news-grid-item section-news-grid-medium_hor" id="section-news-grid-item-2">
+                    <div class="section-news-grid-item-date right"><span>11.02</span><br>2023</div>
+                    <div class="section-news-grid-item-text">
+                        <h4>Ученые АО “ИРМ” до конца 2022 года завершат основные испытания топлива для водородной
+                        </h4>
+                    </div>
+                </div>
+                <div class="section-news-grid-item section-news-grid-medium_hor" id="section-news-grid-item-3">
+                    <div class="section-news-grid-item-date right"><span>11.02</span><br>2023</div>
+                    <div class="section-news-grid-item-text">
+                        <h4>Ученые АО “ИРМ” до конца 2022 года завершат основные испытания топлива</h4>
+                    </div>
+                </div>
+                <div class="section-news-grid-item section-news-grid-medium_ver" id="section-news-grid-item-4">
+                    <div class="section-news-grid-item-date right"><span>11.02</span><br>2023</div>
+                    <div class="section-news-grid-item-text">
+                        <h4>Ученые АО “ИРМ” до конца 2022 года завершат основные испытания
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("section-slider-item");
+            let dots = document.getElementsByClassName("dot");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active-dot", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active-dot";
+            setTimeout(showSlides, 10000); // Change image every 2 seconds
+        }
+    </script>

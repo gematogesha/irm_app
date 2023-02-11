@@ -1,3 +1,5 @@
+/*-------------------Layout-------------------*/
+
 body{
     font-family: 'MyriadPro', sans-serif;
     font-weight: 400;
@@ -5,19 +7,60 @@ body{
     color: var(--color);
 }
 
+h1{
+    font-size: 50px;
+}
+
+h2{
+    font-size: 40px; 
+}
+
+h3{
+    font-size: 32px; 
+}
+
+h4{
+    font-size: 24px; 
+}
+
+
 a:hover{
-    color: var(--blue-color);
+    color: var(--blue);
+}
+
+section{
+    min-height: 450px;
+    padding: 30px 0;
+    min-width: 320px;
 }
 
 .wrapper{
     margin: auto;
-    max-width: 1350px;
-    min-width: 320px;
+    max-width: 1450px;
+    width: 100%;
     padding: 0 20px;
     height: 100%;
+    position: relative;
 }
 
-section{
-    height: 450px;
-    padding: 25px 0;
+.section-title{
+    color: var(--blue);
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 15px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+
+}
+
+.right{
+    float: right;
+    text-align: right;
+}
+
+.left{
+    float: left;
+    text-align: left;
 }
