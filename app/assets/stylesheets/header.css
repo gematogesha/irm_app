@@ -47,13 +47,13 @@ header{
     height: 100%;
 }
 
-.header-menu-item{
+.header-menu__item{
     line-height: 20px;
     font-weight: 600;
     font-size: 18px;
 }
 
-.header-menu-item:hover{
+.header-menu__item:hover{
     color: var(--blue);
 
 }
