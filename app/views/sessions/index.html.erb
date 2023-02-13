@@ -1,45 +1,45 @@
-<section class="section-slider">
-    <div class="section-slider__item" id="section-slider__item__1">
+<section class="slider">
+    <div class="slider-item" id="slider-item-1">
         <div class="wrapper">
-            <div class="section-dark">
-                <div class="section-slider__item__text">
-                    <h3>Эксперементальное производство и металлообработка</h3> 
+            <div class="dark">
+                <div class="slider-item-text">
+                    <div class="slider-title">Металлообработка</div> 
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur minima ducimus soluta, asperiores adipisci similique consequuntur consectetur aut nostrum exercitationem totam iure maiores reprehenderit ut dicta maxime harum quo perferendis. Dolorum voluptate laudantium illo ex nostrum exercitationem dolorem, perspiciatis officiis?</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="section-slider__item" id="section-slider__item__2">
+    <div class="slider-item" id="slider-item-2">
         <div class="wrapper">
-            <div class="section-dark">
-                <div class="section-slider__item__text">
-                    <h3>Пeрспективные реакторные технологии</h3>
+            <div class="dark">
+                <div class="slider-item-text">
+                    <div class="slider-title">Реакторные технологии</div>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Doloremque eaque a voluptates soluta animi obcaecati, placeat quisquam blanditiis minima dolorum nobis qui voluptatem laudantium corporis veritatis fuga, assumenda necessitatibus adipisci.</p>
                 </div>
             </div>
         </div>
     </div>
-    <div class="section-slider__item" id="section-slider__item__3">
+    <div class="slider-item" id="slider-item-3">
     <div class="wrapper">
-        <div class="section-dark">
-            <div class="section-slider__item__text">
-                <h3>Материаловедческое направление</h3>
+        <div class="dark">
+            <div class="slider-item-text">
+                <div class="slider-title">Материаловедческое направление</div>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Esse minus animi nobis repudiandae dolorum saepe reprehenderit, ratione consequuntur cupiditate soluta totam veniam, voluptas, eum quos? Omnis, dolor incidunt quos at ab asperiores.</p>
             </div>
         </div>
     </div>
 
-    <div style="text-align:center; margin-top:-35px">
+    <div style="text-align:center">
         <span class="dot"></span>
         <span class="dot"></span>
         <span class="dot"></span>
     </div>
 </section>
 
-<section class="section-news">
+<section class="news">
     <div class="wrapper">
-        <h2 class="section-news-title title">Новости</h1>
-        <div class="section-news">
+        <h2 class="news-title title">Новости</h1>
+        <div class="news">
 
         </div>
     </div>
@@ -60,7 +60,7 @@
 
         function showSlides(n) {
             let i;
-            let slides = document.getElementsByClassName("section-slider__item");
+            let slides = document.getElementsByClassName("slider-item");
             let dots = document.getElementsByClassName("dot");
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
