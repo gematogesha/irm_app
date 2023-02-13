@@ -1,13 +1,13 @@
 /*-------------------Base-------------------*/
 
 :root{
-	--color: #333;
+	--color: #555;
     --color-white: #fff;
     --border: #d9d9d9;
-    --blue-dark: #003274;
-    --blue: #025EA1;
+    --navy-blue: #003274;
+    --blue: #2965c8;
     --blue-light: #6CACE4;
-    --dark-background: rgba(0, 0, 0, 0.55);
+    --dark-background: rgba(0, 0, 0, 0.35);
 
 
     --border-radius: 5px;
