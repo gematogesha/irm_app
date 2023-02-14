@@ -4,7 +4,7 @@ body{
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: var(--color);
-    font-weight: 400;
+    font-weight: 300;
 }
 
 h1{
@@ -43,10 +43,6 @@ h6{
 
 a{
     color: var(--blue);
-}
-
-a:hover{
-    color: var(--blue);
     text-decoration: underline var(--blue);
 }
 
@@ -61,6 +57,7 @@ section{
     width: 100%;
     padding: 0 20px;
     height: 100%;
+    display: flow-root; /* TEST */
 }
 
 .title{
@@ -100,4 +97,9 @@ section{
     text-transform: uppercase;
     line-height: 50px;
     text-align: center;
+}
+
+.small{
+    font-size: 12px;
+    color: var(--color-clear)
 }

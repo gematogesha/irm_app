@@ -2,6 +2,7 @@
 
 :root{
 	--color: #202835;
+    --color-clear: #555;
     --color-white: #fff;
     --disabled: #C4C4C4;
     --border: #dedede;
@@ -9,7 +10,6 @@
     --blue: #006FFA;
     --blue-clear: rgba(0, 111, 250, 0.6);
     --blue-light: #9FC7F7;
-    --dark-background: rgba(0, 0, 0, 0.35);
     --shadow: 1px 2px 9px rgba(0, 0, 0, 0.3);
     --shadow-inset: inset 1px 2px 6px rgba(0, 0, 0, 0.3);
 
