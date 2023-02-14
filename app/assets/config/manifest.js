@@ -4,3 +4,4 @@
 //= link_tree ../../../vendor/javascript .js
 
 //= link jquery3.min.js
+//= link flickerplate

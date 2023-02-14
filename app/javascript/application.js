@@ -4,4 +4,6 @@ import "controllers"
 
 import "jquery"
 
-import "custom/main"
+import "plugin/main"
+
+

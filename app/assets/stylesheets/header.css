@@ -54,9 +54,13 @@ a:hover{
 .header-menu-item{
     line-height: 76px;
     font-weight: 300;
-    font-size: 18px;
     padding: 0 13px;
     border-bottom: 4px solid rgba(0, 0, 0, 0);
+}
+
+.header-menu-item a{
+    height: 100%;
+    display: inline-block;
 }
 
 .header-menu-item:hover{

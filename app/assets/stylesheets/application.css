@@ -2,12 +2,14 @@
 *= require reset
 
 *= require font-awesome
+*= require flickerplate
 
 *= require base
 
 *= require layout
 
 *= require header
+
 *= require main-page
 
 */
