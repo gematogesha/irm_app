@@ -69,7 +69,7 @@
     display:block;
     position:absolute;
     top:10%;
-    width:3%;
+    width:5%;
     height:80%;
     z-index:100;
     overflow:hidden;
@@ -138,13 +138,14 @@
     float:none
 }
 .flickerplate .dot-navigation .dot{
-    width:14px;
-    height:14px;
-    line-height:14px;
+    width:16px;
+    height:16px;
+    line-height:16px;
     text-align:center;
     margin-left:6px;
     margin-right:6px;
-    background-color:rgba(255,255,255,0.3);
+    background-color:rgba(255,255,255,0.8);
+    border: 2px solid rgba(255,255,255,0.4);
     border-radius:50%;
     -o-border-radius:50%;
     -ms-border-radius:50%;
@@ -159,10 +160,10 @@
 }
 .flickerplate .dot-navigation .dot:hover{
     cursor:pointer;
-    background-color:rgba(255,255,255,0.6)
+    background-color:var(--blue-clear)
 }
 .flickerplate .dot-navigation .dot.active{
-    background-color:#fff
+    background-color: var(--blue)
 }
 .flickerplate .dot-navigation.left,.flickerplate .dot-navigation.left ul{
     text-align:left
