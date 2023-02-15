@@ -1,57 +1,6 @@
 <section class="slider">
     <ul>
-        <li>
-            <div class="slider-item" id="slider-item-1">
-                <div class="wrapper flex-wrapper">
-                    <div class="slider-item-text">
-                        <h2 class="slider-title">Металлообработка</h2> 
-                        <p>Экспериментально - механический цех АО «ИРМ» оказывает большой спектр услуг в области проектно-конструкторской документации. Основным направлением деятельности конструкторского отдела - экспериментально - механического цеха являются конструирование механизмов и проектирование инженерных систем разного уровня сложности.</p>
-                        <div class="button button-primary button-default">
-                            <div class="button-text">Подробнее</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="slider-item" id="slider-item-2">
-                <div class="wrapper flex-wrapper">
-                    <div class="slider-item-text">
-                        <h2 class="slider-title">Реакторные технологии</h2>
-                        <p> На базе АО «ИРМ» создается производство высокотехнологичной радиоизотопной продукции, полностью соответствующей мировым стандартам качества</p>
-                        <div class="button button-primary button-default">
-                            <div class="button-text">Подробнее</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="slider-item" id="slider-item-3">
-                <div class="wrapper flex-wrapper">
-                    <div class="slider-item-text">
-                        <h2 class="slider-title">Радионуклидная продукция</h2>
-                        <p>АО «Институт реакторных материалов» (АО «ИРМ») обладает мощной производственной базой: исследовательский реактор ИВВ‑2М для наработки изотопного сырья, горячие камеры, радиохимическое оборудование, участок по изготовлению облучательных устройств.</p>
-                        <div class="button button-primary button-default">
-                            <div class="button-text">Подробнее</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
-        <li>
-            <div class="slider-item" id="slider-item-4">
-                <div class="wrapper flex-wrapper">
-                    <div class="slider-item-text">
-                        <h2 class="slider-title">Металлообработка</h2> 
-                        <p>Экспериментально - механический цех АО «ИРМ» оказывает большой спектр услуг в области проектно-конструкторской документации. Основным направлением деятельности конструкторского отдела - экспериментально - механического цеха являются конструирование механизмов и проектирование инженерных систем разного уровня сложности.</p>
-                        <div class="button button-primary button-default">
-                            <div class="button-text">Подробнее</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </li>
+        <%= render "slider" %>
     </ul>
 </section>
 
@@ -61,10 +10,8 @@
         <div class="about-block left">
             <div class="about-item-text">
                 <h2 class="about-title">АО "ИРМ"</h2> 
-                <p>Экспериментально - механический цех АО «ИРМ» оказывает большой спектр услуг в области проектно-конструкторской документации. Основным направлением деятельности конструкторского отдела - экспериментально - механического цеха являются конструирование механизмов и проектирование инженерных систем разного уровня сложности.</p>
-                <div class="button button-secondary button-default">
-                    <div class="button-text">Подробнее</div>
-                </div>
+                <p>ЭАО «Институт реакторных материалов» — атомный центр Урала материаловедческого профиля, предприятие Блока по управлению инновациями Государственной корпорации по атомной энергии «Росатом». Институт начал свою деятельность в 1966 году с осуществления физического пуска реактора ИВВ-2.</p>
+                <div class="button button-secondary button-default">Подробнее</div>
             </div>
         </div>
         <div class="news-block left">
@@ -72,31 +19,8 @@
                 <h4>Новости</h4>
                 <div class="subtitle">Если не новсти, то события</div>
             </div>
-            <div class="news-item" id="news_id_1">
-                <div class="news-img left"></div>
-                <div class="news-info">
-                    <div class="news-title"><a>Ученые АО “ИРМ” до конца 2022 года завершат основные испытания топлива для водородной энергетики</a></div>
-                    <div class="news-date small">12 февраля 2023</div>
-                </div>
-            </div>
-            <div class="news-item" id="news_id_2"> 
-                <div class="news-img left"></div>
-                <div class="news-info">
-                    <div class="news-title"><a>Ученые АО «ИРМ» выполнили уникальное исследование для японской АЭС</a></div>
-                    <div class="news-date small">12 февраля 2023</div>
-                </div>
-            </div>
-            <div class="news-item" id="news_id_3">
-                <div class="news-img left"></div>
-                <div class="news-info">
-                    <div class="news-title"><a>13 сотрудников научного дивизиона Росатома отмечены высокими государственными и отраслевыми наградами</a></div>
-                    <div class="news-date small">12 февраля 2023</div>
-                </div>
-            </div>
+            <%= render "news" %>
+            <div class="button button-secondary button-small">Все новости</div>
         </div>
     </div>
 </section>
-<section>
-    <div class="wrapper"></div>
-</section>
-
