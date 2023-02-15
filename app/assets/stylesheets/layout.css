@@ -47,7 +47,7 @@ a{
 }
 
 section{
-    padding: 30px 0;
+    padding: 50px 0;
     min-width: 320px;
 }
 
@@ -57,29 +57,62 @@ section{
     width: 100%;
     padding: 0 20px;
     height: 100%;
-    display: flow-root; /* TEST */
+    display: flow-root;
+}
+
+.flex-wrapper{
+    display: flex;
+    align-items: center;
+    Justify-content: flex-start;
 }
 
 .title{
-    text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+
+}
+
+.subtitle{
+    color: var(--color-clear);
 
 }
 
 .right{
     float: right;
-    text-align: right;
 }
 
 .left{
     float: left;
-    text-align: left;
 }
 
-.button-primary{
+.button:active{
+    transition: none;
+}
+.button:active .button-text{
+    transition: none;
+}
+
+.button-default{
     height: 50px;
-    background-color: var(--blue);
     width: 235px;
+}
+
+.button-small{
+    height: 40px;
+    width: 135px
+}
+
+.button-default .button-text{
+    line-height: 50px;
+}
+
+.button-small .button-text{
+    line-height: 40px;
+}
+
+
+
+.button-primary{
+    background-color: var(--blue);
     border-radius: var(--border-radius);
 }
 
@@ -89,14 +122,47 @@ section{
 
 .button-primary:active{
     box-shadow: var(--shadow-inset);
+    background-color: var(--white) !important;
+    color: var(--color) !important;
 }
+
+
+
+.button-secondary{
+    background-color: var(--white);
+    border: 1px solid var(--color);
+    border-radius: var(--border-radius);
+}
+
+.button-secondary:hover{
+    box-shadow: var(--shadow);
+}
+
+.button-secondary:active{
+    box-shadow: var(--shadow-inset);
+    background-color: var(--color) !important;
+}
+
+
 
 .button-text{
     font-weight: 500;
     font-size: 16px;
     text-transform: uppercase;
-    line-height: 50px;
     text-align: center;
+    color: var(--white) !important;
+}
+
+.button-secondary .button-text{
+    color: var(--color) !important;
+}
+
+.button-secondary:active .button-text{
+    color: var(--white) !important;
+}
+
+.button-primary:active .button-text{
+    color: var(--color) !important;
 }
 
 .small{
