@@ -1,0 +1,62 @@
+/*-------------------Button-------------------*/
+
+.button{
+    font-weight: 500;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.button:active{
+    transition: none;
+}
+
+
+
+.button-default{
+    height: 50px;
+    width: 235px;
+    line-height: 50px;
+}
+
+.button-small{
+    height: 40px;
+    width: 165px;
+    line-height: 40px;
+}
+
+
+
+.button-primary{
+    background-color: var(--blue);
+    border-radius: var(--border-radius);
+}
+
+.button-primary:hover{
+    box-shadow: var(--shadow);
+}
+
+.button-primary:active{
+    box-shadow: var(--shadow-inset);
+    background-color: var(--white) !important;
+    color: var(--color) !important;
+}
+
+
+
+.button-secondary{
+    background-color: var(--white);
+    border: 1px solid var(--color);
+    border-radius: var(--border-radius);
+    color: var(--color) !important;
+}
+
+.button-secondary:hover{
+    box-shadow: var(--shadow);
+}
+
+.button-secondary:active{
+    box-shadow: var(--shadow-inset);
+    background-color: var(--color) !important;
+    color: var(--white) !important;
+}
