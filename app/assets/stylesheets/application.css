@@ -9,6 +9,8 @@
 *= require layout
 
 *= require header
+*= require footer
+*= require button
 
 *= require main-page
 
