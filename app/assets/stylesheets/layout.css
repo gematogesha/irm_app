@@ -1,10 +1,21 @@
 /*-------------------Layout-------------------*/
 
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
 body{
     font-family: "Roboto", Arial, Helvetica, sans-serif;
     font-size: 16px;
     color: var(--color);
     font-weight: 300;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    display: table;
 }
 
 h1{
@@ -46,6 +57,11 @@ a{
     text-decoration: underline var(--blue);
 }
 
+a:hover{
+    color: var(--blue-clear);
+    text-decoration: underline var(--blue-clear);
+}
+
 section{
     padding: 50px 0;
     min-width: 320px;
@@ -66,6 +82,13 @@ section{
     Justify-content: flex-start;
 }
 
+.flex-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+
 .title{
     margin-bottom: 30px;
 
@@ -82,87 +105,6 @@ section{
 
 .left{
     float: left;
-}
-
-.button:active{
-    transition: none;
-}
-.button:active .button-text{
-    transition: none;
-}
-
-.button-default{
-    height: 50px;
-    width: 235px;
-}
-
-.button-small{
-    height: 40px;
-    width: 135px
-}
-
-.button-default .button-text{
-    line-height: 50px;
-}
-
-.button-small .button-text{
-    line-height: 40px;
-}
-
-
-
-.button-primary{
-    background-color: var(--blue);
-    border-radius: var(--border-radius);
-}
-
-.button-primary:hover{
-    box-shadow: var(--shadow);
-}
-
-.button-primary:active{
-    box-shadow: var(--shadow-inset);
-    background-color: var(--white) !important;
-    color: var(--color) !important;
-}
-
-
-
-.button-secondary{
-    background-color: var(--white);
-    border: 1px solid var(--color);
-    border-radius: var(--border-radius);
-}
-
-.button-secondary:hover{
-    box-shadow: var(--shadow);
-}
-
-.button-secondary:active{
-    box-shadow: var(--shadow-inset);
-    background-color: var(--color) !important;
-}
-
-
-
-.button-text{
-    font-weight: 500;
-    font-size: 16px;
-    text-transform: uppercase;
-    text-align: center;
-    color: var(--white) !important;
-}
-
-.button-secondary .button-text{
-    color: var(--color) !important;
-}
-
-.button-secondary:active .button-text{
-    color: var(--white) !important;
-}
-
-.button-primary:active .button-text{
-    color: var(--color) !important;
 }
 
 .small{

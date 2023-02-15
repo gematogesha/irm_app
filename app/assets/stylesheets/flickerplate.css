@@ -162,7 +162,7 @@
 }
 .flickerplate .dot-navigation .dot:hover{
     cursor:pointer;
-    background-color:var(--blue-clear)
+    background-color:var(--blue-light)
 }
 .flickerplate .dot-navigation .dot.active{
     background-color: var(--blue)

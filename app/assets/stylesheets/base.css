@@ -9,7 +9,7 @@
     --white: #fff;
     --navy-blue: #2C2783;
     --blue: #006FFA;
-    --blue-clear: rgba(0, 111, 250, 0.6);
+    --blue-clear: rgba(0, 111, 250, 0.7);
     --blue-light: #9FC7F7;
 
     --shadow: 1px 2px 9px rgba(0, 0, 0, 0.3);
@@ -17,6 +17,5 @@
 
 
     --border-radius: 5px;
-    --news-padding: 20px
   
 }
