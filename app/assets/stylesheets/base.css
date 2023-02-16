@@ -6,10 +6,11 @@
     --disabled: #C4C4C4;
     --border: #dedede;
 
+	--black: rgb(12, 20, 33);
     --white: #fff;
     --navy-blue: #2C2783;
     --blue: #006FFA;
-    --blue-clear: rgba(0, 111, 250, 0.7);
+    --blue-clear: #006ffab3;
     --blue-light: #9FC7F7;
 
     --shadow: 1px 2px 9px rgba(0, 0, 0, 0.3);
@@ -17,5 +18,9 @@
 
 
     --border-radius: 5px;
+
+    --vk: #2787F5;
+    --telegram: #2AABEE; 
+
   
 }
