@@ -11,7 +11,9 @@
             <div class="about-item-text">
                 <h2 class="about-title">АО "ИРМ"</h2> 
                 <p>ЭАО «Институт реакторных материалов» — атомный центр Урала материаловедческого профиля, предприятие Блока по управлению инновациями Государственной корпорации по атомной энергии «Росатом». Институт начал свою деятельность в 1966 году с осуществления физического пуска реактора ИВВ-2.</p>
-                <div class="button button-secondary button-default">Подробнее</div>
+                <%= link_to root_path, class: "button-link" do %>
+                    <div class="button button-secondary button-default">Подробнее</div>
+                <% end %>
             </div>
         </div>
         <div class="news-block left">
@@ -20,7 +22,9 @@
                 <div class="subtitle">Если не новсти, то события</div>
             </div>
             <%= render "news" %>
-            <div class="button button-secondary button-small">Все новости</div>
+            <%= link_to root_path, class: "button-link" do %>
+                <div class="button button-secondary button-small">Все новости</div>
+            <% end %>
         </div>
     </div>
 </section>
