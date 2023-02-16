@@ -88,7 +88,17 @@ footer{
 }
 
 .social-link i{
-    font-size: 26px;
+    font-size: 28px;
+    line-height: 15px;
+    width: 22px;
+}
+
+.social-link i:hover{
+    background: var(--white);
+}
+
+.social-link i::before{
+    margin-left: -2px;
 }
 
 .vk:hover{
