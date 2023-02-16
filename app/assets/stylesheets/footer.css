@@ -24,12 +24,10 @@ footer{
 
 .footer-top .wrapper a, .footer-bot .wrapper a{
     color: var(--white);
-    text-decoration: underline var(--white);
 }
 
 .footer-top .wrapper a:hover, .footer-bot .wrapper a:hover{
     color: var(--blue-light);
-    text-decoration: underline var(--blue-light);
 }
 
 
@@ -48,7 +46,6 @@ footer{
 
 .footer-item a{
     color: var(--white);
-    text-decoration: underline var(--white);
 }
 
 .footer-logo, .footer-item-main span{

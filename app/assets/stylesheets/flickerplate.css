@@ -75,8 +75,8 @@
     height:80%;
     z-index:100;
     overflow:hidden;
-    font-family:"FontAwesome";
-    vertical-align:middle
+    font-family:"Font Awesome 6 Free";
+    vertical-align:middle;
 }
 .flickerplate .arrow-navigation:before{
     position:absolute;

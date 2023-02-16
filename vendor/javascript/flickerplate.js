@@ -171,8 +171,8 @@ function flickerplateComponent($element, $userOptions, tool) {
 			var $arrowLeft = document.createElement('div');
 			var $arrowRight = document.createElement('div');
 
-			$arrowLeft.className = 'arrow-navigation left';
-			$arrowRight.className = 'arrow-navigation right';
+			$arrowLeft.className = 'fa-solid arrow-navigation left';
+			$arrowRight.className = 'fa-solid arrow-navigation right';
 
 			$element.insertBefore($arrowLeft, $element.querySelector('.flicks'));
 			$element.insertBefore($arrowRight, $element.querySelector('.flicks'));
