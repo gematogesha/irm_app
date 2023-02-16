@@ -1,8 +1,53 @@
 <section></section>
 <footer>
-    <section class="footer">
+    <section class="footer-top">
         <div class="wrapper">
-        asdasds
+            <div class="footer-item footer-item-main">
+                <div class="footer-logo">
+                    <%= link_to 'https://rosatom.ru' do %>
+                        <%= image_tag("logo/logo-rosatom-white.png", alt: "Росатом", title: 'Росатом', class: "footer-logo-img") %>
+                    <% end %>
+                    <%= link_to 'https://niirosatom.ru/' do %>
+                        <%= image_tag("logo/logo-nii-white.png", alt: "Наука и инновации", title: 'Наука и инновации', class: "footer-logo-img") %>
+                    <% end %>
+                </div>
+                <span>624250, Свердловская область,<br>г. Заречный, ул. а/я 29</span>
+                <span>noreply@irmatom.ru</span>
+            </div>
+            <div class="footer-item">
+                <ul> 
+                    <li><h6>Lorem, ipsum.</h6></li>
+                    <li>Lorem, ipsum.</li>
+                    <li>Fuga, asperiores.</li>
+                    <li>Totam, quisquam!</li>
+                    <li>Ratione, fuga.</li>
+                </ul>
+            </div>
+            <div class="footer-item">
+                <ul>
+                    <li>
+                        <h6>Lorem, ipsum.</h6>
+                    </li>
+                    <li>Lorem, ipsum.</li>
+                    <li>Magnam, autem!</li>
+                </ul>
+            </div>
+            <div class="footer-item social">
+                <ul>
+                    <li>
+                        <h6>Социальные сети</h6>
+                    </li>
+                </ul>
+                <%= link_to icon('fa-brands', 'vk'), "https://vk.com", title: "ВКонтакте", class: "social-link vk" %>
+                <%= link_to icon('fa-brands', 'telegram'), "https://web.telegram.org", title: "Телеграм", class: "social-link telegram" %>
+            </div>
+        </div>
+    </section>
+    <div class="wrapper line"></div>
+    <section class="footer-bot">
+        <div class="wrapper">
+        <%= link_to "Политика конфиденциальности", "https://vk.com", title: "ВКонтакте" %>
+        <span>&copy; 2023 АО "ИРМ"<br>Все права защищены</span>
         </div>
     </section>
 </footer>
