@@ -61,10 +61,12 @@
     min-height: 60px;
     padding-bottom: 10px;
     border-bottom: 1px solid var(--border);
+    padding: 0 10px 10px 10px;
 }
 
 .news-item:last-of-type{
     margin-bottom: 30px;
+    border: 0;
 }
 
 .news-info{
