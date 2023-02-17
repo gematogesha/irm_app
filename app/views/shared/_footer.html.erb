@@ -3,14 +3,12 @@
     <section class="footer-top">
         <div class="wrapper">
             <div class="footer-item footer-item-main">
-                <div class="footer-logo">
-                    <%= link_to 'https://rosatom.ru' do %>
-                        <%= image_tag("logo/logo-rosatom-white.png", alt: "Росатом", title: 'Росатом', class: "footer-logo-img") %>
-                    <% end %>
-                    <%= link_to 'https://niirosatom.ru/' do %>
-                        <%= image_tag("logo/logo-nii-white.png", alt: "Наука и инновации", title: 'Наука и инновации', class: "footer-logo-img") %>
-                    <% end %>
-                </div>
+                <%= link_to 'https://rosatom.ru', class: "footer-logo-link" do %>
+                    <%= image_tag("logo/logo-rosatom-white.png", alt: "Росатом", title: 'Росатом', class: "footer-logo-img") %>
+                <% end %>
+                <%= link_to 'https://niirosatom.ru/', class: "footer-logo-link" do%>
+                    <%= image_tag("logo/logo-nii-white.png", alt: "Наука и инновации", title: 'Наука и инновации', class: "footer-logo-img") %>
+                <% end %>
                 <span>624250, Свердловская область,<br>г. Заречный, ул. а/я 29</span>
                 <span>noreply@irmatom.ru</span>
             </div>
@@ -37,9 +35,11 @@
                     <li>
                         <h5>Социальные сети</h5>
                     </li>
+                    <li>
+                        <%= link_to icon('fa-brands', 'vk'), "https://vk.com", title: "ВКонтакте", class: "social-link vk" %>
+                        <%= link_to icon('fa-brands', 'telegram'), "https://web.telegram.org", title: "Телеграм", class: "social-link telegram" %>
+                    </li>
                 </ul>
-                <%= link_to icon('fa-brands', 'vk'), "https://vk.com", title: "ВКонтакте", class: "social-link vk" %>
-                <%= link_to icon('fa-brands', 'telegram'), "https://web.telegram.org", title: "Телеграм", class: "social-link telegram" %>
             </div>
         </div>
     </section>
