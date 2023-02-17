@@ -5,7 +5,6 @@ footer{
     color: var(--white);
     display: table-row;
     font-size: 14px;
-    height: 367px;
 }
 
 .footer-top .wrapper, .footer-bot .wrapper{
@@ -29,12 +28,6 @@ footer{
 
 .footer-top .wrapper a:hover, .footer-bot .wrapper a:hover{
     color: var(--blue-light);
-}
-
-
-.line{
-    border-top: 2px solid var(--blue);
-    max-width: 1200px;
 }
 
 .footer-bot{
