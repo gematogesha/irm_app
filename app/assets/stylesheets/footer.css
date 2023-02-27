@@ -10,12 +10,10 @@ footer{
 .footer-top .wrapper, .footer-bot .wrapper{
     display: flex;
     justify-content: space-between;
-
 }
 
 .footer-top .wrapper{
     align-items: flex-start;
-
 }
 
 .footer-bot .wrapper{
@@ -75,10 +73,6 @@ footer{
     display: block;
 }
 
-.footer-item ul{
-    margin-right: 50px;
-}
-
 .footer-item ul li{
     margin-bottom: 15px;
 }
@@ -123,7 +117,7 @@ footer{
     color: var( --disabled);
 }
 
-.footer-bot .wrapper div a{
+.footer-bot .wrapper div a, .footer-item ul{
     margin-right: 50px;
 }
 

@@ -2,9 +2,9 @@ Rails.application.routes.draw do
 
   root to: "sessions#index"
 
-  resources :sessions
+  resources :sessions, only: %i[new create destroy]
 
-  resources :news
+  resources :news, param: :title
 
 
 
