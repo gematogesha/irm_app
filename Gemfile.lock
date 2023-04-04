@@ -227,7 +227,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
-  font-awesome-sass (~> 6.3.0)
+  font-awesome-sass
   image_processing
   importmap-rails
   jbuilder

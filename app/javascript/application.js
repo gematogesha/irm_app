@@ -7,3 +7,5 @@ import "jquery"
 import "plugin/main"
 
 
+import "trix"
+import "@rails/actiontext"

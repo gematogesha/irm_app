@@ -9,3 +9,5 @@ pin_all_from "app/javascript/controllers", under: "controllers"
 pin "jquery", to: "jquery3.min.js", preload: true
 
 pin_all_from "app/javascript/plugin", under: "plugin"
+pin "trix"
+pin "@rails/actiontext", to: "actiontext.js"
