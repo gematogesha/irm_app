@@ -1,0 +1,12 @@
+<%= form_with model: @post do |form| %>
+  <div class="field">
+
+    <%= form.label :title, class: "control-label" %>
+    <%= form.text_area :title, rows: 5 , cols: 45 %>
+
+    <%= form.label :content %>
+    <%= form.rich_text_area :content %>
+
+    <%= form.submit class: "button"%>
+  </div>
+<% end %>

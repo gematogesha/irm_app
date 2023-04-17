@@ -13,7 +13,9 @@
     --blue-clear: #006ffab3;
     --blue-light: #9FC7F7;
 
-    --shadow: 1px 2px 9px rgba(0, 0, 0, 0.3);
+
+    /* --shadow: 1px 2px 9px rgba(0, 111, 250, 0.3); */
+    --shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
     --shadow-inset: inset 1px 2px 6px rgba(0, 0, 0, 0.3);
 
 

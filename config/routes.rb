@@ -4,8 +4,7 @@ Rails.application.routes.draw do
 
   resources :sessions, only: %i[new create destroy]
 
-  resources :news, param: :number
-
+  resources :posts, param: :number
 
 
 end
