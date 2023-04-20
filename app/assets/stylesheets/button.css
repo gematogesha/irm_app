@@ -39,6 +39,7 @@
 
 .button-primary:hover{
     box-shadow: var(--shadow);
+    background-color: var(--blue-hover);
 }
 
 .button-primary:active{
@@ -50,10 +51,10 @@
 
 
 .button-secondary{
-    background-color: var(--white);
-    border: 1px solid var(--color);
+    background-color: var(--blue-pale);
+    border: 1px solid var(--blue);
     border-radius: var(--border-radius);
-    color: var(--color) !important;
+    color: var(--blue) !important;
 }
 
 .button-secondary:hover{
@@ -62,6 +63,6 @@
 
 .button-secondary:active{
     box-shadow: var(--shadow-inset);
-    background-color: var(--color) !important;
+    background-color: var(--blue-light) !important;
     color: var(--white) !important;
 }

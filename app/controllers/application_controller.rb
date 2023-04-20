@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
 
 	helper_method :breadcrumbs
+	before_action :set_breadcrumbs
 
 	def breadcrumbs
 	  @breadcrumbs ||= []
@@ -27,5 +28,11 @@ class ApplicationController < ActionController::Base
 	rescue
 		render file: "#{Rails.root}/public/500.html", status: :internal_server_error
 	end
+
+    def set_breadcrumbs
+		#add_breadcrumb("Admin", admin_home_path) if Current.user.admin?
+		add_breadcrumb("Главная", root_path)
+	end
+
 
 end

@@ -1,3 +1,10 @@
-<%- title @post.title.truncate(70, separator: ' ') %>
+<%= render partial: "shared/page-title", locals: { page_title_text: @post.title } %>
 
-<%= @post.content %>
+
+<section class="section-post">
+    <div class="wrapper">
+        <div class="post-content">
+            <%= @post.content %>
+        </div>
+    </div>
+</section>

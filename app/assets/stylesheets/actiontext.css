@@ -29,3 +29,8 @@
   padding: 0 !important;
   max-width: 100% !important;
 }
+
+.trix-content blockquote {
+  border-color:  var(--blue-clear) !important;
+  font-style: italic;
+}
