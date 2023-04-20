@@ -2,7 +2,9 @@ class PostsController < ApplicationController
 
     before_action :model_name
     before_action :set_post, only: %i[update show destroy edit]
-  
+    before_action :set_breadcrumbs
+
+
     add_flash_types :info, :error, :success
 
 
@@ -28,7 +30,7 @@ class PostsController < ApplicationController
       end
 
     def show
-        
+      add_breadcrumb(@post.title, @post.number)
     end
 
 
@@ -45,6 +47,12 @@ class PostsController < ApplicationController
     def model_name
         @model_one = Post.model_name.human
         @model_many = Post.model_name.human(count: :many)
-      end
+    end
+
+    def set_breadcrumbs
+      #add_breadcrumb("Admin", admin_home_path) if Current.user.admin?
+      add_breadcrumb("Главная", root_path)
+      add_breadcrumb("Новости", posts_path)
+    end
 
 end
