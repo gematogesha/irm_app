@@ -8,7 +8,7 @@ class PostsController < ApplicationController
 
 
     def index
-        @posts = Post.all      
+        @posts = Post.all.order(created_at: :desc)     
         
         add_breadcrumb("Новости")
         @page_title_text = @model_many

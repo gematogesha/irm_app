@@ -1,0 +1,15 @@
+<% @posts.each do |post| %>
+    <div class="post-item" id="post_id_1">
+        <div class="post-img left flex-block">
+            <%= link_to post_path(post.number), class: "left flex-block" do%>
+                <img src="http://irm-atom.ru/wp-content/uploads/2022/12/photo1671510202-e1671510386558.jpeg" alt="">
+            <% end %>
+        </div>
+        <div class="post-info">
+            <div class="post-title">
+                <%= link_to post.title, post_path(post.number)%>
+            </div>
+            <div class="post-date small"><%= l(post.created_at, format: :long) %></div>
+        </div>
+    </div>
+<% end %>

@@ -16,6 +16,9 @@
     <body>
         <%= render "shared/header" %> 
         <%= render "shared/notification" %>  
+        <% if !current_page?(root_url) %>
+            <%= render partial: "shared/page_title", locals: { page_title_text: @page_title_text } %>
+        <% end %>
         <%= yield %>
         <%= render "shared/footer" %>
         <%= javascript_include_tag "flickerplate" %>

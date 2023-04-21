@@ -32,5 +32,8 @@
 
 .trix-content blockquote {
   border-color:  var(--blue-clear) !important;
+}
+
+figure .attachment__caption{
   font-style: italic;
 }
