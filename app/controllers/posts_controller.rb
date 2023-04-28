@@ -16,7 +16,7 @@ class PostsController < ApplicationController
 
     def create
         @post = Post.create(post_params)
-    
+
         if @post.save
           redirect_to posts_path, success: "Новость создана"
         else
@@ -24,17 +24,40 @@ class PostsController < ApplicationController
     
           render :new
         end
+    end
+
+    def update
+      @post.update(post_params)
+      
+      if @post.update(post_params)
+        redirect_to posts_path, success: "Новость обновлена"
+      else
+        flash.now[:error] = "Неправильно заполнены формы"
+  
+        render :edit
       end
+    end
 
 
     def new
         @post = Post.new
-      end
+
+        add_breadcrumb("Новости", posts_path)
+
+        @page_title_text = "Создать новость"
+
+    end
+
+    def edit
+      @page_title_text = "Редактировать новость"      
+    end
 
     def show
       @page_title_text = @post.title
       
       add_breadcrumb("Новости", posts_path)
+
+      @blob = ActiveStorage::Attachment.find_by(record_id: @post.id)
     end
 
 
