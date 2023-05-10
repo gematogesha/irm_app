@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
 		render file: "#{Rails.root}/public/404.html", status: :not_found
 	end
 
-	def unprocessable_entity
+	def unprocessable_entity 
 		raise ActionController::RoutingError.new('Unprocessable entity')
 	rescue
 		render file: "#{Rails.root}/public/422.html", status: :unprocessable_entity

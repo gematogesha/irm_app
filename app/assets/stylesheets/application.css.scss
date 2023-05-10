@@ -10,8 +10,11 @@
 *= require header
 *= require footer
 *= require button
+*= require notification
+*= require page-error
 
 *= require main-page
+*= require post
 
 *= require actiontext
 

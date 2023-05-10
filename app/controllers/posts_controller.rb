@@ -11,31 +11,36 @@ class PostsController < ApplicationController
         @posts = Post.all.order(created_at: :desc)     
         
         add_breadcrumb("Новости")
+
         @page_title_text = @model_many
     end
 
     def create
+        add_breadcrumb("Новости", posts_path)
+
+        @page_title_text = "Создать новость"
+
         @post = Post.create(post_params)
 
         if @post.save
           redirect_to posts_path, success: "Новость создана"
-        else
-          flash.now[:error] = "Неправильно заполнены формы"
-    
-          render :new
+        else     
+            render :new
         end
     end
 
     def update
-      @post.update(post_params)
-      
-      if @post.update(post_params)
-        redirect_to posts_path, success: "Новость обновлена"
-      else
-        flash.now[:error] = "Неправильно заполнены формы"
-  
-        render :edit
-      end
+        add_breadcrumb("Новости", posts_path)
+
+        @page_title_text = "Редактировать новость"  
+
+        @post.update(post_params)
+        
+        if @post.update(post_params)
+            redirect_to post_path(@post.number), success: "Новость обновлена"
+        else 
+            render :edit
+        end
     end
 
 
@@ -49,10 +54,15 @@ class PostsController < ApplicationController
     end
 
     def edit
-      @page_title_text = "Редактировать новость"      
+        add_breadcrumb("Новости", posts_path)
+
+        @page_title_text = "Редактировать новость"  
     end
 
     def show
+
+      @post.update_attribute(:views, @post.views +=1 )
+
       @page_title_text = @post.title
       
       add_breadcrumb("Новости", posts_path)
@@ -64,7 +74,7 @@ class PostsController < ApplicationController
     private
 
     def post_params
-      params.require(:post).permit(:title, :content)
+      params.require(:post).permit(:title, :content, :image)
     end
   
     def set_post

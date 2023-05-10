@@ -5,6 +5,7 @@
     --color-clear: #555;
     --disabled: #C4C4C4;
     --border: #dedede;
+    --background: #f2f2f2;
 
 	--black: rgb(12, 20, 33);
     --white: #fff;
@@ -21,7 +22,8 @@
     --shadow-inset: inset 1px 2px 6px rgba(0, 0, 0, 0.3);
 
 
-    --border-radius: 5px;
+    --border-radius: 8px;
+    --border-radius-2x: 16px;
 
     --vk: #2787F5;
     --telegram: #2AABEE; 

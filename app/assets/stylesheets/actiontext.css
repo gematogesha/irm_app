@@ -37,3 +37,7 @@
 figure .attachment__caption{
   font-style: italic;
 }
+
+.trix-content img {
+  width: 100%;
+}

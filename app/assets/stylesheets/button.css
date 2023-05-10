@@ -51,7 +51,6 @@
 
 
 .button-secondary{
-    background-color: var(--blue-pale);
     border: 1px solid var(--blue);
     border-radius: var(--border-radius);
     color: var(--blue) !important;

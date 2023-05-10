@@ -109,7 +109,12 @@ section{
 
 .small{
     font-size: 12px;
-    color: var(--color-clear)
+    color: var(--color-clear);
+}
+
+.medium{
+    font-size: 14px;
+    color: var(--color-clear);
 }
 
 .page-title{
@@ -149,10 +154,27 @@ section{
     content: none;
 }
 
-.section-post{
+.content{
     padding: 20px 0;
+    background-color: var(--white);
+    max-width: 1000px;
 }
 
-.post-content{
-    width: 700px;
+.content-wrapper{
+    margin: auto;
+    margin-bottom: 20px;
+    max-width: 640px;
+    padding: 0 20px;
 }
+
+.content-image{
+    position: relative;
+}
+
+.content-image img{
+    width: 100%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    max-height: 1000px;
+}
+

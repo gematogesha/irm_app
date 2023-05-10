@@ -5,7 +5,7 @@
 
 <section class="section-post">
     <div class="wrapper">
-        <%= render "form", post: @post %>
+        <%= render "form", post: @post, url: post_path(@post.number) %>
     </div>
 </section>
 

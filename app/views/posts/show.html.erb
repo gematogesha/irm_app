@@ -1,9 +1,23 @@
 <%- title @page_title_text %>
 
-<section class="section-post">
+
+<section class="section-post" style="padding: 0;">
     <div class="wrapper">
-        <div class="post-content">
-            <%= @post.content %>
+        <div class="content">
+            <div class="content-wrapper">
+                <div class="post-details medium">
+                    <div class="post-date"><%= l(@post.created_at, format: :long) %></div>
+                    <div class="post-views"><%= icon('fa-solid', 'eye')%><%= @post.views %></div>
+                </div>
+            </div>
+            <% if @post.image.present? %>
+                <div class="content-image">
+                    <%= image_tag(@post.image, alt: @post.title, title: @post.title) %>
+                </div>
+            <% end %>
+            <div class="content-wrapper">
+                <%= @post.content %>
+            </div>
         </div>
     </div>
 </section>

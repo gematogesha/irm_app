@@ -2,15 +2,13 @@ class Post < ApplicationRecord
 
   has_rich_text :content
 
-  before_create { self.number = "@" + SecureRandom.hex(3) }
+  has_one_attached :image
 
   validates :title, :content, presence: true
 
-  before_save :capitalize_title, :strip_ize
+  before_create { self.number = "@" + SecureRandom.hex(3) }
 
-  def capitalize_title
-      title.capitalize!
-  end
+  before_save :strip_ize
 
   def strip_ize
       title.strip!

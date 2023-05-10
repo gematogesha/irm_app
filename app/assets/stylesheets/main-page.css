@@ -82,8 +82,8 @@
 }
 
 .post-img a{
-    height: 60px;
-    width: 60px;
+    height: 100%;
+    width: 100%;
 }
 
 .post-img a img {

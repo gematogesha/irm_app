@@ -1,0 +1,31 @@
+/*-------------------Page-Error-------------------*/
+
+.dialog{
+    padding-top: 50px;
+}
+
+.page-error{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+}
+
+.number-error{
+    font-size: 200px;
+    padding: 0 50px;
+}
+
+.number-error>span{
+    color: #0088cc;
+}
+
+.text-error{
+    height: fit-content;
+    max-width: 400px;
+}
+
+.text-error>h4{
+    margin-bottom: 15px;
+}
