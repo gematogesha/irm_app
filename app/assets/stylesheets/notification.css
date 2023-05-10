@@ -22,19 +22,19 @@
   95%, 100% {right: -350px;}
 }
 
-.notification-success{
+.notification__success{
 	border: 1px solid #c3e6cb;
     color: #155724 !important;
 	background-color: #e7f5eb;
 }
 
-.notification-info{
+.notification__info{
 	border: 1px solid #b8daff;
     color: #004085 !important;
 	background-color: #ecf5ff;
 }
 
-.notification-error{
+.notification__error{
 	border: 1px solid #f5c6cb;
 	color: #cc1a2c !important;
 	background-color: #fdf2f3;
@@ -54,15 +54,15 @@
 	margin-top: 5px;
 }
 
-.notification-error .fa{
+.notification__error .fa{
 	color: #cc1a2c !important;
 }
 
-.notification-success .fa{
+.notification__success .fa{
 	color: #155724 !important;
 }
 
-.notification-info .fa{
+.notification__info .fa{
 	color: #004085 !important;
 }
 

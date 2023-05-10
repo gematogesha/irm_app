@@ -1,6 +1,6 @@
 <section class="page-title">
-    <div class="wrapper">
-        <div class="page-tittle-text">
+    <div class="wrapper wrapper__page-title">
+        <div class="page-title__text">
             <h2>
                 <% if page_title_text.present? %>
                     <%= page_title_text %>
@@ -13,9 +13,9 @@
                 <% breadcrumbs.each do |crumb| %>
                     <span>
                         <% if crumb.link? %>
-                            <%= link_to crumb.name, crumb.path, class: "breadcrumb-link" %>
+                            <%= link_to crumb.name, crumb.path, class: "breadcrumb__link" %>
                         <% else %>
-                            <span class="breadcrumb-page">
+                            <span class="breadcrumb__link_current">
                                 <%= crumb.name %>
                             </span>
                         <% end %>

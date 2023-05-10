@@ -1,6 +1,6 @@
 /*-------------------Button-------------------*/
 
-.button-link, .button-link:hover{
+.button__link, .button__link:hover{
     text-decoration: none;
 }
 
@@ -17,13 +17,13 @@
 
 
 
-.button-default{
+.button__default{
     height: 50px;
     width: 235px;
     line-height: 50px;
 }
 
-.button-small{
+.button__small{
     height: 40px;
     width: 165px;
     line-height: 40px;
@@ -31,18 +31,18 @@
 
 
 
-.button-primary{
+.button__primary{
     background-color: var(--blue);
     border-radius: var(--border-radius);
     color: var(--white) !important;
 }
 
-.button-primary:hover{
+.button__primary:hover{
     box-shadow: var(--shadow);
     background-color: var(--blue-hover);
 }
 
-.button-primary:active{
+.button__primary:active{
     box-shadow: var(--shadow-inset);
     background-color: var(--white) !important;
     color: var(--color) !important;
@@ -50,17 +50,17 @@
 
 
 
-.button-secondary{
+.button__secondary{
     border: 1px solid var(--blue);
     border-radius: var(--border-radius);
     color: var(--blue) !important;
 }
 
-.button-secondary:hover{
+.button__secondary:hover{
     box-shadow: var(--shadow);
 }
 
-.button-secondary:active{
+.button__secondary:active{
     box-shadow: var(--shadow-inset);
     background-color: var(--blue-light) !important;
     color: var(--white) !important;

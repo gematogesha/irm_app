@@ -76,7 +76,7 @@ section{
     display: flow-root;
 }
 
-.flex-wrapper{
+.wrapper__flex{
     display: flex;
     align-items: center;
     Justify-content: flex-start;

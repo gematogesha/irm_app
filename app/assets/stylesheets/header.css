@@ -9,22 +9,22 @@ header{
     height: 50px;
 }
 
-.header-logo{
+.header__logo{
     height: 100%;
     float: left;
     padding-right: 25px;
 }
 
-.header-logo-img{
+.header__logo-img{
     height: 58px;
     margin-top: -4px;
 }
 
-.header-logo:hover{
+.header__logo:hover{
     opacity: 85%;
 }
 
-.header-menu{
+.header__menu{
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
@@ -47,21 +47,21 @@ header{
     height: 100%;
 }
 
-.header-menu-item{
+.header__menu__item{
     line-height: 76px;
     font-weight: 300;
     padding: 0 13px;
     border-bottom: 4px solid rgba(0, 0, 0, 0);
 }
 
-.header-menu-item a{
+.header__menu__item a{
     height: 100%;
     display: inline-block;
     text-decoration: none !important;
     color: var(--blue) !important;
 }
 
-.header-menu-item:hover{
+.header__menu__item:hover{
     border-bottom: 4px solid var(--blue);
 }
 

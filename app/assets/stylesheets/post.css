@@ -18,22 +18,23 @@
     width: 100%;
 }
 
-.post-index .post-title {
+.post-index .post__item_title {
     font-size: 20px;
     margin-bottom: 15px;
 }
 
-.post-index .post-img {
+.post-index .post__item_img {
     height: 150px;
     width: 200px;
+    margin-right: 20px;
 }
 
-.post-index .post-details {
-    width: calc(100% - 215px);
+.post-index .post__item_details {
+    width: calc(100% - 220px);
     display: inline-block;
 }
 
-.post-index .post-item {
+.post-index .post__item {
     width: 100%;
     min-height: 190px;
     padding: 20px;
@@ -43,7 +44,7 @@
     border-radius: var(--border-radius-2x);
 }
 
-.post-index .post-item:last-of-type{
+.post-index .post__item:last-of-type{
     margin-bottom: 0px;
     border-bottom: 1px solid var(--border);
 }

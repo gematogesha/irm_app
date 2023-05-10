@@ -6,24 +6,22 @@
 
 
 <section>
-    <div class="wrapper flex-wrapper">
+    <div class="wrapper wrapper__flex">
         <div class="about-block left">
-            <div class="about-item-text">
-                <h2 class="about-title">АО "ИРМ"</h2> 
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique adipisci, reiciendis, commodi quisquam saepe deserunt ducimus, veniam maiores excepturi ab iure ea repudiandae distinctio quos voluptatum necessitatibus? Doloribus, voluptas culpa reiciendis magnam necessitatibus consectetur dicta asperiores vel harum blanditiis voluptates modi fugit aliquam iure. Fugit optio molestias, cum explicabo consequuntur quae, nostrum officiis libero harum aut, animi tenetur assumenda excepturi quidem earum enim rerum expedita at. Fuga possimus beatae illo labore sit, consequuntur aliquam, sequi error impedit odit corporis non unde iusto similique dolorem ad fugiat iure eaque architecto! Nobis officia minus atque non in repellendus sunt accusamus, adipisci consequatur?</p>
-                <%= link_to root_path, class: "button-link" do %>
-                    <div class="button button-secondary button-default">Подробнее</div>
-                <% end %>
-            </div>
+            <h2 class="about-block__title title">АО "ИРМ"</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique adipisci, reiciendis, commodi quisquam saepe deserunt ducimus, veniam maiores excepturi ab iure ea repudiandae distinctio quos voluptatum necessitatibus? Doloribus, voluptas culpa reiciendis magnam necessitatibus consectetur dicta asperiores vel harum blanditiis voluptates modi fugit aliquam iure. Fugit optio molestias, cum explicabo consequuntur quae, nostrum officiis libero harum aut, animi tenetur assumenda excepturi quidem earum enim rerum expedita at. Fuga possimus beatae illo labore sit, consequuntur aliquam, sequi error impedit odit corporis non unde iusto similique dolorem ad fugiat iure eaque architecto! Nobis officia minus atque non in repellendus sunt accusamus, adipisci consequatur?</p>
+            <%= link_to root_path, class: "button__link" do %>
+                <div class="button button__secondary button__default">Подробнее</div>
+            <% end %>
         </div>
         <div class="post-block left">
-            <div class="title">
+            <div class="post-block__title title">
                 <h4>Новости</h4>
-                <div class="subtitle">Если не новсти, то события</div>
+                <div class="spost-block__subtitle">Если не новсти, то события</div>
             </div>
             <%= render "post" %>
-            <%= link_to posts_path, class: "button-link" do %>
-                <div class="button button-secondary button-small">Все новости</div>
+            <%= link_to posts_path, class: "button__link" do %>
+                <div class="button button__secondary button__small">Все новости</div>
             <% end %>
         </div>
     </div>

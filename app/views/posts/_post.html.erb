@@ -1,5 +1,5 @@
-<div class="post-item" id="post_id_<%= post.id %>">
-    <div class="post-img left flex-block">
+<div class="post__item" id="post_id_<%= post.id %>">
+    <div class="post__item_img left flex-block">
         <%= link_to post_path(post.number), class: "left flex-block" do%>
             <% if post.image.present? %>
                 <%= image_tag(post.image, alt: post.title, title: post.title) %>
@@ -8,8 +8,8 @@
             <% end %>
         <% end %>
     </div>
-    <div class="post-details">
-        <div class="post-title">
+    <div class="post__item_details">
+        <div class="post__item_title">
             <h5><%= link_to post.title, post_path(post.number)%></h5>
         </div>
             <span>
@@ -19,6 +19,6 @@
                     <%= post.content.to_s.truncate(300, separator: ' ') %>
                 <% end %>
             </span>
-        <div class="post-date small"><%= l(post.created_at, format: :long) %></div>
+        <div class="post__item_date small"><%= l(post.created_at, format: :long) %></div>
     </div>
 </div>
