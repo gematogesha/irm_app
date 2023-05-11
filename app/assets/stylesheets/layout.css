@@ -156,7 +156,7 @@ section{
 
 .content{
     line-height: 1.5;
-    padding: 20px 0;
+    padding: 10px 0;
     background-color: var(--white);
     max-width: 1000px;
 }
