@@ -13,11 +13,7 @@
             <h5><%= link_to post.title, post_path(post.number)%></h5>
         </div>
             <span>
-                <% if post.content.to_s.include? '</action-text-attachment>' %>
-                    <%= post.content.to_s.split('</action-text-attachment>')[1].to_s.truncate(300, separator: ' ').delete '</div>br' %>
-                <% else %>
-                    <%= post.content.to_s.truncate(300, separator: ' ') %>
-                <% end %>
+                <%= post.content.to_plain_text.truncate(300, separator: ' ').gsub(/\[.+?\]/, '') %>
             </span>
         <div class="post__item_date small"><%= l(post.created_at, format: :long) %></div>
     </div>

@@ -5,6 +5,8 @@
     <div class="wrapper wrapper__content">
         <div class="content">
             <div class="content-wrapper">
+                <h5 class="content-title"><%= @post.title %></h5>
+                <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam sit explicabo maiores eveniet vitae id, labore ad animi distinctio quidem dolorem ipsa a</div>
                 <div class="post-details medium">
                     <div class="post-date"><%= l(@post.created_at, format: :long) %></div>
                     <div class="post-views"><%= icon('fa-solid', 'eye')%><%= @post.views %></div>

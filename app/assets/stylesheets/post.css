@@ -1,6 +1,14 @@
 /*-------------------POST-------------------*/
 
 /*-------------------General-------------------*/
+.content .post-details{
+    margin-top: 20px;
+}
+
+.content h5{
+    margin-bottom: 20px;
+}
+
 .content .post-date{
     padding: 0;
 }
@@ -102,4 +110,10 @@
     border-bottom: 1px solid var(--border);
 }
 
+/*-------------------Post-Show-------------------*/
+.content .post-details div{
+    padding: 8px;
+    background-color: var(--blue-pale);
+    border-radius: var(--border-radius);
+}
 
