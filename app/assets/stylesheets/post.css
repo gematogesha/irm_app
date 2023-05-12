@@ -76,8 +76,7 @@
 
 /*-------------------Post-Index-------------------*/
 
-.post-index .post__item_title {
-    font-size: 20px;
+.post-index .post__item_title, .post-index .post-sceleton__item_title {
     margin-bottom: 15px;
 }
 
@@ -89,7 +88,7 @@
 }
 
 
-.post-index .post__item_details {
+.post-index .post__item_details, .post-index .post-sceleton__item_details {
     width: calc(100% - 220px);
     display: inline-block;
 }
@@ -112,8 +111,36 @@
 
 /*-------------------Sceleton-------------------*/
 
-.post-sceleton__item_img{
+.post-index .post-sceleton__item_img{
     background-color: var(--background);
+}
+
+.post-index .post-sceleton__item_title div{
+    height: 24px;
+    width: 75%;
+    border-radius: 24px;
+    background-color: var(--background);
+}
+
+.post-index .post-sceleton__item_details span {
+    background-color: var(--background);
+    height: 16px;
+    width: 60%;
+    border-radius: 16px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.post-index .post-sceleton__item_date{
+    padding-top: 10px;
+}
+
+.post-index .post-sceleton__item_date div{
+    height: 12px;
+    width: 130px;
+    background-color: var(--background);
+    float: right;
+    border-radius: 12px;
 }
 
 /*-------------------Post-Show-------------------*/
