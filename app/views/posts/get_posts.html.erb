@@ -3,8 +3,8 @@
 <section class="section-post">
     <div class="wrapper">
         <div class="post-index">
-        <%= turbo_frame_tag "posts", src: posts_get_posts_path, loading: :lazy do %>
-            <%= render "post_sceleton" %>
+        <%= turbo_frame_tag "posts" do %>
+            <% render @posts %>
         <% end %>
         </div>
     </div>

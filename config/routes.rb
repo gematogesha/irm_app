@@ -1,10 +1,11 @@
 Rails.application.routes.draw do
 
-  root to: "sessions#index"
+  root "sessions#index"
+  get "/posts/get_posts"
 
   resources :sessions, only: %i[new create destroy]
-
   resources :posts, param: :number
+
 
 
 end
