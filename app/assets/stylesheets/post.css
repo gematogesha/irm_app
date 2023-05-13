@@ -145,7 +145,7 @@
 
 /*-------------------Post-Show-------------------*/
 .content .post-details div{
-    padding: 8px;
+    padding: 6px;
     background-color: var(--blue-pale);
     border-radius: var(--border-radius);
 }
