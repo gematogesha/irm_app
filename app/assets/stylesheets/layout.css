@@ -127,6 +127,10 @@ section{
     margin-top: none;
 }
 
+.page-title__text{
+    margin-bottom: 5px;
+}
+
 .breadcrumbs{
     font-size: 13px;
     color: var(--color-clear);
