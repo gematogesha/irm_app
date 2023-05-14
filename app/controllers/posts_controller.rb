@@ -4,6 +4,7 @@ class PostsController < ApplicationController
     before_action :set_post, only: %i[update show destroy edit]
 
 
+
     add_flash_types :info, :error, :success
 
 
@@ -67,31 +68,31 @@ class PostsController < ApplicationController
 
     def show
 
-      @post.update_attribute(:views, @post.views +=1 )
+        @post.update_attribute(:views, @post.views +=1 )
 
-      @page_title_text = @post.title
-      
-      add_breadcrumb("Новости", posts_path)
+        @page_title_text = @post.title
+        
+        @page_title_status = false
 
-      @blob = ActiveStorage::Attachment.find_by(record_id: @post.id)
+        add_breadcrumb("Новости", posts_path)
+
+        @blob = ActiveStorage::Attachment.find_by(record_id: @post.id)
     end
 
 
     private
 
     def post_params
-      params.require(:post).permit(:title, :content, :image)
+        params.require(:post).permit(:title, :content, :image)
     end
   
     def set_post
-      @post = Post.find_by!(number: params[:number]) rescue not_found
+        @post = Post.find_by!(number: params[:number]) rescue not_found
     end
 
     def model_name
         @model_one = Post.model_name.human
         @model_many = Post.model_name.human(count: :many)
     end
-
-
 
 end

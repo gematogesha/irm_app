@@ -28,6 +28,7 @@
 .trix-content action-text-attachment .attachment {
   padding: 0 !important;
   max-width: 100% !important;
+  width: 100%;
 }
 
 .trix-content blockquote {
@@ -36,6 +37,23 @@
   padding-left: 0.8em;
 }
 
+.trix-content .attachment__caption .attachment__name + .attachment__size::before {
+  content: none;
+}
+
+.trix-content .attachment__caption .attachment__name, .trix-content .attachment__caption .attachment__link i {
+  margin-right: 8px;
+}
+
+.trix-content .attachment__caption .attachment__link {
+  display: flex;
+  align-items: center;
+}
+
+.trix-content .attachment__caption .attachment__link i {
+  font-size: 32px;
+  color: var(--red);
+}
 
 .trix-content blockquote::before{
   content: "";
@@ -53,4 +71,8 @@ figure .attachment__caption{
 
 .trix-content img {
   width: 100%;
+}
+
+.trix-content .attachment__caption {
+  text-align: left;
 }

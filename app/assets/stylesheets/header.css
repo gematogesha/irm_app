@@ -47,21 +47,21 @@ header{
     height: 100%;
 }
 
-.header__menu__item{
+.header__menu_item{
     line-height: 76px;
     font-weight: 300;
     padding: 0 13px;
     border-bottom: 4px solid rgba(0, 0, 0, 0);
 }
 
-.header__menu__item a{
+.header__menu_item a{
     height: 100%;
     display: inline-block;
     text-decoration: none !important;
     color: var(--blue) !important;
 }
 
-.header__menu__item:hover{
+.header__menu_item:hover{
     border-bottom: 4px solid var(--blue);
 }
 

@@ -1,26 +1,28 @@
 <section class="page-title">
     <div class="wrapper wrapper__page-title">
         <div class="page-title__text">
-            <h2>
-                <% if page_title_text.present? %>
-                    <%= page_title_text %>
-                <% else %>
-                   <%= "Что-то пошло не так..." %>
-                <% end %>
-            </h2>
+            <%if page_title_status != false %>
+                <h2>
+                    <% if page_title_text.present? %>
+                        <%= page_title_text %>
+                    <% else %>
+                        <%= "Что-то пошло не так..." %>
+                    <% end %>
+                </h2>
+            <% end %>
         </div>
         <div class="breadcrumbs">
-                <% breadcrumbs.each do |crumb| %>
-                    <span>
-                        <% if crumb.link? %>
-                            <%= link_to crumb.name, crumb.path, class: "breadcrumb__link" %>
-                        <% else %>
-                            <span class="breadcrumb__link_current">
-                                <%= crumb.name %>
-                            </span>
-                        <% end %>
-                    </span>
-                <% end %>
+            <% breadcrumbs.each do |crumb| %>
+                <span>
+                    <% if crumb.link? %>
+                        <%= link_to crumb.name, crumb.path, class: "breadcrumb__link" %>
+                    <% else %>
+                        <span class="breadcrumb__link_current">
+                            <%= crumb.name %>
+                        </span>
+                    <% end %>
+                </span>
+            <% end %>
         </div>
     </div>
 </section>

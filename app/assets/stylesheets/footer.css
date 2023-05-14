@@ -3,7 +3,6 @@
 footer{
     background-color: var(--color);
     color: var(--white);
-    display: table-row;
     font-size: 14px;
 }
 

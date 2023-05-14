@@ -1,4 +1,4 @@
-<figure class="attachment attachment--<%= blob.representable? ? "preview" : "file" %> attachment--<%= blob.filename.extension %>">
+<figure class="attachment attachment--<%= blob.representable? ? " preview" : " file" %> attachment--<%= blob.filename.extension %>">
     <% if blob.representable? %>
         <%= image_tag blob.representation(resize_to_limit: local_assigns[:in_gallery] ? [ 800, 600 ] : [ 1024, 768 ]) %>
     <% end %>
@@ -7,6 +7,14 @@
     <figcaption class="attachment__caption">
         <% if caption = blob.try(:caption) %>
             <%= caption %>
+        <% else %>
+            <% if blob.content_type == 'application/pdf' %>
+                <%= link_to rails_blob_path(blob, disposition: "attachment"), class: 'attachment__link' do %>
+                    <%= icon("fa-solid", "file-pdf")%>
+                    <span class="attachment__name"><%= blob.filename %></span>
+                    <span class="attachment__size small"><%= number_to_human_size blob.byte_size %></span>
+                <% end %>
+            <% end %>
         <% end %>
     </figcaption>
 </figure>

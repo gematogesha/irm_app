@@ -1,10 +1,6 @@
 /*-------------------POST-------------------*/
 
 /*-------------------General-------------------*/
-.content .post-details{
-    margin-top: 20px;
-}
-
 .content h5{
     margin-bottom: 20px;
 }
@@ -27,6 +23,7 @@
     align-items: center;
     flex-wrap: nowrap;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 .post-block__item_img a, .post__item_img a{
@@ -76,8 +73,12 @@
 
 /*-------------------Post-Index-------------------*/
 
+.post-index{
+    width: calc(100% - 300px);
+}
+
 .post-index .post__item_title, .post-index .post-sceleton__item_title {
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .post-index .post__item_img, .post-index .post-sceleton__item_img {
@@ -87,6 +88,10 @@
     border-radius: var(--border-radius);
 }
 
+
+.post-index .post__item_details span{
+    line-height: 1.5;
+}
 
 .post-index .post__item_details, .post-index .post-sceleton__item_details {
     width: calc(100% - 220px);
@@ -117,7 +122,7 @@
 
 .post-index .post-sceleton__item_title div{
     height: 24px;
-    width: 75%;
+    width: 100%;
     border-radius: 24px;
     background-color: var(--background);
 }
@@ -125,7 +130,6 @@
 .post-index .post-sceleton__item_details span {
     background-color: var(--background);
     height: 16px;
-    width: 60%;
     border-radius: 16px;
     display: block;
     margin-bottom: 10px;
@@ -148,5 +152,6 @@
     padding: 6px;
     background-color: var(--blue-pale);
     border-radius: var(--border-radius);
+    line-height: 16px;
 }
 

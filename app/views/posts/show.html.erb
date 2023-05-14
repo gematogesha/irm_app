@@ -2,15 +2,16 @@
 
 
 <section class="section-post" style="padding: 0;">
-    <div class="wrapper wrapper__content">
+    <div class="wrapper wrapper__content wrapper__flex_top">
+        <%= render "shared/sidebar" %>
         <div class="content">
             <div class="content-wrapper">
                 <h5 class="content-title"><%= @post.title %></h5>
-                <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam sit explicabo maiores eveniet vitae id, labore ad animi distinctio quidem dolorem ipsa a</div>
                 <div class="post-details medium">
                     <div class="post-date"><%= l(@post.created_at, format: :long) %></div>
                     <div class="post-views"><%= icon('fa-solid', 'eye')%><%= @post.views %></div>
                 </div>
+                <div><%= @post.content.to_plain_text.split('.')[0]%></div>
             </div>
             <% if @post.image.present? %>
                 <div class="content-image">
