@@ -23,12 +23,12 @@
     color: var(--white);
 }
 
-.sidebar__item:first-child{
+.sidebar__item_link:first-child .sidebar__item{
     border-top-left-radius: var(--border-radius);
     border-top-right-radius: var(--border-radius);
 }
 
-.sidebar__item:last-child{
+.sidebar__item_link:last-child .sidebar__item{
     border-bottom-left-radius: var(--border-radius);
     border-bottom-right-radius: var(--border-radius);
     margin: 0;

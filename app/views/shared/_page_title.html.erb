@@ -1,7 +1,7 @@
 <section class="page-title">
     <div class="wrapper wrapper__page-title">
-        <div class="page-title__text">
-            <%if page_title_status != false %>
+        <%if page_title_status != false %>
+            <div class="page-title__text">
                 <h2>
                     <% if page_title_text.present? %>
                         <%= page_title_text %>
@@ -9,8 +9,8 @@
                         <%= "Что-то пошло не так..." %>
                     <% end %>
                 </h2>
-            <% end %>
-        </div>
+            </div>
+        <% end %>
         <div class="breadcrumbs">
             <% breadcrumbs.each do |crumb| %>
                 <span>

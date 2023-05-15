@@ -165,12 +165,9 @@ section{
     line-height: 1.5;
     padding: 10px 0;
     background-color: var(--white);
+    margin: auto;
+    max-width: 900px;
 }
-
-.post-index, .content{
-    width: calc(100% - 300px);
-}
-
 
 .content-wrapper{
     margin: auto;

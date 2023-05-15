@@ -1,5 +1,5 @@
 <div class="post__item" id="post_id_<%= post.id %>">
-    <div class="post__item_img left flex-block">
+    <div class="post__item_img left">
         <%= link_to post_path(post.number), class: "left flex-block" do%>
             <% if post.image.present? %>
                 <%= image_tag(post.image, alt: post.title, title: post.title) %>
@@ -12,9 +12,9 @@
         <div class="post__item_title">
             <h5><%= link_to post.title, post_path(post.number)%></h5>
         </div>
-            <span>
+            <span class="left">
                 <%= post.content.to_plain_text.truncate(200, separator: ' ').gsub(/\[.+?\]/, '') %>
             </span>
-        <div class="post__item_date small"><%= l(post.created_at, format: :long) %></div>
+        <div class="post__item_date small right"><%= l(post.created_at, format: :long) %></div>
     </div>
 </div>
