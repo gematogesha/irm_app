@@ -44,11 +44,15 @@
 }
 
 .post-block__item_date, .post-index .post__item_date, .content .post-details div{
+    line-height: 16px;
+}
+
+.post-index .post-box__item_date, .post-index .post__item_date, .content .post-details div{
     padding: 5px;
     background-color: var(--blue-pale);
     border-radius: var(--border-radius);
-    line-height: 16px;
 }
+
 
 /*-------------------Main-Page-------------------*/
 
@@ -125,22 +129,22 @@
 
 
 
-/*-------------------Post-Index-Block-------------------*/
+/*-------------------Post-Index-box-------------------*/
 
 .post-index{
     width: calc(100% - 300px);
 }
 
-.post-index .post-block__item .post__item_title, .post-index .post-block__item .post-sceleton__item_title {
+.post-index .post-box__item .post__item_title, .post-index .post-box__item .post-sceleton__item_title {
     margin-bottom: 10px;
 }
 
-.post-index .post-block__item .post__item_img, .post-index .post-block__item .post-block-sceleton__item_img {
+.post-index .post-box__item .post__item_img, .post-index .post-box__item .post-box-sceleton__item_img {
     height: 300px;
     width: 100%;
 }
 
-.post-index .post-block__item .post__item_img a{
+.post-index .post-box__item .post__item_img a{
     height: 100%;
     width: 100%;
     border-top-left-radius: var(--border-radius);
@@ -149,23 +153,23 @@
     border-bottom-right-radius: 0;
 }
 
-.post-index .post-block__item .post__item_img a img{
+.post-index .post-box__item .post__item_img a img{
     border-radius: 0;
 }
 
-.post-index .post-block__item .post__item_details span{
+.post-index .post-box__item .post__item_details span{
     line-height: 1.5;
     width: 100%;
 }
 
-.post-index .post-block__item .post__item_details, .post-index .post-block__item .post-block-sceleton__item_details {
+.post-index .post-box__item .post__item_details, .post-index .post-box__item .post-box-sceleton__item_details {
     display: inline-block;
     width: 100%;
     padding: 20px;
 }
 
 
-.post-index .post-block__item, .post-index .post-block-sceleton__item {
+.post-index .post-box__item, .post-index .post-box-sceleton__item {
     min-height: 190px;
     margin-bottom: 28px;
     border-bottom: 1px solid var(--border);

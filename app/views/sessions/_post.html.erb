@@ -14,7 +14,7 @@
             <div class="post-block__item_title">
                 <%= link_to post.title, post_path(post.number)%>
             </div>
-            <div class="post-block__item_date small"><%= l(post.created_at, format: :long) %></div>
+            <div class="post-block__item_date small right"><%= l(post.created_at, format: :long) %></div>
         </div>
     </div>
 <% end %>
