@@ -73,10 +73,6 @@
 
 /*-------------------Post-Index-------------------*/
 
-.post-index{
-    width: calc(100% - 300px);
-}
-
 .post-index .post__item_title, .post-index .post-sceleton__item_title {
     margin-bottom: 10px;
 }
