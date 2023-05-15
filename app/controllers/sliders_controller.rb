@@ -19,7 +19,7 @@ class SlidersController < ApplicationController
         @slider = Slider.create(slider_params)
 
         if @slider.save
-          redirect_to sliders_path, success: "Слайдер создан"
+          redirect_to root_path, success: "Слайдер создан"
         else     
             render :new
         end
@@ -40,7 +40,7 @@ class SlidersController < ApplicationController
     private
 
     def slider_params
-        params.require(:slider).permit(:title, :description, :image)
+        params.require(:slider).permit(:title, :description, :link, :image)
     end
   
     def set_slider

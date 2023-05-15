@@ -65,6 +65,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_15_135108) do
   create_table "sliders", force: :cascade do |t|
     t.string "title"
     t.text "description"
+    t.string "link"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
