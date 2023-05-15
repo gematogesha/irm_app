@@ -1,0 +1,5 @@
+<% if variable.errors.any? %>
+    <% variable.errors.full_messages.each do |notification| %>
+        <div><%= notification %></div>
+    <% end %>
+<% end %>

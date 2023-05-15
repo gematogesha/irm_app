@@ -3,8 +3,6 @@ class PostsController < ApplicationController
     before_action :model_name
     before_action :set_post, only: %i[update show destroy edit]
 
-
-
     add_flash_types :info, :error, :success
 
 
@@ -22,6 +20,19 @@ class PostsController < ApplicationController
         @page_title_text = @model_many
     end
 
+    def show
+
+        @post.update_attribute(:views, @post.views +=1 )
+
+        @page_title_text = @post.title
+        
+        @page_title_status = false
+
+        add_breadcrumb("Новости", posts_path)
+
+        @blob = ActiveStorage::Attachment.find_by(record_id: @post.id)
+    end
+
     def create
         add_breadcrumb("Новости", posts_path)
 
@@ -35,21 +46,6 @@ class PostsController < ApplicationController
             render :new
         end
     end
-
-    def update
-        add_breadcrumb("Новости", posts_path)
-
-        @page_title_text = "Редактировать новость"  
-
-        @post.update(post_params)
-        
-        if @post.update(post_params)
-            redirect_to post_path(@post.number), success: "Новость обновлена"
-        else 
-            render :edit
-        end
-    end
-
 
     def new
         @post = Post.new
@@ -66,19 +62,20 @@ class PostsController < ApplicationController
         @page_title_text = "Редактировать новость"  
     end
 
-    def show
 
-        @post.update_attribute(:views, @post.views +=1 )
-
-        @page_title_text = @post.title
-        
-        @page_title_status = false
-
+    def update
         add_breadcrumb("Новости", posts_path)
 
-        @blob = ActiveStorage::Attachment.find_by(record_id: @post.id)
-    end
+        @page_title_text = "Редактировать новость"  
 
+        @post.update(post_params)
+        
+        if @post.update(post_params)
+            redirect_to post_path(@post.number), success: "Новость обновлена"
+        else 
+            render :edit
+        end
+    end
 
     private
 
