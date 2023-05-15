@@ -39,12 +39,8 @@
     border-radius: var(--border-radius);
 }
 
-.post-block__item_date, .post-index .post__item_date{
+.post-block__item_date {
     padding-top: 10px;
-}
-
-.post-block__item_date, .post-index .post__item_date, .content .post-details div{
-    line-height: 16px;
 }
 
 .post-index .post-box__item_date, .post-index .post__item_date, .content .post-details div{

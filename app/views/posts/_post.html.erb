@@ -10,9 +10,9 @@
     </div>
     <div class="post__item_details">
         <div class="post__item_title">
-            <h5><%= link_to post.title, post_path(post.number)%></h5>
+            <h5 align="justify"><%= link_to post.title, post_path(post.number)%></h5>
         </div>
-            <span class="left">
+            <span align="justify" class="left">
                 <%= post.content.to_plain_text.truncate(200, separator: ' ').gsub(/\[.+?\]/, '') %>
             </span>
         <div class="post__item_date small right"><%= l(post.created_at, format: :long) %></div>

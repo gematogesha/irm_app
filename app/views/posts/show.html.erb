@@ -10,7 +10,7 @@
                     <div class="post-date"><%= l(@post.created_at, format: :long) %></div>
                     <div class="post-views"><%= icon('fa-solid', 'eye')%><%= @post.views %></div>
                 </div>
-                <div><%= @post.content.to_plain_text.split('.')[0]%></div>
+                <div align="justify"><%= @post.content.to_plain_text.split('.')[0]%></div>
             </div>
             <% if @post.image.present? %>
                 <div class="content-image">
