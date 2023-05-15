@@ -1,3 +1,7 @@
+.wrapper__content .sidebar-block{
+    padding-top: 32px
+}
+
 .sidebar-block{
     width: calc(100% - 900px);
     padding-right: 28px;
