@@ -83,7 +83,8 @@
     margin-right: 15px;
 }
 
-/*-------------------Post-Index-------------------*/
+/*-------------------Post-Index-------------------
+
 
 .post-index{
     width: calc(100% - 300px)
@@ -132,14 +133,14 @@
 /*-------------------Post-Index-box-------------------*/
 
 .post-index{
-    width: calc(100% - 300px);
+    width: 100%;
 }
 
-.post-index .post-box__item .post__item_title, .post-index .post-box__item .post-sceleton__item_title {
+.post-index .post-box__item .post__item_title, .post-index .post-box-sceleton__item .post-sceleton__item_title {
     margin-bottom: 10px;
 }
 
-.post-index .post-box__item .post__item_img, .post-index .post-box__item .post-box-sceleton__item_img {
+.post-index .post-box__item .post__item_img, .post-index .post-box-sceleton__item .post-sceleton__item_img {
     height: 300px;
     width: 100%;
 }
@@ -162,7 +163,7 @@
     width: 100%;
 }
 
-.post-index .post-box__item .post__item_details, .post-index .post-box__item .post-box-sceleton__item_details {
+.post-index .post-box__item .post__item_details, .post-index .post-box-sceleton__item .post-sceleton__item_details {
     display: inline-block;
     width: 100%;
     padding: 20px;
@@ -184,7 +185,14 @@
 /*-------------------Sceleton-------------------*/
 
 .post-index .post-sceleton__item_img{
+    padding: 20px;
+}
+
+.post-index .post-sceleton__item_img div {
+    width: 100%;
     background-color: var(--background);
+    height: 100%;
+    border-radius: var(--border-radius);
 }
 
 .post-index .post-sceleton__item_title div{
