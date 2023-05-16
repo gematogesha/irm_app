@@ -3,9 +3,9 @@
 <section class="section-post">
     <div class="wrapper">
         <div class="post-index">
-        <%= turbo_frame_tag "posts", src: posts_get_posts_path, loading: :lazy do %>
-            <%= render "post_sceleton" %>
-        <% end %>
+            <%= turbo_frame_tag "posts", src: posts_get_posts_path, loading: :lazy do %>
+                <%= render "post_sceleton" %>
+            <% end %>
         </div>
     </div>
 </section>
