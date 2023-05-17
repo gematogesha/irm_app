@@ -10,6 +10,12 @@
     <%= form.label :image %>
     <%= form.file_field :image %>
 
+    <%= form.label :hot %>
+    <%= form.check_box :hot %>
+
+    <%= form.label :best %>
+    <%= form.check_box :best %>
+
     <%= form.submit class: "button buttom__primary"%>
   </div>
 <% end %>
