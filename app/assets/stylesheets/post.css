@@ -168,7 +168,7 @@
 
 .post-index .post-box__item, .post-index .post-box-sceleton__item {
     min-height: 190px;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
     border-bottom: 1px solid var(--border);
     background-color: var(--white);
     border-radius: var(--border-radius);
@@ -244,7 +244,8 @@
     border-bottom: 1px solid var(--white);
     border-top: 1px solid var(--white);
     border-right: 1px solid var(--white);
-    top: 10px
+    top: 10px;
+    width: 50px;
 }
 
 .post-index .post__hot i, .post-index .post__best i{
@@ -267,7 +268,7 @@
 /*-------------------Post-Show-------------------*/
 
 .content .post__hot, .content .post__best{
-    font-size: 20px;
+    font-size: 18px;
     line-height: 32px;
     padding: 0 5px;
     display: contents;
