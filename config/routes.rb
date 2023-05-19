@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   resources :sessions, only: %i[new create destroy]
   resources :posts, param: :number
   resources :sliders
+  resources :documents, param: :page_title
 
 
 

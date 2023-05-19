@@ -12,7 +12,7 @@ class SlidersController < ApplicationController
 
 
     def create
-        add_breadcrumb("Новости", sliders_path)
+        add_breadcrumb(@model_many, sliders_path)
 
         @page_title_text = "Создать слайдер"
 
@@ -29,7 +29,7 @@ class SlidersController < ApplicationController
     def new
         @slider = Slider.new
 
-        add_breadcrumb("Новости", sliders_path)
+        add_breadcrumb(@model_many, sliders_path)
 
         @page_title_text = "Создать слайдер"
 

@@ -5,12 +5,12 @@
     <div class="wrapper wrapper__content">
         <div class="content">
             <div class="content-wrapper">
-                <h5 class="content-title"><%= @post.title %>
+                <h5 class="content-title left"><%= @post.title %>
                     <% if @post.hot == true %>
-                        <div class="post__hot left"><%= icon("fa-solid", "fire")%></div>
+                        <div class="post__hot"><%= icon("fa-solid", "fire")%></div>
                     <% end %>
                     <% if @post.best == true %>
-                        <div class="post__best left"><%= icon("fa-solid", "star")%></div>
+                        <div class="post__best"><%= icon("fa-solid", "star")%></div>
                     <% end %>
                 </h5>
                 <div class="post-details medium">

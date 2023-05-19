@@ -270,8 +270,8 @@
 .content .post__hot, .content .post__best{
     font-size: 18px;
     line-height: 32px;
-    padding: 0 5px;
-    display: contents;
+    /*padding-left: 6px;*/
+    display: inline;
 }
 
 .content .post__best i{

@@ -7,7 +7,7 @@ class PostsController < ApplicationController
 
 
     def index
-        add_breadcrumb("Новости")
+        add_breadcrumb(@model_many)
 
         @page_title_text = @model_many
     end
@@ -15,7 +15,7 @@ class PostsController < ApplicationController
     def get_posts
         @posts = Post.all.order(created_at: :desc)    
         
-        add_breadcrumb("Новости")
+        add_breadcrumb(@model_many)
 
         @page_title_text = @model_many
     end
@@ -28,13 +28,13 @@ class PostsController < ApplicationController
         
         @page_title_status = false
 
-        add_breadcrumb("Новости", posts_path)
+        add_breadcrumb(@model_many, posts_path)
 
         @blob = ActiveStorage::Attachment.find_by(record_id: @post.id)
     end
 
     def create
-        add_breadcrumb("Новости", posts_path)
+        add_breadcrumb(@model_many, posts_path)
 
         @page_title_text = "Создать новость"
 
@@ -50,21 +50,21 @@ class PostsController < ApplicationController
     def new
         @post = Post.new
 
-        add_breadcrumb("Новости", posts_path)
+        add_breadcrumb(@model_many, posts_path)
 
         @page_title_text = "Создать новость"
 
     end
 
     def edit
-        add_breadcrumb("Новости", posts_path)
+        add_breadcrumb(@model_many, posts_path)
 
         @page_title_text = "Редактировать новость"  
     end
 
 
     def update
-        add_breadcrumb("Новости", posts_path)
+        add_breadcrumb(@model_many, posts_path)
 
         @page_title_text = "Редактировать новость"  
 
