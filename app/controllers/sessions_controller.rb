@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
     end
 
     def accept_cookies
-		cookies[:status] = false
+		cookies[:status] = true
 	end
 
 end
