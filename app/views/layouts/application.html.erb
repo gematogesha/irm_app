@@ -20,6 +20,7 @@
             <%= render partial: "shared/page_title", locals: { page_title_text: @page_title_text, page_title_status: @page_title_status} %>
         <% end %>
         <%= yield %>
+        <%= render "shared/cookies" %>
         <%= render "shared/footer" %>
 
         <%= javascript_include_tag "flickerplate" %>
