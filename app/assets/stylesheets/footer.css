@@ -4,6 +4,10 @@ footer{
     background-color: var(--color);
     color: var(--white);
     font-size: 14px;
+    margin-top: -350px;
+    min-height: 350px;
+    position: relative;
+    clear: both;
 }
 
 .footer-top .wrapper, .footer-bot .wrapper{

@@ -8,7 +8,11 @@ class SessionsController < ApplicationController
     end
 
     def accept_cookies
-		cookies[:status] = true
+		cookies[:cookie_policy] = { value: true, expires: 1.month }
+
+        redirect_back(fallback_location: root_path)
 	end
+
+
 
 end

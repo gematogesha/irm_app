@@ -279,7 +279,7 @@
 }
 
 .content .post__hot i{
-    background: -webkit-linear-gradient(#ff8c42, var(--red));
+    background: -webkit-linear-gradient(#ffce42, var(--red));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
