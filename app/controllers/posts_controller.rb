@@ -29,8 +29,6 @@ class PostsController < ApplicationController
         @page_title_status = false
 
         add_breadcrumb(@model_many, posts_path)
-
-        @blob = ActiveStorage::Attachment.find_by(record_id: @post.id)
     end
 
     def create

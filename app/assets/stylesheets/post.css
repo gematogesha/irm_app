@@ -13,9 +13,7 @@
     margin-right: 8px;
 }
 
-.section-post{
-    background-color: var(--background);
-}
+
 
 .content .post-details{
     display: flex;

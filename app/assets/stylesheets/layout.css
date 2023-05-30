@@ -219,3 +219,7 @@ section{
 .cookies .wrapper button{
     width: 100px;
 }
+
+.section-post, .section-about{
+    background-color: var(--background);
+}
