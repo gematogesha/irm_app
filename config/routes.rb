@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :posts, param: :number
   resources :sliders
   resources :documents, param: :page_title
+  resources :abouts, param: :page_title
 
 
 
