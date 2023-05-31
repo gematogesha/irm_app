@@ -24,10 +24,8 @@
 
         </div>
             <%= render "shared/footer" %>
-
-            <%= turbo_frame_tag "cookies" do %>
-                <%= render "shared/cookies" %>
-            <% end %>
+            <%= render "shared/cookies" %>
+            
             <%= javascript_include_tag "flickerplate" %>
             <script>
                 new flickerplate({selector: '.slider'});

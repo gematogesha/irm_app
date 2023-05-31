@@ -34,6 +34,12 @@ class ApplicationController < ActionController::Base
 		add_breadcrumb("Главная", root_path)
 	end
 
-
+	def admin_check
+		if session[:admin] == true
+			return
+		else
+			not_found
+		end
+	end	
 
 end
