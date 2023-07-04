@@ -8,12 +8,46 @@ class DocumentsController < ApplicationController
 
     def index
         @documents = Document.all
+
+        add_breadcrumb(@model_many)
+
+        @page_title_text = @model_many
     end
+
+    def create
+        add_breadcrumb(@model_many, documents_path)
+
+        @page_title_text = "Создать документ"
+
+        @document = Document.create(document_params)
+
+        if @document.save
+          redirect_to documents_path, success: "Документ создан"
+        else     
+            render :new
+        end
+    end
+
+    def new
+        @document = Document.new
+
+        add_breadcrumb(@model_many, documents_path)
+
+        @page_title_text = "Создать документ"
+
+    end
+
+
+
+
+
+
+
 
     private
 
     def document_params
-        params.require(:document).permit(:title, :content, :image, :hot, :best)
+        params.require(:document).permit(:title, :description, :file)
     end
   
     def set_document

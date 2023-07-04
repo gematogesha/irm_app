@@ -220,6 +220,6 @@ section{
     width: 100px;
 }
 
-.section-post, .section-about{
+.section-posts, .section-about, .section-documents{
     background-color: var(--background);
 }

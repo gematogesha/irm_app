@@ -1,11 +1,11 @@
-<%= render "shared/alert", variable: @slider %>
+<%= render "shared/alert", variable: @document %>
 
 
 <%- title @page_title_text %>
 
 <section class="section-posts">
     <div class="wrapper">
-        <%= render "form" %>
+        <%= render "form", post: @document, url: @document %>
     </div>
 </section>
 

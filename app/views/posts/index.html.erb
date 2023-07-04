@@ -1,6 +1,6 @@
 <%- title @page_title_text %>
 
-<section class="section-post">
+<section class="section-posts">
     <div class="wrapper">
         <div class="post-index">
             <%= turbo_frame_tag "posts", src: posts_get_posts_path, loading: :lazy do %>

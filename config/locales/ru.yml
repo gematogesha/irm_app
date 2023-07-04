@@ -3,7 +3,10 @@ ru:
     models:
       post:
         one: "Новость"
-        other: "Новости"       
+        other: "Новости"      
+      document:
+        one: "Документ"
+        other: "Документы"   
     attributes:
       post:
         title: "Заголовок"

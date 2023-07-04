@@ -34,7 +34,8 @@
 .trix-content blockquote {
   position: relative;
   border: none;
-  padding-left: 0.8em;
+  padding-left: 1.2em;
+  margin-left: 0;
 }
 
 .trix-content .attachment__caption .attachment__name + .attachment__size::before {
@@ -75,4 +76,17 @@ figure .attachment__caption{
 
 .trix-content .attachment__caption {
   text-align: center;
+}
+
+.trix-content .attachment-gallery > action-text-attachment, .trix-content .attachment-gallery > .attachment {
+  padding: 0 0.2em;
+  max-width: none;
+}
+
+.trix-content .attachment-gallery > action-text-attachment:first-child, .trix-content .attachment-gallery > .attachment:first-child {
+  padding-left: 0;
+}
+
+.trix-content .attachment-gallery > action-text-attachment:last-child, .trix-content .attachment-gallery > .attachment:last-child {
+  padding-right: 0;
 }
