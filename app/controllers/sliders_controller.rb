@@ -1,5 +1,6 @@
 class SlidersController < ApplicationController
 
+    before_action :loggedin
     before_action :model_name
     before_action :set_slider, only: %i[update show destroy edit]
 

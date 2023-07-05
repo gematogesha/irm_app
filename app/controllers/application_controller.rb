@@ -34,12 +34,13 @@ class ApplicationController < ActionController::Base
 		add_breadcrumb("Главная", root_path)
 	end
 
-	def admin_check
-		if session[:admin] == true
+	def loggedin
+		if session[:admin]
 			return
 		else
-			not_found
+			redirect_to login_path(subdomain: "admin")
 		end
-	end	
+	end
+
 
 end

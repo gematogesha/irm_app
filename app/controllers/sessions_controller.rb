@@ -1,6 +1,6 @@
 class SessionsController < ApplicationController
 
-    #before_action :admin_check, only: [:destroy]
+    before_action :loggedin, only: [:destroy, :admin]
 
     add_flash_types :info, :error, :success
 
@@ -10,7 +10,9 @@ class SessionsController < ApplicationController
     end
 
     def new
-
+        if session[:admin]
+          redirect_to control_panel_path(subdomain: "admin")
+        end 
     end
   
     def admin
@@ -31,16 +33,15 @@ class SessionsController < ApplicationController
     
             redirect_to control_panel_path(subdomain: "admin"), info: "Вы вошли на сайт"
         else
-            redirect_to root_path, error: "Неправельный email или пароль"
+            redirect_to login_path, error: "Неправельный email или пароль"
     
         end
     end
   
     def destroy
-        session.delete(:admin)
+        session.destroy
     
         redirect_to root_path, info: "Вы вышли из аккаунта"
-  
     end
 
 

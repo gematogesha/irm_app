@@ -256,7 +256,7 @@
 }
 
 .content .post__best i, .post-index .post__best i{
-    color: var(--blue);
+    color: var(--blue-hover);
 }
 
 .content .post__hot i, .post-index .post__hot i{

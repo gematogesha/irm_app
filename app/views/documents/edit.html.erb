@@ -1,0 +1,13 @@
+<%= render "shared/alert", variable: @document %>
+
+
+<%- title @page_title_text %>
+
+<section class="section-documents">
+    <div class="wrapper">
+        <%= render "form", document: @document, url: document_path(@document.page_title) %>
+    </div>
+</section>
+
+
+

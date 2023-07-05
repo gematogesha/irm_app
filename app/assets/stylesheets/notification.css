@@ -9,11 +9,14 @@
 	padding: 15px 20px;
     -webkit-animation: move 5s ease-in-out;
     animation: move 5s ease-in-out;
+	display: flex;
+    align-items: center;
 }
 
 .notification i {
 	float: left;
 	margin-right: 20px;
+	font-size: 26px;
 }
 
 @keyframes move {
@@ -42,7 +45,6 @@
 
 .notification>span {
     display: table-cell;
-    height: 30px;
     vertical-align: middle;
 }
 

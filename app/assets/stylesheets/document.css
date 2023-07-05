@@ -1,0 +1,45 @@
+/*-------------------Document-------------------*/
+
+.section-documents .document__item {
+    border-bottom: 1px solid var(--border);
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.section-documents .document__item:last-child{
+    margin-bottom: 0;
+}
+
+.section-documents .document__item .document__item_text,
+.section-documents .document__item .document__item_file{
+    display: inline-block;
+}
+
+.section-documents .document__item .document__item_text .document__item_title + p {
+    padding-top: 10px;
+}
+
+.section-documents .document__item .document__item_file{
+    max-width: 210px;
+    border-left: 2px solid var(--background);
+    padding-left: 20px;
+}
+
+.section-documents .document__item .document__item_file i{
+    color: var(--red);
+    font-size: 36px;
+    width: 100%;
+    text-align: center;    
+    padding-bottom: 5px;
+}
+
+.section-documents iframe{
+    width: 100%;
+    height: 900px; 
+    border: none;
+}

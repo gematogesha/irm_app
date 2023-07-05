@@ -47,10 +47,6 @@ footer{
     margin-bottom: 25px;
 }
 
-.footer-top__item-main{
-    padding-right: 50px;
-}
-
 .footer-top__item-main span:last-child{
     margin: 0;
 }
@@ -120,7 +116,7 @@ footer{
     color: var( --disabled);
 }
 
-.footer-bot .wrapper div a, .footer-top__item ul{
+.footer-bot .wrapper div a{
     margin-right: 50px;
 }
 
