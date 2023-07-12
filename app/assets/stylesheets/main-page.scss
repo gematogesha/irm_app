@@ -58,11 +58,23 @@
     border-radius: var(--border-radius);
     padding: 20px;
     color: var(--white);
-    
-    background: rgb(68,128,243);
-    background: linear-gradient(-25deg, rgba(68,128,243,1) 75%, rgba(68,128,243,0.8) 90%, rgba(68,128,243,0.2) 100%);
-    
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: 150%;
 }
+
+#activity-block__item_1{
+    background-image: image-url('atom_white.png'), linear-gradient(270deg, rgba(68,128,243,1) 0%, rgba(15,89,232,1) 100%);
+}
+
+#activity-block__item_2{
+    background-image: image-url('gears_white.png'), linear-gradient(270deg, rgba(68,128,243,1) 0%, rgba(15,89,232,1) 100%);
+}
+
+#activity-block__item_3{
+    background-image: image-url('idea_white.png'), linear-gradient(270deg, rgba(68,128,243,1) 0%, rgba(15,89,232,1) 100%);
+}
+
 
 .activity-block__item .activity-block__item_title {
     margin-bottom: 25px;
