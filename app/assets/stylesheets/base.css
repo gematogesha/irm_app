@@ -10,10 +10,10 @@
 	--black: rgb(12, 20, 33);
     --white: #fff;
     --navy-blue: #2C2783;
-    --blue: #006FFA;
-    --blue-hover: #368EFC;
-    --blue-clear: #006ffab3;
-    --blue-light: #6BACFD;
+    --blue: #4480F3;
+    --blue-hover: #578DF4;
+    --blue-clear: #7DAFFC;
+    --blue-light: #BCD6FE;
     --blue-pale: #D6E9FF;
     --red: #ff3c38;
     --orange: #ff8c42;
@@ -21,8 +21,8 @@
 
 
     /* --shadow: 1px 2px 9px rgba(0, 111, 250, 0.3); */
-    --shadow: 1px 2px 6px rgba(0, 0, 0, 0.3);
-    --shadow-inset: inset 1px 2px 6px rgba(0, 0, 0, 0.3);
+    --shadow: 1px 2px 6px #0C10181F;
+    --shadow-inset: inset 1px 2px 6px #0C10181F;
 
 
     --border-radius: 8px;

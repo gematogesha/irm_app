@@ -26,6 +26,7 @@
 
 .section-documents .document__item .document__item_file{
     max-width: 210px;
+    min-width: 140px;
     border-left: 2px solid var(--background);
     padding-left: 20px;
 }

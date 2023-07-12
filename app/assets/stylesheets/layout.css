@@ -52,7 +52,7 @@ a{
 }
 
 a:hover{
-    color: var(--blue-clear);
+    color: var(--blue-hover);
     text-decoration: none;
 }
 
@@ -85,6 +85,12 @@ section{
     display: flex;
     align-items: flex-start;
     Justify-content: flex-start;
+}
+
+.wrapper__flex_around{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .flex-block{
@@ -220,6 +226,6 @@ section{
     width: 100px;
 }
 
-.section-posts, .section-about, .section-documents{
+.section-gray{
     background-color: var(--background);
 }

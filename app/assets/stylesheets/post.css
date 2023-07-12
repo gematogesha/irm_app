@@ -26,7 +26,8 @@
     border-radius: var(--border-radius);
 }
 
-.post-block__item_img a img, .post-index .post__item_img a img {
+.post-block__item_img a img, 
+.post-index .post__item_img a img {
     min-height:100%; 
     min-width: 100%; 
     object-fit: cover; 
@@ -37,7 +38,9 @@
     padding-top: 10px;
 }
 
-.post-index .post-box__item_date, .post-index .post__item_date, .content .post-details div{
+.post-index .post-box__item_date, 
+.post-index .post__item_date, 
+.content .post-details div{
     padding: 5px;
     background-color: var(--blue-pale);
     border-radius: var(--border-radius);
@@ -126,11 +129,13 @@
     width: 100%;
 }
 
-.post-index .post-box__item .post__item_title, .post-index .post-box-sceleton__item .post-sceleton__item_title {
+.post-index .post-box__item .post__item_title, 
+.post-index .post-box-sceleton__item .post-sceleton__item_title {
     margin-bottom: 10px;
 }
 
-.post-index .post-box__item .post__item_img, .post-index .post-box-sceleton__item .post-sceleton__item_img {
+.post-index .post-box__item .post__item_img, 
+.post-index .post-box-sceleton__item .post-sceleton__item_img {
     height: 250px;
     width: 100%;
 }
@@ -153,14 +158,16 @@
     width: 100%;
 }
 
-.post-index .post-box__item .post__item_details, .post-index .post-box-sceleton__item .post-sceleton__item_details {
+.post-index .post-box__item .post__item_details, 
+.post-index .post-box-sceleton__item .post-sceleton__item_details {
     display: inline-block;
     width: 100%;
     padding: 20px;
 }
 
 
-.post-index .post-box__item, .post-index .post-box-sceleton__item {
+.post-index .post-box__item, 
+.post-index .post-box-sceleton__item {
     min-height: 190px;
     margin-bottom: 20px;
     border-bottom: 1px solid var(--border);
