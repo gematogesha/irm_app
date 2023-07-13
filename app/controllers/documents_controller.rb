@@ -39,19 +39,9 @@ class DocumentsController < ApplicationController
     end
 
     def show
-
         @page_title_text = @document.title
         
         add_breadcrumb(@model_many, documents_path)
-
-    end
-
-    def new
-        @document = Document.new
-
-        add_breadcrumb(@model_many, documents_path)
-
-        @page_title_text = "Создать документ"
 
     end
 
