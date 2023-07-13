@@ -212,7 +212,7 @@ section{
     position: fixed;
     bottom: 0;
     width: 100%;
-    background: var(--blue-clear);
+    background: var(--blue);
 }
 
 .cookies .wrapper div{
