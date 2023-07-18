@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   resources :posts, only: %i[index show], param: :number
   resources :documents, only: %i[index show], param: :page_title
   resources :abouts, only: %i[index show], param: :page_title
+  resources :leaders, only: %i[index], param: :page_title
 
   constraints subdomain: 'admin' do
     resources :sessions, only: %i[new create destroy]
@@ -18,6 +19,7 @@ Rails.application.routes.draw do
     resources :posts, param: :number
     resources :documents, param: :page_title
     resources :abouts, param: :page_title
+    resources :leaders, param: :page_title
   end
 
 end
