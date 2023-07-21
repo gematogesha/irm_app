@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   post "sessions/accept_cookies"
 
   resources :sessions, only: %i[accept_cookies]
-  resources :posts, only: %i[index show], param: :number
+  resources :posts, param: :number
   resources :documents, only: %i[index show], param: :page_title
   resources :abouts, only: %i[index show], param: :page_title
   resources :leaders, only: %i[index], param: :page_title

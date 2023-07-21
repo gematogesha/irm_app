@@ -1,11 +1,11 @@
 /*-------------------Footer-------------------*/
 
 footer{
-    background-color: var(--color);
-    color: var(--white);
+    background-color: var(--amelieDark);
+    color: var(--harakiriLight);
     font-size: 14px;
-    margin-top: -350px;
-    min-height: 350px;
+    margin-top: -332px;
+    min-height: 332px;
     position: relative;
     clear: both;
 }
@@ -24,11 +24,11 @@ footer{
 }
 
 .footer-top .wrapper a, .footer-bot .wrapper a{
-    color: var(--white);
+    color: var(--amelie);
 }
 
 .footer-top .wrapper a:hover, .footer-bot .wrapper a:hover{
-    color: var(--blue-light);
+    color: var(--alien);
 }
 
 .footer-bot{
@@ -36,11 +36,11 @@ footer{
 }
 
 .social-link{
-    color: var(--blue-light) !important;
+    color: var(--alien) !important;
 }
 
 .footer-top__item a{
-    color: var(--white);
+    color: var(--amelie);
 }
 
 .footer-logo-link, .footer-top__item-main span{
@@ -68,7 +68,7 @@ footer{
 }
 
 .footer-top__item-main span{
-    color: var(--blue-light);
+    color: var(--alien);
     display: block;
 }
 
@@ -92,7 +92,7 @@ footer{
 }
 
 .social-link i:hover{
-    background: var(--white);
+    background: var(--amelie);
 }
 
 .social-link i::before{
@@ -108,12 +108,12 @@ footer{
 }
 
 .footer-bot{
-    background-color: var(--black);
+    background-color: var(--trainspottingDark);
 }
 
 .footer-bot .wrapper span{
     text-align: right;
-    color: var( --disabled);
+    color: var(--metropolis);
 }
 
 .footer-bot .wrapper div a{

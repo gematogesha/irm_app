@@ -63,7 +63,7 @@
   bottom: 4px;
   left: 0;
   border-radius: 2px;
-  border-left: 4px solid var(--blue-clear);
+  border-left: 4px solid var(--rocky);
 }
 
 figure .attachment__caption{
@@ -89,4 +89,12 @@ figure .attachment__caption{
 
 .trix-content .attachment-gallery > action-text-attachment:last-child, .trix-content .attachment-gallery > .attachment:last-child {
   padding-right: 0;
+}
+
+.trix-content ol{
+  list-style:decemical;
+}
+
+.trix-content ul{
+  list-style: disc;
 }

@@ -40,7 +40,7 @@ class ApplicationController < ActionController::Base
 		if session[:admin]
 			return
 		else
-			redirect_to login_path(subdomain: "admin")
+			redirect_to root_path
 		end
 	end
 

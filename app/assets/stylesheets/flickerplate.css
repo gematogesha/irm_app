@@ -4,7 +4,7 @@
     position:relative;
     width:100%;
     height:600px;
-    background-color:#e6e6e6;
+    background-color: #e6e6e6;
     overflow:hidden
 }
 .flickerplate ul.flicks{
@@ -164,10 +164,10 @@
 }
 .flickerplate .dot-navigation .dot:hover{
     cursor:pointer;
-    background-color:var(--blue-light)
+    background-color:var(--avengers)
 }
 .flickerplate .dot-navigation .dot.active{
-    background-color: var(--blue)
+    background-color: var(--rocky)
 }
 .flickerplate .dot-navigation.left,.flickerplate .dot-navigation.left ul{
     text-align:left

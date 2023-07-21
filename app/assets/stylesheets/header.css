@@ -58,10 +58,9 @@ header{
     height: 100%;
     display: inline-block;
     text-decoration: none !important;
-    color: var(--blue) !important;
 }
 
 .header__menu_item:hover{
-    border-bottom: 4px solid var(--blue);
+    border-bottom: 4px solid var(--rocky);
 }
 

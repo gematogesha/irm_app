@@ -2,7 +2,7 @@
 
 .section-documents .document__item {
     border-bottom: 1px solid var(--border);
-    background-color: var(--white);
+    background-color: var(--amelie);
     border-radius: var(--border-radius);
     padding: 20px;
     display: flex;
@@ -27,12 +27,12 @@
 .section-documents .document__item .document__item_file{
     max-width: 210px;
     min-width: 140px;
-    border-left: 2px solid var(--background);
+    border-left: 2px solid var(--trainspotting);
     padding-left: 20px;
 }
 
 .section-documents .document__item .document__item_file i{
-    color: var(--red);
+    color: var(--fargo);
     font-size: 36px;
     width: 100%;
     text-align: center;    

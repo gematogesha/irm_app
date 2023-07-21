@@ -13,7 +13,7 @@
                         <div class="post__best"><%= icon("fa-solid", "star")%></div>
                     <% end %>
                 </h5>
-                <div class="post-details medium">
+                <div class="post-details small">
                     <div class="post-date"><%= l(@post.created_at, format: :long) %></div>
                     <div class="post-views"><%= icon('fa-solid', 'eye')%><%= @post.views %></div>
                 </div>

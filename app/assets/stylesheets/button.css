@@ -7,61 +7,46 @@
 .button{
     font-weight: 500;
     font-size: 16px;
-    text-transform: uppercase;
-    text-align: center;
+   /* text-transform: uppercase;*/
+    text-align: center;    
+    height: 40px;
+    padding: 10px 16px;
+    border-radius: var(--border-radius);
+    width: fit-content;
 }
 
 .button:active{
     transition: none;
 }
 
-
-
-.button__default{
-    height: 50px;
-    width: 235px;
-    line-height: 50px;
-}
-
-.button__small{
-    height: 40px;
-    width: 165px;
-    line-height: 40px;
-}
-
-
-
 .button__primary{
-    background-color: var(--blue);
-    border-radius: var(--border-radius);
-    color: var(--white) !important;
+    background-color: var(--rocky);
+    color: var(--amelie) !important;
 }
 
 .button__primary:hover{
+    transition: background-color .1s linear;
     box-shadow: var(--shadow);
-    background-color: var(--blue-hover);
+    background-color: var(--rockyHover);
 }
 
 .button__primary:active{
     box-shadow: var(--shadow-inset);
-    background-color: var(--white) !important;
-    color: var(--blue) !important;
+    background-color: var(--rockyPressed) !important;
+    color: var(--amelie) !important;
 }
 
 
 
 .button__secondary{
-    border: 1px solid var(--blue);
-    border-radius: var(--border-radius);
-    color: var(--blue) !important;
+    background-color: var(--avengers);
+    color: var(--rocky) !important;
 }
 
 .button__secondary:hover{
-    box-shadow: var(--shadow);
+    background-color: var(--avengersHover);
 }
 
 .button__secondary:active{
-    box-shadow: var(--shadow-inset);
-    background-color: var(--blue-hover) !important;
-    color: var(--white) !important;
+    background-color: var(--avengersPressed);
 }
