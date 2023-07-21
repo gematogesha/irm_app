@@ -62,5 +62,6 @@ header{
 
 .header__menu_item:hover{
     border-bottom: 4px solid var(--rocky);
+    transition: all .1s ease-in-out;
 }
 
