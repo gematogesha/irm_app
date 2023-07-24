@@ -164,7 +164,7 @@
 }
 .flickerplate .dot-navigation .dot:hover{
     cursor:pointer;
-    background-color:var(--avengers)
+    background-color:var(--rockyHover)
 }
 .flickerplate .dot-navigation .dot.active{
     background-color: var(--rocky)

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_18_104024) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_24_055158) do
   create_table "abouts", force: :cascade do |t|
     t.string "title"
     t.string "page_title"
@@ -80,6 +80,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_18_104024) do
     t.integer "views", default: 0
     t.boolean "hot", default: false
     t.boolean "best", default: false
+    t.text "subtitle"
   end
 
   create_table "sliders", force: :cascade do |t|

@@ -80,7 +80,7 @@ section{
 
 .wrapper{
     margin: auto;
-    max-width: 1320px;
+    max-width: 1360px;
     width: 100%;
     padding: 0 20px;
     height: 100%;
@@ -234,4 +234,28 @@ section{
 
 .section-gray{
     background-color: var(--trainspotting);
+}
+
+.disabled {
+    cursor: default;
+    opacity: .32;
+    pointer-events: none;
+}
+
+.loading{
+    animation: keyframes-pulse 1.6s ease .4s infinite;
+}
+
+@keyframes keyframes-pulse {
+    0% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .32
+    }
+
+    to {
+        opacity: 1
+    }
 }

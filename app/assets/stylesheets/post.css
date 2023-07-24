@@ -60,9 +60,10 @@
 .post-block__item{
     width: 100%;
     margin-bottom: 16px;
-    min-height: 76px;
-    padding: 0 10px 10px 10px;
-    background: var(--te)
+    min-height: 84px;
+    padding: 12px 16px;
+    background: var(--django);
+    border-radius: var(--border-radius);
 }
 
 .post-block__item_info{
@@ -91,8 +92,8 @@
 
 .post-index .post-box__item .post__item_img, 
 .post-index .post-box-sceleton__item .post-sceleton__item_img {
-    height: 100%;
-    width: 268px;
+    height: 225px;
+    width: 300px;
 }
 
 .post-index .post-box__item .post__item_img a{
@@ -101,7 +102,10 @@
 }
 
 .post-index .post-box__item .post__item_img a img{
-    border-radius: 0;
+    width: 100%;
+    object-fit: cover;
+    max-height: 225px;
+
 }
 
 .post-index .post-box__item .post__item_details span{
@@ -121,10 +125,9 @@
 .post-index .post-box-sceleton__item {
     min-height: 190px;
     margin-bottom: 20px;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--avengers);
     background-color: var(--white);
     border-radius: var(--border-radius-2x);
-    width: 300px;
     float: left;
     padding: 16px;
     position: relative;
@@ -140,30 +143,26 @@
 
 .line{
     display: inline-block;
-    width: calc(33.33333333% - 13.33333333px);
+    width: 25%;
 }
 /*-------------------Sceleton-------------------*/
 
-.post-index .post-sceleton__item_img{
-    padding: 20px;
-}
-
 .post-index .post-sceleton__item_img div {
     width: 100%;
-    background-color: var(--sceleton);
+    background-color: var(--django);
     height: 100%;
-    border-radius: var(--border-radius);
+    border-radius: var(--border-radius-2x);
 }
 
 .post-index .post-sceleton__item_title div{
     height: 24px;
     width: 100%;
     border-radius: 24px;
-    background-color: var(--sceleton);
+    background-color: var(--django);
 }
 
 .post-index .post-sceleton__item_details span {
-    background-color: var(--sceleton);
+    background-color: var(--django);
     height: 16px;
     border-radius: 16px;
     display: block;
@@ -177,12 +176,12 @@
 .post-index .post-sceleton__item_date div{
     height: 20px;
     width: 130px;
-    background-color: var(--sceleton);
+    background-color: var(--django);
     border-radius: 20px;
 }
 
 .post-index .post__item_date{
-    margin-top: 5px;
+    margin-top: 8px;
 }
 
 .post-index .post__hot, .post-index .post__best{
@@ -205,6 +204,7 @@
 .post-index .post__hot + .post__best{
     top: 44px
 }
+
 
 /*-------------------Post-Show-------------------*/
 
