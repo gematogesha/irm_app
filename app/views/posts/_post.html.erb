@@ -5,10 +5,10 @@
             <% if (i+1 - ind)%4==0 %>
                 <div class="post-box__item" id="post_id_<%= post.id %>">
                     <% if post.hot == true %>
-                        <div class="post__hot"><%= icon("fa-solid", "fire",  class: 'fa-beat')%></div>
+                        <div class="post__hot small"><%= icon("fa-solid", "fire")%> Горячие новости</div>
                     <% end %>
                     <% if post.best == true %>
-                        <div class="post__best"><%= icon("fa-solid", "star")%></div>
+                        <div class="post__best small "><%= icon("fa-solid", "star")%> Новости недели</div>
                     <% end %>
                     <div class="post__item_img left">
                         <%= link_to post_path(post.number), class: "left flex-block" do%>

@@ -5,25 +5,29 @@
     <div class="wrapper wrapper__content">
         <div class="content">
             <div class="content-wrapper">
-                <h5 class="content-title left"><%= @post.title %>
+                <h5 class="content-title"><%= @post.title %></h5>
+                <div class="post-tags">
                     <% if @post.hot == true %>
-                        <div class="post__hot"><%= icon("fa-solid", "fire")%></div>
+                        <div class="post__hot small"><%= icon("fa-solid", "fire")%>
+                            Горячие новости</div>
                     <% end %>
                     <% if @post.best == true %>
-                        <div class="post__best"><%= icon("fa-solid", "star")%></div>
+                        <div class="post__best small "><%= icon("fa-solid", "star")%>
+                            Новости недели</div>
                     <% end %>
-                </h5>
-                <div class="post-details small">
-                    <div class="post-date"><%= l(@post.created_at, format: :long) %></div>
-                    <div class="post-views"><%= icon('fa-solid', 'eye')%><%= @post.views %></div>
                 </div>
                 <div align="justify" class="content-subtitle"><%= @post.subtitle %></div>
+                <div class="post-details small">
+                    <div class="post-views"><%= icon('fa-solid', 'eye')%><%= @post.views %></div>
+                    <div class="post-date"><%= l(@post.created_at, format: :long) %></div>
+                </div>
             </div>
             <% if @post.image.present? %>
                 <div class="content-image">
                     <%= image_tag(@post.image, alt: @post.title, title: @post.title) %>
                 </div>
             <% end %>
+
             <div class="content-wrapper">
                 <%= @post.content %>
             </div>

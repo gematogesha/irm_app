@@ -17,7 +17,7 @@
     align-items: center;
     flex-wrap: nowrap;
     width: 100%;
-    margin-bottom: 20px;
+    margin-top: 12px;
 }
 
 .post-block__item_img a, .post__item_img a{
@@ -46,8 +46,9 @@
     background-color: var(--arrival);
     border-radius: var(--border-radius-2x);
     color: var(--rocky);
+    font-weight: 500;
 }
-}
+
 
 
 /*-------------------Main-Page-------------------*/
@@ -66,6 +67,10 @@
     padding: 12px 16px;
     background: var(--django);
     border-radius: var(--border-radius);
+}
+
+.post-block__item:last-of-type{
+    margin-bottom: 28px;
 }
 
 .post-block__item_info{
@@ -186,43 +191,57 @@
     margin-top: 8px;
 }
 
-.post-index .post__hot, .post-index .post__best{
-    position: absolute;
-    padding: 4px 10px;
-    font-size: 14px;
-    line-height: 16px;
+.post__hot, .post__best{
+   
     font-weight: 500;
-    top: 20px;
-    right: 0;
-    width: 48px;
-    padding-right: 46px;
+    padding: 4px 12px;
+    top: 24px;
+    left: 24px;
+    border-radius: var(--border-radius-2x);
 }
 
-.post-index .post__hot i, .post-index .post__best i{
-    margin-left: 5px;
-    font-size: 16px;
+.post-index .post__hot, .post-index .post__best{
+    position: absolute;
+}
+
+
+.post__hot{
+    color: var(--fargo);
+    background-color: var(--romance);
+}
+
+.post__hot i{
+    color: var(--indiana);
+}
+
+.post__best{
+    color: var(--rocky);
+    background-color: var(--arrival);
+}
+
+.post__best i{
+    color: var(--alien);
+}
+
+.post__hot i, .post__best i{
+    margin-right: 4px;
 }
 
 .post-index .post__hot + .post__best{
-    top: 44px
+    top: 56px
 }
 
 
 /*-------------------Post-Show-------------------*/
 
 .content .post__hot, .content .post__best{
-    font-size: 18px;
-    line-height: 32px;
-    /*padding-left: 6px;*/
-    display: inline;
+    display: inline-block;
 }
 
 .content .post__best i, .post-index .post__best i{
     color: var(--rocky);
 }
 
-.content .post__hot i, .post-index .post__hot i{
-    background: -webkit-linear-gradient(var(--lebowski), var(--fargo));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.content .post-tags{
+    margin-bottom: 12px;
 }
