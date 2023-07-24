@@ -1,15 +1,21 @@
-.notification {
-    width: 100%;
-    display: inline-flex;
-    padding: 12px 16px;
-    position: relative;
+.notification{
+	position: absolute;
+	max-width: 360px;
+	top: 104px;
+	right: -350px;
+	z-index: 1000;
+	background-color: var(--amelie);
+	border-radius: var(--border-radius);
+    -webkit-animation: move 5s ease-in-out;
+    animation: move 5s ease-in-out;
+	display: flex;
+    align-items: center;
+	padding: 12px 16px;
     box-shadow: 0 8px 32px 0 var(--hamilton);
     transition: all .4s;
-    border-radius: 12px;
-    background-color: var(--amelie);
 }
 
-.notification i {
+.notification .notification__icon {
 	float: left;
 	margin-right: 20px;
 	font-size: 26px;
@@ -17,58 +23,31 @@
 
 @keyframes move {
   0%, 5% {right: -350px;}
-  15%, 85% {right: 20px;}
+  15%, 85% {right: 24px;}
   95%, 100% {right: -350px;}
 }
 
-.notification__success{
-	border: 1px solid #c3e6cb;
-    color: #155724 !important;
-	background-color: #e7f5eb;
-}
 
-.notification__info{
-	border: 1px solid #b8daff;
-    color: #004085 !important;
-	background-color: #ecf5ff;
-}
-
-.notification__error{
-	border: 1px solid #f5c6cb;
-	color: #cc1a2c !important;
-	background-color: #fdf2f3;
-}
-
-.notification>span {
-    display: table-cell;
-    vertical-align: middle;
-}
-
-.notification .fa{
+.notification .notification__icon i{
     float: left;
-    margin-right: 20px;
-    font-size: 30px;
+    font-size: 16px;
 	vertical-align: middle;
 	margin-top: 5px;
 }
 
-.notification__error .fa{
-	color: #cc1a2c !important;
+.notification__error .notification__icon i{
+	color: var(--fargo) !important;
 }
 
-.notification__success .fa{
-	color: #155724 !important;
+.notification__success .notification__icon i{
+	color: var(--matrix) !important;
 }
 
-.notification__info .fa{
-	color: #004085 !important;
+.notification__info .notification__icon i{
+	color: var(--rocky) !important;
 }
 
-.module-alert{
-	border-color: #f5c6cb !important;
-}
 
 .module-head-alert{
-	background-color: #fdf2f3 !important;
-	color: #cc1a2c !important;
+	color: var(--fargo) !important;
 }

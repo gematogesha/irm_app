@@ -42,9 +42,11 @@
 .post-index .post-box__item_date, 
 .post-index .post__item_date, 
 .content .post-details div{
-    padding: 8px;
-    background-color: var(--avengers);
-    border-radius: var(--border-radius);
+    padding: 4px 12px;
+    background-color: var(--arrival);
+    border-radius: var(--border-radius-2x);
+    color: var(--rocky);
+}
 }
 
 

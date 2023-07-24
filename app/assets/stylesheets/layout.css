@@ -197,14 +197,13 @@ section{
 .content-title {
     line-height: 32px;
     word-wrap: break-word;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin: 12px 0;
     font-weight: 700;
 }
 
 .content-image{
     position: relative;
-    margin: 28px 0;
+    margin: 16px 0;
 }
 
 .content-image img{
