@@ -1,52 +1,55 @@
 /*-------------------Button-------------------*/
 
-.button__link, .button__link:hover{
+.button__link,
+.button__link:hover {
     text-decoration: none;
 }
 
-.button{
+.button {
     font-weight: 500;
     font-size: 16px;
-   /* text-transform: uppercase;*/
-    text-align: center;    
+    /* text-transform: uppercase;*/
+    text-align: center;
     height: 40px;
     padding: 10px 16px;
     border-radius: var(--border-radius);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
+    cursor: pointer !important;
+    margin: 0 !important;
 }
 
-.button:active{
+.button:active {
     transition: none;
 }
 
-.button__primary{
+.button__primary {
     background-color: var(--rocky);
     color: var(--amelie) !important;
 }
 
-.button__primary:hover{
-    transition: background-color .1s linear;
+.button__primary:hover {
+    transition: background-color 0.1s linear;
     box-shadow: var(--shadow);
     background-color: var(--rockyHover);
 }
 
-.button__primary:active{
+.button__primary:active {
     box-shadow: var(--shadow-inset);
     background-color: var(--rockyPressed) !important;
     color: var(--amelie) !important;
 }
 
-
-
-.button__secondary{
+.button__secondary {
     background-color: var(--avengers);
     color: var(--rocky) !important;
 }
 
-.button__secondary:hover{
+.button__secondary:hover {
     background-color: var(--avengersHover);
 }
 
-.button__secondary:active{
+.button__secondary:active {
     background-color: var(--avengersPressed);
 }

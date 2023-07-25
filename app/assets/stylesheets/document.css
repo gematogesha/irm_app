@@ -11,12 +11,12 @@
     margin-bottom: 16px;
 }
 
-.section-documents .document__item:last-child{
+.section-documents .document__item:last-child {
     margin-bottom: 0;
 }
 
 .section-documents .document__item .document__item_text,
-.section-documents .document__item .document__item_file{
+.section-documents .document__item .document__item_file {
     display: inline-block;
 }
 
@@ -24,23 +24,23 @@
     padding-top: 8px;
 }
 
-.section-documents .document__item .document__item_file{
+.section-documents .document__item .document__item_file {
     max-width: 210px;
     min-width: 140px;
     border-left: 2px solid var(--trainspotting);
     padding-left: 16px;
 }
 
-.section-documents .document__item .document__item_file i{
+.section-documents .document__item .document__item_file i {
     color: var(--fargo);
     font-size: 36px;
     width: 100%;
-    text-align: center;    
+    text-align: center;
     padding-bottom: 4px;
 }
 
-.section-documents iframe{
+.section-documents iframe {
     width: 100%;
-    height: 900px; 
+    height: 900px;
     border: none;
 }

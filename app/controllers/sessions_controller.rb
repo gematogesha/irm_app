@@ -10,12 +10,21 @@ class SessionsController < ApplicationController
     end
 
     def new
+
+        add_breadcrumb("Вход")
+
+        @page_title_text = "Вход"
+
         if session[:admin]
           redirect_to control_panel_path(subdomain: "admin")
         end 
     end
   
     def admin
+
+        add_breadcrumb("Панель администратора")
+
+        @page_title_text = "Панель администратора"
         
     end
 

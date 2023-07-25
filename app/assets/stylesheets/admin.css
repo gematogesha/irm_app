@@ -1,0 +1,37 @@
+.label {
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 8px;
+    box-shadow: none;
+    background-color: var(--django);
+    color: var(--troy);
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.label:hover {
+    box-shadow: none;
+    background-color: var(--djangoHover);
+}
+
+.label:focus-within {
+    box-shadow: none;
+    background-color: var(--djangoHover);
+}
+
+input:nth-last-child(-n+2) {
+    margin-bottom: 32px;
+}
+
+.login {
+    width: 300px;
+    margin: 75px auto;
+    padding: 16px;
+    border-radius: var(--border-radius-2x);
+    background-color: var(--amelie);
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+}

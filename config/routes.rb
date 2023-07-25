@@ -3,23 +3,29 @@ Rails.application.routes.draw do
   root "sessions#index"
   get "/posts/get_posts"
   post "sessions/accept_cookies"
+  get '/abouts/leaders', to: "leaders#index"
 
   resources :sessions, only: %i[accept_cookies]
   resources :posts, param: :number
-  resources :documents, only: %i[index show], param: :page_title
-  resources :abouts, only: %i[index show], param: :page_title
-  resources :leaders, only: %i[index], param: :page_title
+  resources :documents, param: :page_title
+  resources :abouts, param: :page_title
+  scope "/abouts" do
+    resources :leaders, param: :page_title
+  end
 
   constraints subdomain: 'admin' do
     resources :sessions, only: %i[new create destroy]
     get '/login', to: "sessions#new"
     get '/control-panel', to: "sessions#admin"
     get '/logout', to: "sessions#destroy"
+    get '/abouts/leaders', to: "leaders#index"
     resources :sliders
     resources :posts, param: :number
     resources :documents, param: :page_title
     resources :abouts, param: :page_title
-    resources :leaders, param: :page_title
+    scope "/abouts" do
+      resources :leaders, param: :page_title
+    end
   end
 
 end
