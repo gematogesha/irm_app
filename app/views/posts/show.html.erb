@@ -5,22 +5,22 @@
     <div class="wrapper wrapper__content">
         <div class="content">
             <div class="content-wrapper">
-                <h5 class="content-title"><%= @post.title %></h5>
                 <div class="post-tags">
                     <% if @post.hot == true %>
                         <div class="post__hot small"><%= icon("fa-solid", "fire")%>
-                            Горячие новости</div>
+                            Горячая новость</div>
                     <% end %>
                     <% if @post.best == true %>
                         <div class="post__best small "><%= icon("fa-solid", "star")%>
-                            Новости недели</div>
+                            Новость недели</div>
                     <% end %>
                 </div>
-                <div align="justify" class="content-subtitle"><%= @post.subtitle %></div>
+                <h5 class="content-title"><%= @post.title %></h5>
                 <div class="post-details small">
-                    <div class="post-views"><%= icon('fa-solid', 'eye')%><%= @post.views %></div>
                     <div class="post-date"><%= l(@post.created_at, format: :long) %></div>
+                    <div class="post-views"><%= icon('fa-solid', 'eye')%><%= @post.views %></div>
                 </div>
+                <div align="justify" class="content-subtitle"><%= @post.subtitle %></div>
             </div>
             <% if @post.image.present? %>
                 <div class="content-image">
@@ -30,7 +30,58 @@
 
             <div class="content-wrapper">
                 <%= @post.content %>
+                <div class="post__nav">
+                    <% if !@post.previous.nil? %>
+                        <%= link_to post_path(@post.previous.number), class: 'post__nav_link' do %>
+                            <div class="post__nav_prev">
+                                <div class="plank">
+                                    <div class="plank__action">
+                                        <%= icon("fa-solid", "angle-left")%>
+                                    </div>
+                                    <div class="plank__content">
+                                        <div class="plank__title"><%= @post.previous.title.truncate(20, separator: '') %></div>
+                                        <div class="plank__subtitle">Предыдущая новость</div>
+                                    </div>
+                                    <div class="plank__icon flex-block">
+                                        <div class="plank__image flex-block">
+                                            <% if @post.previous.image.present? %>
+                                                <%= image_tag(@post.previous.image, alt: @post.previous.title, title: @post.previous.title) %>
+                                            <% else %>
+                                                <%= image_tag("noimage.png", alt: "Нет изображения", title: 'Нет изображения') %>
+                                            <% end %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        <% end %>
+                    <% end %>
+                    <% if !@post.next.nil? %>
+                        <%= link_to post_path(@post.next.number), class: 'post__nav_link' do %>
+                            <div class="post__nav_next">
+                                <div class="plank">
+                                    <div class="plank__icon flex-block">
+                                        <div class="plank__image flex-block">
+                                            <% if @post.next.image.present? %>
+                                                <%= image_tag(@post.next.image, alt: @post.next.title, title: @post.next.title) %>
+                                            <% else %>
+                                                <%= image_tag("noimage.png", alt: "Нет изображения", title: 'Нет изображения') %>
+                                            <% end %>
+                                        </div>
+                                    </div>
+                                    <div class="plank__content">
+                                        <div class="plank__title"><%= @post.next.title.truncate(20, separator: '') %></div>
+                                        <div class="plank__subtitle">Следующая новость</div>
+                                    </div>
+                                    <div class="plank__action">
+                                        <%= icon("fa-solid", "angle-right")%>
+                                    </div>
+                                </div>
+                            </div>
+                        <% end %>
+                    <% end %>
+                </div>
             </div>
+
         </div>
     </div>
 </section>

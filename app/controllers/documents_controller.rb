@@ -1,6 +1,6 @@
 class DocumentsController < ApplicationController
 
-    before_action :loggedin, only: [:create, :new, :update, :delete]
+    before_action :loggedin, only: [:create, :new, :update, :delete, :edit]
     before_action :model_name
     before_action :set_document, only: %i[update show destroy edit]
 

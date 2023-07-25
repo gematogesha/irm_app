@@ -16,9 +16,7 @@
 }
 
 .notification .notification__icon {
-	float: left;
-	margin-right: 20px;
-	font-size: 26px;
+	margin-right: 16px;
 }
 
 @keyframes move {
@@ -29,10 +27,8 @@
 
 
 .notification .notification__icon i{
-    float: left;
     font-size: 16px;
 	vertical-align: middle;
-	margin-top: 5px;
 }
 
 .notification__error .notification__icon i{

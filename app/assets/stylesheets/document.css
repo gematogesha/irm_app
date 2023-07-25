@@ -1,14 +1,14 @@
 /*-------------------Document-------------------*/
 
 .section-documents .document__item {
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--avengers);
     background-color: var(--amelie);
     border-radius: var(--border-radius);
-    padding: 20px;
+    padding: 16px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .section-documents .document__item:last-child{
@@ -21,14 +21,14 @@
 }
 
 .section-documents .document__item .document__item_text .document__item_title + p {
-    padding-top: 10px;
+    padding-top: 8px;
 }
 
 .section-documents .document__item .document__item_file{
     max-width: 210px;
     min-width: 140px;
     border-left: 2px solid var(--trainspotting);
-    padding-left: 20px;
+    padding-left: 16px;
 }
 
 .section-documents .document__item .document__item_file i{
@@ -36,7 +36,7 @@
     font-size: 36px;
     width: 100%;
     text-align: center;    
-    padding-bottom: 5px;
+    padding-bottom: 4px;
 }
 
 .section-documents iframe{
