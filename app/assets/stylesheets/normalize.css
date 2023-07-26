@@ -159,12 +159,6 @@ textarea {
     cursor: pointer;
 }
 
-input,
-textarea {
-    cursor: text;
-}
-
-
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
@@ -359,4 +353,8 @@ button {
 *:focus,
 *:hover {
     outline: none;
+}
+
+i {
+    transition: all 0.1s ease-in-out;
 }

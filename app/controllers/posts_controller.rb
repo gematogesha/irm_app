@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-    before_action :loggedin, only: [:create, :new, :update, :delete, :edit]
+    before_action :loggedin, only: %i[create new update delete edit destroy]
     before_action :model_name
     before_action :set_post, only: %i[update show destroy edit]
 
@@ -75,6 +75,12 @@ class PostsController < ApplicationController
             render :edit
         end
     end
+
+    def destroy 
+        @post.destroy
+        redirect_to admin_path, success: "Новость удалена"
+    end
+    
 
     private
 

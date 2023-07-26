@@ -1,6 +1,6 @@
 class DocumentsController < ApplicationController
 
-    before_action :loggedin, only: [:create, :new, :update, :delete, :edit]
+    before_action :loggedin, only: %i[create new update delete edit destroy]
     before_action :model_name
     before_action :set_document, only: %i[update show destroy edit]
 
@@ -63,6 +63,11 @@ class DocumentsController < ApplicationController
         else 
             render :edit
         end
+    end
+
+    def destroy 
+        @document.destroy
+        redirect_to admin_path, success: "Документ удален"
     end
 
     private

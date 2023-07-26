@@ -4,13 +4,19 @@
     <% @documents.each do |document| %>
         <div class="admin-list__item" id="admin-list__item-<%= document.id %>">
             <div class="admin-list__item_img left flex-block">
-                <%= icon("fa-solid", "file-pdf")%>
+                <%= link_to edit_document_path(document.page_title), class: "edit" do %>
+                    <%= icon("fa-solid", "file")%>
+                <% end %>
             </div>
             <div class="admin-list__item_title">
-                <%= link_to edit_document_path(document.page_title) do %>
+                <%= link_to edit_document_path(document.page_title), class: "edit" do %>
                     <%= document.title %>
-                    <%= icon("fa-solid", "pen-to-square")%>
+                    <%= icon("fa-regular", "pen-to-square")%>
                 <% end %>
+                <%= button_to icon("fa-regular", "trash-can"), document_path(document.page_title), 
+                    method: :delete, 
+                    form: {data: {turbo_confirm: "Вы точно хотите удалить документ?" }}, 
+                    class: "delete" %>
             </div>
         </div>
     <% end %>

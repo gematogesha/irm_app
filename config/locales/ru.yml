@@ -11,6 +11,10 @@ ru:
       post:
         title: "Заголовок"
         content: "Содержание"
+        subtitle: "Подзаголовок"
+        image: "Изображение"
+        hot: "Горячая новость"
+        best: "Новость дня"
   errors:
     format: 'Поле "%{attribute}" %{message}'
     messages:

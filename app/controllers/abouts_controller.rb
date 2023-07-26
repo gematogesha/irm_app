@@ -1,6 +1,6 @@
 class AboutsController < ApplicationController
 
-    before_action :loggedin, only: [:create, :new, :update, :delete, :edit]
+    before_action :loggedin, only: %i[create new update delete edit destroy]
     before_action :model_name
     before_action :set_about, only: %i[update show destroy edit]
 
