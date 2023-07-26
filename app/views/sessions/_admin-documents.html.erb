@@ -1,0 +1,17 @@
+<div class="admin-list__documents admin-list">
+    <h4 class="title">Документы
+        <%= link_to icon('fa-regular', 'plus'), new_document_path, title: "Создать", class: "create" %></h4>
+    <% @documents.each do |document| %>
+        <div class="admin-list__item" id="admin-list__item-<%= document.id %>">
+            <div class="admin-list__item_img left flex-block">
+                <%= icon("fa-solid", "file-pdf")%>
+            </div>
+            <div class="admin-list__item_title">
+                <%= link_to edit_document_path(document.page_title) do %>
+                    <%= document.title %>
+                    <%= icon("fa-solid", "pen-to-square")%>
+                <% end %>
+            </div>
+        </div>
+    <% end %>
+</div>

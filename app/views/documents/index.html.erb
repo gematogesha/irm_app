@@ -5,7 +5,7 @@
         <% @documents.each do |document| %>
             <div class="document__item" id="document__item-<%= document.id %>">
                 <div class="document__item_text">
-                    <h5 class="document__item_title"><%= link_to document.title, document_path(document.page_title)%></h5>
+                    <h5 class="document__item_title"><%= link_to document.title, document_url(document.page_title, subdomain: false)%></h5>
                     <p><%= document.description %></p>
                 </div>
                 <div class="document__item_file">

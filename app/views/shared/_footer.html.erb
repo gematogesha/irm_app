@@ -14,10 +14,10 @@
             <div class="footer-top__item">
                 <ul> 
                     <li><h5>Категории</h5></li>
-                    <li><%= link_to "Главная", root_path %></li>
-                    <li><%= link_to "О нас", root_path %></li>
-                    <li><%= link_to "Новости", posts_path %></li>
-                    <li><%= link_to "Контакты", root_path %></li>
+                    <li><%= link_to "Главная", root_url(subdomain: false) %></li>
+                    <li><%= link_to "О нас", root_url(subdomain: false) %></li>
+                    <li><%= link_to "Новости", posts_url(subdomain: false) %></li>
+                    <li><%= link_to "Контакты", root_url(subdomain: false) %></li>
                 </ul>
             </div>
             <div class="footer-top__item">
@@ -45,8 +45,8 @@
     <section class="footer-bot">
         <div class="wrapper">
             <div>
-                <%= link_to "Политика конфиденциальности", root_path %>
-                <%= link_to "Карта сайта", root_path %>
+                <%= link_to "Политика конфиденциальности", root_url(subdomain: false) %>
+                <%= link_to "Карта сайта", root_url(subdomain: false) %>
             </div>
         <span>&copy; 2023 АО "ИРМ"<br>НЕ Все права защищены</span>
         </div>

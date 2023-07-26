@@ -9,38 +9,36 @@ class PostsController < ApplicationController
 
     def index
         add_breadcrumb(@model_many)
-
         @page_title_text = @model_many
+
+        if session[:admin]
+            redirect_to admin_path
+        end
+
     end
 
     def get_posts
         @posts = Post.all.order(created_at: :desc)    
-        
         add_breadcrumb(@model_many)
-
         @page_title_text = @model_many
     end
 
     def show
-
+        add_breadcrumb(@model_many, posts_url(subdomain: false))
         @post.update_attribute(:views, @post.views +=1 )
-
         @page_title_text = @post.title
-        
         @page_title_status = false
 
-        add_breadcrumb(@model_many, posts_path)
     end
 
     def create
-        add_breadcrumb(@model_many, posts_path)
-
+        if !session[:admin]
+            add_breadcrumb(@model_many, posts_path)
+        end
         @page_title_text = "Создать новость"
-
         @post = Post.create(post_params)
-
         if @post.save
-          redirect_to posts_path, success: "Новость создана"
+          redirect_to admin_path, success: "Новость создана"
         else     
             render :new
         end
@@ -48,29 +46,31 @@ class PostsController < ApplicationController
 
     def new
         @post = Post.new
-
-        add_breadcrumb(@model_many, posts_path)
-
+        if !session[:admin]
+            add_breadcrumb(@model_many, posts_path)
+        end
+        add_breadcrumb("Создать новость")
         @page_title_text = "Создать новость"
-
     end
 
     def edit
-        add_breadcrumb(@model_many, posts_path)
-
+        if !session[:admin]
+            add_breadcrumb(@model_many, posts_path)
+        end
+        add_breadcrumb("Редактировать новость")
         @page_title_text = "Редактировать новость"  
     end
 
 
-    def update
-        add_breadcrumb(@model_many, posts_path)
-
-        @page_title_text = "Редактировать новость"  
-
+    def update      
+        if !session[:admin]
+            add_breadcrumb(@model_many, posts_path)
+        end
+        @page_title_text = "Редактировать новость" 
+        add_breadcrumb("Редактировать новость") 
         @post.update(post_params)
-        
         if @post.update(post_params)
-            redirect_to post_path(@post.number), success: "Новость обновлена"
+            redirect_to admin_path, success: "Новость обновлена"
         else 
             render :edit
         end

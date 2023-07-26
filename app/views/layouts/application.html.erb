@@ -12,22 +12,26 @@
     </head>
     <body>
         <div class="body">
-            <%= render "shared/header" %>
+            <% if !session[:admin] %>
+                <%= render "shared/header" %>
+            <% end %>
             <%= render "shared/notification" %>
+
             <% if !current_page?(root_url) %>
                 <%= render partial: "shared/page_title", locals: { page_title_text: @page_title_text, page_title_status: @page_title_status} %>
             <% end %>
+
             <%= yield %>
 
         </div>
+        <% if !session[:admin] %>
             <%= render "shared/footer" %>
             <%= render "shared/cookies" %>
-            
-            <%= javascript_include_tag "flickerplate" %>
-            <script>
-                new flickerplate({selector: '.slider'});
-            </script>
-            
+        <% end %>  
+        <%= javascript_include_tag "flickerplate" %>
+        <script>
+            new flickerplate({selector: '.slider'});
+        </script>
+          
     </body>
-
 </html>

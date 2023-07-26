@@ -11,7 +11,7 @@
                         <div class="post__best small "><%= icon("fa-solid", "star")%> Новость недели</div>
                     <% end %>
                     <div class="post__item_img left">
-                        <%= link_to post_path(post.number), class: "left flex-block" do%>
+                        <%= link_to post_url(post.number, subdomain: false), class: "left flex-block" do%>
                         <% if post.image.present? %>
                             <%= image_tag(post.image, alt: post.title, title: post.title) %>
                         <% else %>
@@ -21,7 +21,7 @@
                 </div>
                 <div class="post__item_details">
                     <div class="post__item_title">
-                        <h6><%= link_to post.title, post_path(post.number)%></h5>
+                        <h6><%= link_to post.title, post_url(post.number, subdomain: false) %></h5>
                     </div>
                     <span align="justify" class="left">
                         <% if !post.subtitle.nil? %>

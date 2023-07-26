@@ -1,9 +1,13 @@
 <%- title @page_title_text %>
 
-<section class="section-posts section-gray">
+<section class="section-posts
+        <% if session[:admin] %>
+          section-gray
+        <% end %>
+        ">
     <div class="wrapper">
         <div class="post-index">
-            <%= turbo_frame_tag "posts", src: posts_get_posts_path, loading: :lazy do %>
+            <%= turbo_frame_tag "posts", src: posts_get_posts_url(subdomain: false), loading: :lazy do %>
                 <%= render "post_sceleton" %>
             <% end %>
         </div>

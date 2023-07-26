@@ -9,67 +9,61 @@ class DocumentsController < ApplicationController
 
     def index
         @documents = Document.all
-
         add_breadcrumb(@model_many)
-
         @page_title_text = @model_many
     end
 
     def create
-        add_breadcrumb(@model_many, documents_path)
-
+        if !session[:admin]
+            add_breadcrumb(@model_many, documents_path)
+        end
+        add_breadcrumb("Создать документ")
         @page_title_text = "Создать документ"
-
         @document = Document.create(document_params)
-
         if @document.save
-          redirect_to documents_path, success: "Документ создан"
+          redirect_to admin_path, success: "Документ создан"
         else     
             render :new
         end
     end
 
     def new
+        if !session[:admin]
+            add_breadcrumb(@model_many, documents_path)
+        end
         @document = Document.new
-
-        add_breadcrumb(@model_many, documents_path)
-
+        add_breadcrumb("Создать документ")
         @page_title_text = "Создать документ"
 
     end
 
     def show
         @page_title_text = @document.title
-        
-        add_breadcrumb(@model_many, documents_path)
-
+        add_breadcrumb(@model_many, documents_url(subdomain: false))
     end
 
     def edit
-        add_breadcrumb(@model_many, documents_path)
-
+        if !session[:admin]
+            add_breadcrumb(@model_many, documents_path)
+        end
+        add_breadcrumb("Редактировать документ")
         @page_title_text = "Редактировать документ"  
     end
 
 
     def update
-        add_breadcrumb(@model_many, documents_path)
-
+        if !session[:admin]
+            add_breadcrumb(@model_many, documents_path)
+        end
+        add_breadcrumb("Редактировать документ")
         @page_title_text = "Редактировать документ"  
-
         @document.update(document_params)
-        
         if @document.update(document_params)
-            redirect_to document_path(@document.page_title), success: "Документ обновлен"
+            redirect_to admin_path, success: "Документ обновлен"
         else 
             render :edit
         end
     end
-
-
-
-
-
 
     private
 

@@ -35,20 +35,20 @@ h3 {
 h4 {
     font-size: 32px;
     letter-spacing: 0.25px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 32px;
 }
 
 h5 {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 24px;
 }
 
 h6 {
     font-size: 20px;
     letter-spacing: 0.15px;
-    font-weight: 400;
+    font-weight: 500;
     line-height: 20px;
 }
 
@@ -156,7 +156,7 @@ section {
 }
 
 .breadcrumbs span {
-    margin-right: 32px;
+    margin-right: 38px;
     position: relative;
 }
 

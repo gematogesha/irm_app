@@ -1,7 +1,7 @@
 .notification {
     position: absolute;
     max-width: 360px;
-    top: 104px;
+    top: 20px;
     right: -350px;
     z-index: 1000;
     background-color: var(--amelie);

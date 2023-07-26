@@ -2,16 +2,16 @@
   <div class="form">
 
     <%= form.label :title, class: "control-label" %>
-    <%= form.text_field :title %>
+    <%= form.text_field :title, class: "label"  %>
 
     <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.text_area :description, class: "label"  %>
 
-    <%= form.label :link, class: "control-label" %>
+    <%= form.label :link, class: "label" %>
     <%= form.text_field :link %>
 
     <%= form.label :image %>
-    <%= form.file_field :image %>
+    <%= form.file_field :image, class: "label"  %>
 
     <%= form.submit class: "button button__primary"%>
   </div>

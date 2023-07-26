@@ -18,7 +18,7 @@
 }
 
 .number-error > span {
-    color: #0088cc;
+    color: var(--rocky);
 }
 
 .text-error {

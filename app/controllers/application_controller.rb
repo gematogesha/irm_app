@@ -12,10 +12,9 @@ class ApplicationController < ActionController::Base
 	end
 
     def set_breadcrumbs
-		#add_breadcrumb("Admin", admin_home_path) if Current.user.admin?
-		add_breadcrumb("Главная", root_path)
+		add_breadcrumb("Панель админитсратора", control_panel_path) if session[:admin]
+		add_breadcrumb("Главная", root_url(subdomain: false)) if !session[:admin]
 	end
-
 
 	def not_found
 		raise ActionController::RoutingError.new('Not Found')
@@ -34,7 +33,6 @@ class ApplicationController < ActionController::Base
 	rescue
 		render file: "#{Rails.root}/public/500.html", status: :internal_server_error
 	end
-
 
 	def loggedin
 		if session[:admin]

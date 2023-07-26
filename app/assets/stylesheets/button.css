@@ -3,6 +3,7 @@
 .button__link,
 .button__link:hover {
     text-decoration: none;
+    display: inline-block;
 }
 
 .button {
@@ -11,7 +12,7 @@
     /* text-transform: uppercase;*/
     text-align: center;
     height: 40px;
-    padding: 10px 16px;
+    padding: 10px 16px !important;
     border-radius: var(--border-radius);
     width: -webkit-fit-content;
     width: -moz-fit-content;

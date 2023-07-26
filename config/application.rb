@@ -19,8 +19,6 @@ module IrmApp
 
     config.action_dispatch.tld_length = 0
 
-    config.assets.paths << Rails.root.join('приложение', 'активы', 'шрифты')
-
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

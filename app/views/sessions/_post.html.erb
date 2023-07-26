@@ -1,8 +1,7 @@
 <% @posts.each do |post| %>
     <div class="post-block__item" id="post_id_<%= post.id %>">
         <div class="post-block__item_img left flex-block">
-        <% blob = ActiveStorage::Attachment.find_by(record_id: post.id) %>
-            <%= link_to post_path(post.number), class: "left flex-block" do%>
+            <%= link_to post_url(post.number, subdomain: false), class: "left flex-block" do%>
                 <% if post.image.present? %>
                     <%= image_tag(post.image, alt: post.title, title: post.title) %>
                 <% else %>
@@ -12,7 +11,7 @@
         </div>
         <div class="post-block__item_info">
             <div class="post-block__item_title">
-                <%= link_to post.title, post_path(post.number)%>
+                <%= link_to post.title, post_url(post.number, subdomain: false)%>
             </div>
             <div class="post-block__item_date small right"><%= l(post.created_at, format: :long) %></div>
         </div>

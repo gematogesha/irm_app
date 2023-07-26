@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-
-  root "sessions#index"
   get "/posts/get_posts"
   post "sessions/accept_cookies"
   get '/abouts/leaders', to: "leaders#index"
@@ -15,7 +13,7 @@ Rails.application.routes.draw do
 
   constraints subdomain: 'admin' do
     resources :sessions, only: %i[new create destroy]
-    get '/login', to: "sessions#new"
+    root "sessions#new", as: 'admin'
     get '/control-panel', to: "sessions#admin"
     get '/logout', to: "sessions#destroy"
     get '/abouts/leaders', to: "leaders#index"
@@ -27,5 +25,7 @@ Rails.application.routes.draw do
       resources :leaders, param: :page_title
     end
   end
+
+  root "sessions#index"
 
 end
