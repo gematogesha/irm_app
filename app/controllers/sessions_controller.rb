@@ -24,12 +24,7 @@ class SessionsController < ApplicationController
     end
 
     def create
-        user_params = params.require(:sessions)
-        email="admin@mail.ru"
-        password="admin"
-        #user = User.find_by(email: user_params[:email])&.authenticate(user_params[:password])
-        #if user.present?
-        if user_params[:email] == email and user_params[:password]==password
+        if authenticate?
             session[:admin] = { value: true, domain: :all }
             redirect_to control_panel_url(subdomain: "admin"), info: "Вы вошли на сайт"
         else
@@ -47,5 +42,18 @@ class SessionsController < ApplicationController
 		cookies[:cookie_policy] = { value: true, expires: 1.month, domain: :all }
         redirect_back(fallback_location: root_path)
 	end
+
+    private
+
+    def authenticate?
+        user_params = params.require(:sessions)
+        email="admin@mail.ru"
+        password="admin"
+        if user_params[:email] == email and user_params[:password]==password
+            true
+        end
+
+    end
+
 
 end

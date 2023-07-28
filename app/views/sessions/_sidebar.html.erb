@@ -1,0 +1,11 @@
+<div class="sidebar">
+    <ul class="sidebar__list">
+        <li class="sidebar__item"><%= link_to "posts", key: "posts" %></li>
+        <li class="sidebar__item"><%= link_to "documents", key: "documents" %></li>
+        <li class="sidebar__item"><%= link_to "sliders", key: "sliders" %></li>
+        <li class="sidebar__item"><%= link_to "abouts", key: "abouts" %></li>
+        <li class="sidebar__item"><%= link_to logout_path, method: :delete, class: "button__link" do %>
+        <div class="button button__primary">Выход</div></li>
+    <% end %>
+    </ul>
+</div>
