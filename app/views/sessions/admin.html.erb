@@ -1,8 +1,12 @@
 <%- title @page_title_text %>
 
-<section class="section-posts">
-    <div class="wrapper">
+<section class="section-admin section-gray">
+    <div class="wrapper wrapper__flex_top">
         <%= render "sidebar" %>
-        <%= render "admin-" + params[:key].to_s %>
+        <% if params[:key].nil? %>
+            asdasdasdad
+        <% else %>
+            <%= render "admin-" + params[:key].to_s %>
+        <% end %>
     </div>
 </section>

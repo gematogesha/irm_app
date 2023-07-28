@@ -1,11 +1,47 @@
 <div class="sidebar">
-    <ul class="sidebar__list">
-        <li class="sidebar__item"><%= link_to "posts", key: "posts" %></li>
-        <li class="sidebar__item"><%= link_to "documents", key: "documents" %></li>
-        <li class="sidebar__item"><%= link_to "sliders", key: "sliders" %></li>
-        <li class="sidebar__item"><%= link_to "abouts", key: "abouts" %></li>
-        <li class="sidebar__item"><%= link_to logout_path, method: :delete, class: "button__link" do %>
-        <div class="button button__primary">Выход</div></li>
+    <div class="menu">
+        <%= link_to control_panel_path(key: "posts") do %>
+            <div class="menu__item">
+                <div class="menu__body">
+                    <div class="menu__icon"><%= icon("fa-solid", "file-pdf")%></div>
+                    <div class="menu__title">Новости</div>
+                </div>
+            </div>
+        <% end %>
+        <%= link_to control_panel_path(key: "documents") do %>
+        <div class="menu__item">
+            <div class="menu__body">
+                <div class="menu__icon"><%= icon("fa-solid", "file-pdf")%></div>
+                <div class="menu__title">Документы</div>
+            </div>
+        </div>
+        <% end %>
+        <%= link_to control_panel_path(key: "sliders") do %>
+        <div class="menu__item">
+            <div class="menu__body">
+                <div class="menu__icon"><%= icon("fa-solid", "file-pdf")%></div>
+                <div class="menu__title">Слайдеры</div>
+            </div>
+        </div>
+        <% end %>
+        <%= link_to control_panel_path(key: "abouts") do %>
+        <div class="menu__item">
+            <div class="menu__body">
+                <div class="menu__icon"><%= icon("fa-solid", "file-pdf")%></div>
+                <div class="menu__title">Остальное</div>
+            </div>
+        </div>
+        <% end %>
+        <%= link_to control_panel_path(key: "leaders") do %>
+        <div class="menu__item">
+            <div class="menu__body">
+                <div class="menu__icon"><%= icon("fa-solid", "file-pdf")%></div>
+                <div class="menu__title">Руководство</div>
+            </div>
+        </div>
+        <% end %>
+    </div>
+    <%= link_to logout_path, method: :delete, class: "button__link", style: "width: 100%" do %>
+        <div class="button button__primary" style="width: 100%">Выход</div>
     <% end %>
-    </ul>
 </div>

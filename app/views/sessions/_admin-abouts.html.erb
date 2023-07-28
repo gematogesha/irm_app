@@ -1,0 +1,23 @@
+<div class="admin-list__abouts admin-list">
+    <h4 class="title">Остальное
+        <%= link_to icon('fa-regular', 'plus'), new_about_path, title: "Создать", class: "create" %></h4>
+    <% @abouts.each do |about| %>
+        <div class="admin-list__item" id="admin-list__item-<%= about.id %>">
+            <div class="admin-list__item_img left flex-block">
+                <%= link_to edit_about_path(about.page_title), class: "edit" do %>
+                    <%= icon("fa-solid", "file")%>
+                <% end %>
+            </div>
+            <div class="admin-list__item_title">
+                <%= link_to edit_about_path(about.page_title), class: "edit" do %>
+                    <%= about.title %>
+                    <%= icon("fa-regular", "pen-to-square")%>
+                <% end %>
+                <%= button_to icon("fa-regular", "trash-can"), about_path(about.page_title), 
+                    method: :delete, 
+                    form: {data: {turbo_confirm: "Вы точно хотите удалить документ?" }}, 
+                    class: "delete" %>
+            </div>
+        </div>
+    <% end %>
+</div>

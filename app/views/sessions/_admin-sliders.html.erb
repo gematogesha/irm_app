@@ -1,0 +1,30 @@
+<div class="admin-list__sliders admin-list">
+    <h4 class="title">Слайдеры
+        <%= link_to icon('fa-regular', 'plus'), new_slider_path, title: "Создать", class: "create" %></h4>
+    <% @sliders.each do |slider| %>
+        <div class="admin-list__item" id="slider_id_<%= slider.id %>">
+            <div class="admin-list__item_img left flex-block">
+                <%= link_to edit_slider_path(slider.number), class: "edit flex-block" do %>
+                    <% if slider.image.present? %>
+                        <%= image_tag(slider.image, alt: slider.title, title: slider.title) %>
+                    <% else %>
+                        <%= image_tag("noimage.png", alt: "Нет изображения", title: 'Нет изображения') %>
+                    <% end %>
+                <% end %>
+            </div>
+            <div class="admin-list__item_info">
+                <div class="admin-list__item_title">
+                    <%= link_to edit_slider_path(slider.number), class: "edit" do %>
+                        <%= slider.title %>
+                        <%= icon("fa-regular", "pen-to-square")%>
+                    <% end %>
+                    <%= button_to icon("fa-regular", "trash-can"), slider_path(slider.number), 
+                        method: :delete, 
+                        form: {data: {turbo_confirm: "Вы точно хотите удалить новость?" }}, 
+                        class: "delete" %>
+                </div>
+                <div class="admin-list__item_date small right"><%= l(slider.created_at, format: :long) %></div>
+            </div>
+        </div>
+    <% end %>
+</div>

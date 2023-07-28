@@ -21,6 +21,9 @@ class SessionsController < ApplicationController
         @page_title_text = "Панель администратора"
         @posts = Post.all.order(created_at: :desc)  
         @documents = Document.all
+        @sliders = Slider.all 
+        @abouts = About.all 
+        @leaders = Leader.all 
     end
 
     def create

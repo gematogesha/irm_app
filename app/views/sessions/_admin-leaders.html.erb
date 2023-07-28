@@ -1,0 +1,23 @@
+<div class="admin-list__leaders admin-list">
+    <h4 class="title">Руководство
+        <%= link_to icon('fa-regular', 'plus'), new_leader_path, title: "Создать", class: "create" %></h4>
+    <% @leaders.each do |leader| %>
+        <div class="admin-list__item" id="admin-list__item-<%= leader.id %>">
+            <div class="admin-list__item_img left flex-block">
+                <%= link_to edit_leader_path(leader.page_title), class: "edit" do %>
+                    <%= icon("fa-solid", "file")%>
+                <% end %>
+            </div>
+            <div class="admin-list__item_title">
+                <%= link_to edit_leader_path(leader.page_title), class: "edit" do %>
+                    <%= leader.title %>
+                    <%= icon("fa-regular", "pen-to-square")%>
+                <% end %>
+                <%= button_to icon("fa-regular", "trash-can"), leader_path(leader.page_title), 
+                    method: :delete, 
+                    form: {data: {turbo_confirm: "Вы точно хотите удалить документ?" }}, 
+                    class: "delete" %>
+            </div>
+        </div>
+    <% end %>
+</div>

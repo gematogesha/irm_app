@@ -11,7 +11,9 @@
         
     </head>
     <body>
-        <div class="body">
+        <% if !session[:admin] %>
+            <div class="body">
+        <% end %>
             <% if !session[:admin] %>
                 <%= render "shared/header" %>
             <% end %>
@@ -23,7 +25,9 @@
 
             <%= yield %>
 
-        </div>
+        <% if !session[:admin] %>
+            </div>
+        <% end %>
         <% if !session[:admin] %>
             <%= render "shared/footer" %>
             <%= render "shared/cookies" %>
