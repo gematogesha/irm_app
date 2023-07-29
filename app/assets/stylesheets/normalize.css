@@ -256,6 +256,8 @@ progress {
 
 textarea {
     overflow: auto;
+    border: none;
+    min-height: 80px;
 }
 
 /**
@@ -359,4 +361,19 @@ button {
 
 i {
     transition: all 0.1s ease-in-out;
+}
+
+
+label{
+    display: block;
+    color: var(--troy);
+    font-size: 16px !important;
+    transition: color .1s;
+    font-weight: 500 !important;
+    line-height: 20px !important;
+    margin-bottom: 4px !important;
+}
+
+input{
+    height: 40px;
 }

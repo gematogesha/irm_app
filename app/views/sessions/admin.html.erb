@@ -4,7 +4,8 @@
     <div class="wrapper wrapper__flex_top">
         <%= render "sidebar" %>
         <% if params[:key].nil? %>
-            asdasdasdad
+            <div class="admin-list">
+            </div>
         <% else %>
             <%= render "admin-" + params[:key].to_s %>
         <% end %>

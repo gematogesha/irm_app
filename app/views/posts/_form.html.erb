@@ -1,24 +1,26 @@
-<%= form_with model: @post, url: url, data: {turbo: false} do |form| %>
-  <div class="form">
+<div class="admin-form">
+    <%= form_with model: @post, url: url, data: {turbo: false} do |form| %>
+        <div class="form">
 
-    <%= form.label :title %>
-    <%= form.text_field :title, class: "label", placeholder: "Пароль" %>
+            <%= form.label :title %>
+            <%= form.text_area :title, class: "input" %>
 
-    <%= form.label :subtitle %>
-    <%= form.text_field :subtitle, class: "label", placeholder: "Пароль" %>
+            <%= form.label :subtitle %>
+            <%= form.text_area :subtitle, class: "input"%>
 
-    <%= form.label :content %>
-    <%= form.rich_text_area :content %>
+            <%= form.label :image %>
+            <%= form.file_field :image %>
 
-    <%= form.label :image %>
-    <%= form.file_field :image, class: "label", placeholder: "Пароль" %>
+            <%= form.label :hot %>
+            <%= form.check_box :hot%>
 
-    <%= form.label :hot %>
-    <%= form.check_box :hot, class: "label" %>
+            <%= form.label :best %>
+            <%= form.check_box :best %>
 
-    <%= form.label :best %>
-    <%= form.check_box :best, class: "label" %>
+            <%= form.label :content %>
+            <%= form.rich_text_area :content %>
 
-    <%= form.submit class: "button button__primary"%>
-  </div>
-<% end %>
+            <%= form.submit class: "button button__primary"%>
+        </div>
+    <% end %>
+</div>

@@ -2,8 +2,7 @@
     height: calc(100% - 121px);
 }
 
-.label {
-    height: 40px;
+.input {
     padding: 0 16px;
     border-radius: 8px;
     box-shadow: none;
@@ -12,20 +11,19 @@
     font-weight: 500;
     margin-bottom: 16px;
     cursor: text;
+    width: 500px;
 }
 
-.label:hover {
+.input:hover {
     box-shadow: none;
     background-color: var(--djangoHover);
+    color: var(--harakiri);
 }
 
-.label:focus-within {
+.input:focus-within {
     box-shadow: none;
     background-color: var(--djangoHover);
-}
-
-input:nth-last-child(-n + 2) {
-    margin-bottom: 32px;
+    color: var(--harakiri);
 }
 
 .login {
@@ -41,15 +39,20 @@ input:nth-last-child(-n + 2) {
     flex-direction: column;
 }
 
-.admin-list {
-    width: calc(100% - 250px);
+.admin-list, .admin-form {
     padding: 16px;
     background-color: var(--amelie);
     border-radius: var(--border-radius-2x);
-    overflow-y: scroll;
-    height: 100%;
-  }
+}
 
+.admin-list{
+    height: 100%;
+}
+
+.admin-list{
+    overflow-y: auto;
+    width: calc(100% - 250px);
+}
 
 .admin-list .title .create{
     font-size: 24px;
@@ -74,7 +77,7 @@ input:nth-last-child(-n + 2) {
 }
 
 .admin-list__item:last-of-type {
-    margin-bottom: 28px;
+    margin-bottom: 0;
 }
 .admin-list__item_title {
     display: flex;
@@ -193,4 +196,167 @@ input:nth-last-child(-n + 2) {
 
 .menu__icon + .menu__title {
     margin-left: 12px;
+}
+
+.form .button{
+    margin-top: 32px !important;
+}
+
+.uploader {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 16px;
+}
+
+.uploader.disabled {
+    cursor: default;
+    pointer-events: none
+}
+
+.uploader__attach {
+    flex: 1 1 100%;
+    width: 100%;
+    cursor: pointer;
+    padding: 16px;
+    border-color: var(--metropolis);
+    border-style: dashed;
+    border-width: 1px;
+    border-radius: 8px;
+    margin-bottom: 0 !important;
+}
+
+.uploader__title {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.uploader__title--text {
+    color: var(--harakiri);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    -webkit-line-clamp: 1
+}
+
+.uploader__sub-title,.uploader__title--text {
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical
+}
+
+.uploader__sub-title {
+    color: var(--metropolis);
+    font-size: 13px;
+    margin-top: 4px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 16px;
+    -webkit-line-clamp: 2
+}
+
+.uploader__uploading {
+    width: 100%;
+    display: flex;
+    padding: 16px;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+    border-color: var(--avengers);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 8px;
+    flex-direction: column;
+    justify-content: center
+}
+
+.uploader__line {
+    top: 0;
+    left: 0;
+    width: 33%;
+    bottom: 0;
+    position: absolute;
+    transition: width .3s ease-in-out;
+    justify-self: flex-start;
+    background-color: var(--avengers)
+}
+
+.uploader__uploading>span {
+    color: var(--troy);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px
+}
+
+.uploader__sub-title.limit {
+    color: var(--matrix)!important
+}
+
+.uploader__title i {
+    color: var(--harakiri);
+    margin-right: 8px
+}
+
+.uploader__attach input {
+    display: none
+}
+
+.uploader__attach.hover,.uploader__attach:hover {
+    border-color: var(--metropolisHover)
+}
+
+.uploader__attach.disabled {
+    cursor: default;
+    pointer-events: none
+}
+
+.uploader__attach.disabled i,.uploader__attach.disabled .uploader__sub-title,.uploader__attach.disabled .uploader__title>span {
+    color: var(--inception)
+}
+
+.uploader__attach.hover i,.uploader__attach.hover .uploader__title--text,.uploader__attach:hover i,.uploader__attach:hover .uploader__title--text {
+    color: var(--harakiriHover)
+}
+
+.uploader__attach.hover .uploader__sub-title,.uploader__attach:hover .uploader__sub-title {
+    color: var(--metropolisHover)
+}
+
+.uploader:active .uploader__attach {
+    border-color: var(--metropolisPressed)
+}
+
+.uploader:active .uploader__attach i,.uploader:active .uploader__attach .uploader__title--text {
+    color: var(--harakiriPressed)
+}
+
+.uploader:active .uploader__attach .uploader__sub-title {
+    color: var(--metropolisPressed)
+}
+
+.uploader.error>.uploader__attach {
+    border-color: var(--fargo);
+    border-style: dashed;
+    border-width: 1px
+}
+
+.uploader.error>.uploader__attach .uploader__sub-title {
+    color: var(--fargo)
+}
+
+.uploader.error>.uploader__attach.hover,.uploader.error>.uploader__attach:hover {
+    border-color: var(--fargoHover)
+}
+
+.uploader.error>.uploader__attach:active {
+    border-color: var(--fargoPressed)
+}
+
+.uploader.error>.uploader__attach.hover .uploader__sub-title,.uploader.error>.uploader__attach:hover .uploader__sub-title {
+    color: var(--fargoHover)
 }

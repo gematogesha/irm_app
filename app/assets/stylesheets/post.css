@@ -126,12 +126,11 @@
     min-height: 190px;
     margin-bottom: 20px;
     border-bottom: 1px solid var(--avengers);
-    background-color: var(--white);
     border-radius: var(--border-radius-2x);
     float: left;
     padding: 16px;
     position: relative;
-    background: var(--amelie);
+    background-color: var(--amelie);
 }
 
 .post__flex {
@@ -244,7 +243,7 @@
 .plank {
     cursor: pointer;
     display: inline-flex;
-    padding: 14px 16px 14px 12px;
+    padding: 12px;
     min-height: 56px;
     border-radius: var(--border-radius-2x);
     background-color: var(--django);
