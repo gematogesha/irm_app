@@ -1,46 +1,5 @@
 /*-------------------POST-------------------*/
 
-/*-------------------General-------------------*/
-.content .post-date {
-    padding: 0;
-}
-
-.content .post-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: nowrap;
-    width: 100%;
-    margin-bottom: 12px;
-}
-
-.b-post__link-img,
-.post__item_img a {
-    height: 100%;
-    width: 100%;
-}
-
-.b-post__img_inside,
-.post-index .post__item_img a img {
-    min-height: 100%;
-    min-width: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    transition: all 0.1s ease-in-out;
-    border-radius: var(--border-radius);
-}
-
-.post-index .post__item_date,
-.post-index .post__item_date,
-.content .post-details div {
-    padding: 4px 12px;
-    background-color: var(--arrival);
-    border-radius: var(--border-radius-2x);
-    color: var(--rocky);
-    font-weight: 400;
-}
-
-
 /*-------------------Main-Page-------------------*/
 
 .b-post {
@@ -49,79 +8,24 @@
     border-left: 2px solid var(--rocky);
 }
 
-.b-post__item {
+.post {
     width: 100%;
-    margin-bottom: 16px;
-    min-height: 84px;
-    padding: 12px 16px;
-    background: var(--django);
-    border-radius: var(--border-radius);
 }
 
-.b-post__item:last-of-type {
-    margin-bottom: 28px;
-}
-
-.b-post__content {
-    width: calc(100% - 76px);
+.line {
     display: inline-block;
+    width: 25%;
 }
 
-.b-post__img {
-    height: 60px;
-    width: 60px;
-    margin-right: 16px;
+.post__flex {
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    align-items: flex-start;
 }
 
-.b-post__date {
-    padding-top: 12px;
-}
-
-/*-------------------Post-Index-box-------------------*/
-
-.post-index {
-    width: 100%;
-}
-
-.post-index .post__item .post__item_title,
-.post-index .post-sceleton__item .post-sceleton__title {
-    margin-bottom: 12px;
-}
-
-.post-index .post__item .post__item_img,
-.post-index .post-sceleton__item .post-sceleton__img {
-    height: 225px;
-    width: 283px;
-}
-
-.post-index .post__item .post__item_img a {
-    height: 100%;
-    width: 100%;
-}
-
-.post-index .post__item .post__item_img a img {
-    width: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    max-height: 225px;
-    border-radius: var(--border-radius-2x);
-}
-
-.post-index .post__item .post__item_details span {
-    line-height: 1.25;
-    width: 100%;
-}
-
-.post-index .post__item .post__item_details,
-.post-index .post-sceleton__item .post-sceleton__content {
-    display: inline-block;
-    width: 100%;
-    padding-top: 16px;
-}
-
-
-.post-index .post__item,
-.post-index .post-sceleton__item {
+.post__item,
+.post-sceleton__item {
     min-height: 190px;
     margin-bottom: 20px;
     border-bottom: 1px solid var(--avengers);
@@ -132,28 +36,89 @@
     background-color: var(--amelie);
 }
 
-.post__flex {
-    display: flex;
-    gap: 20px;
-    flex-direction: row;
-    align-items: flex-start;
+.post__item:last-of-type {
+    margin-bottom: 28px;
 }
 
-.line {
+.post__item_style_small {
+    width: 100%;
+    margin-bottom: 16px;
+    min-height: 84px;
+    padding: 12px 16px;
+    background: var(--django);
+    border-radius: var(--border-radius);
+}
+
+.post__content,
+.post-sceleton__content {
     display: inline-block;
-    width: 25%;
+    width: 100%;
+    padding-top: 16px;
 }
 
-.post-index .post__item_date {
-    margin-top: 8px;
+.post__content_style_small {
+    width: calc(100% - 76px);
+    display: inline-block;
+    padding: 0;
+}
+
+.post__img,
+.post-sceleton__img {
+    height: 225px;
+    width: 283px;
+}
+
+.post__img_style_small {
+    height: 60px;
+    width: 60px;
+    margin-right: 16px;
+}
+
+.post__link-img {
+    height: 100%;
+    width: 100%;
+}
+
+.post__img_inside {
+    min-height: 100%;
+    min-width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    transition: all 0.1s ease-in-out;
+    border-radius: var(--border-radius);
+}
+
+.post__title,
+.post-sceleton__title {
+    margin-bottom: 12px;
+}
+
+.post__title_style_small {
+    margin: 0;
+}
+
+
+.post__text {
+    line-height: 1.25;
+    width: 100%;
+}
+
+.post__info {
+    padding-top: 8px;
+}
+
+.post__date_padding {
+    padding: 4px 12px;
+    background-color: var(--arrival);
+    border-radius: var(--border-radius-2x);
+    color: var(--rocky);
+    font-weight: 400;
 }
 
 /*-------------------Sceleton-------------------*/
 
-.post-sceleton__img{
-    width: 100%;
+.post-sceleton__img {
     background-color: var(--django);
-    height: 100%;
     border-radius: var(--border-radius-2x);
 }
 
@@ -172,7 +137,6 @@
     margin-bottom: 8px;
 }
 
-
 .post-sceleton__info {
     margin-top: 8px;
     height: 20px;
@@ -180,64 +144,56 @@
     background-color: var(--django);
     border-radius: 20px;
 }
+
 /*-------------------Hot-Best-------------------*/
 
-.post__hot,
-.post__best {
-
+.tag {
     font-weight: 500;
     padding: 4px 12px;
     top: 24px;
     left: 24px;
     border-radius: var(--border-radius-2x);
+    display: inline-block;
 }
 
-.post-index .post__hot,
-.post-index .post__best {
-    position: absolute;
-}
-
-
-.post__hot {
+.tag_fargo {
     color: var(--fargo);
     background-color: var(--romance);
 }
 
-.post__hot i {
+.tag_fargo .tag__icon {
     color: var(--indiana);
 }
 
-.post__best {
+.tag_rocky {
     color: var(--rocky);
     background-color: var(--arrival);
 }
 
-.post__best i {
+.tag_rocky .tag__icon {
     color: var(--alien);
 }
 
-.post__hot i,
-.post__best i,
-.content .post-views i {
+.tag__icon {
     margin-right: 4px;
 }
 
-.post-index .post__hot + .post__best {
+.tag+.tag {
     top: 56px
 }
 
-
 /*-------------------Post-Show-------------------*/
 
-.content .post__hot,
-.content .post__best {
-    display: inline-block;
+
+.post-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin-bottom: 12px;
 }
 
-.content .post__best i,
-.post-index .post__best i {
-    color: var(--rocky);
-}
 
 .plank {
     cursor: pointer;
@@ -327,15 +283,16 @@
     font-weight: 500;
 }
 
-.plank__image img {
+.plank__img_inside{
     min-height: 100%;
     min-width: 100%;
     -o-object-fit: cover;
     object-fit: cover;
     transition: all 0.1s ease-in-out;
+    border-radius: 50%;
 }
 
-.plank__image {
+.plank__img {
     height: 100%;
     width: 100%;
 }
@@ -343,8 +300,6 @@
 .plank__icon {
     width: 32px;
     height: 32px;
-    border-radius: 16px;
-    display: inline-flex;
     margin-top: 2px;
 }
 

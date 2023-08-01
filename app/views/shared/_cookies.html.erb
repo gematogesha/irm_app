@@ -1,7 +1,7 @@
 <% if !cookies[:cookie_policy]  %>
     <div class="cookies">
         <div class="wrapper">
-            <div class="left">Этот сайт использует cookies. Продолжая работу с сайтом, Вы выражаете своё согласие на обработку Ваших персональных данных. Отключить cookies Вы можете в настройках своего браузера</div>
+            <div class="cookies__text left">Этот сайт использует cookies. Продолжая работу с сайтом, Вы выражаете своё согласие на обработку Ваших персональных данных. Отключить cookies Вы можете в настройках своего браузера</div>
             <%= button_to "Согласен", sessions_accept_cookies_path, class: "button button_primary right", data: { turbo_frame: "cookies" } %>
         </div>
     </div>

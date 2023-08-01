@@ -2,7 +2,7 @@
 
 <section class="section-posts section_gray">
     <div class="wrapper">
-        <div class="post-index">
+        <div class="post">
             <%= turbo_frame_tag "posts", src: posts_get_posts_url(subdomain: false), loading: :lazy do %>
                 <%= render "post_sceleton" %>
             <% end %>

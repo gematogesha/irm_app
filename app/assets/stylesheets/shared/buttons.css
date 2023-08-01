@@ -18,6 +18,8 @@
     width: fit-content;
     cursor: pointer !important;
     margin: 0 !important;
+    font-family: "Golos", Arial, Helvetica, sans-serif;
+    border: none;
 }
 
 .button:active {
