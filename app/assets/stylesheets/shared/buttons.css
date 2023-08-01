@@ -9,7 +9,6 @@
 .button {
     font-weight: 500;
     font-size: 16px;
-    /* text-transform: uppercase;*/
     text-align: center;
     height: 40px;
     padding: 10px 16px !important;
@@ -25,32 +24,32 @@
     transition: none;
 }
 
-.button__primary {
+.button_primary {
     background-color: var(--rocky);
     color: var(--amelie) !important;
 }
 
-.button__primary:hover {
+.button_primary:hover {
     transition: background-color 0.1s linear;
     box-shadow: var(--shadow);
     background-color: var(--rockyHover);
 }
 
-.button__primary:active {
+.button_primary:active {
     box-shadow: var(--shadow-inset);
     background-color: var(--rockyPressed) !important;
     color: var(--amelie) !important;
 }
 
-.button__secondary {
+.button_secondary {
     background-color: var(--avengers);
     color: var(--rocky) !important;
 }
 
-.button__secondary:hover {
+.button_secondary:hover {
     background-color: var(--avengersHover);
 }
 
-.button__secondary:active {
+.button_secondary:active {
     background-color: var(--avengersPressed);
 }

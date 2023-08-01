@@ -1,53 +1,51 @@
 /*-------------------Header-------------------*/
 
-header {
+.header {
     padding: 15px 0;
     box-shadow: 0 1px 2px var(--hamilton);
 }
 
-.header {
+.b-header {
     height: 50px;
 }
 
-.header__logo {
+.logo {
     height: 100%;
-    float: left;
 }
 
-.header__logo-img {
+.header__logo {
     height: 58px;
     margin-top: -4px;
 }
 
-.header__logo:hover {
+.logo:hover {
     opacity: 85%;
 }
 
-.header__menu {
+.nav {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: flex-end;
     align-content: stretch;
     align-items: center;
-
     height: 100%;
 }
 
-.header__menu_item {
+.nav__item {
     line-height: 76px;
     font-weight: 300;
     padding: 0 13px;
     border-bottom: 4px solid rgba(0, 0, 0, 0);
 }
 
-.header__menu_item a {
+.nav__link {
     height: 100%;
     display: inline-block;
     text-decoration: none !important;
 }
 
-.header__menu_item:hover {
+.nav__item:hover {
     border-bottom: 4px solid var(--rocky);
     transition: all 0.1s ease-in-out;
 }

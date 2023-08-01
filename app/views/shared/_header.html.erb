@@ -1,21 +1,20 @@
-<header>
+<header class="header">
     <div class="wrapper">
-        <div class="header">
-            <div class="header__logo">
-            <%= link_to root_url(subdomain: false) do %>
-                <%= image_tag("logo/logo-irm.png", alt: "Лого ИРМ", title: 'ИРМ', class: "header__logo-img") %>
+        <div class="b-header">
+            <div class="logo left">
+            <%= link_to root_url(subdomain: false), class: "logo__link" do %>
+                <%= image_tag("logo/logo-irm.png", alt: "Лого ИРМ", title: 'ИРМ', class: "header__logo") %>
             <% end %>
             </div>
-            <ul class="header__menu">
-                <li class="header__menu_item"><%= link_to "О нас", root_url(subdomain: false) %></li>
-                <li class="header__menu_item"><%= link_to "Партнерам", root_url(subdomain: false) %></li>
-                <li class="header__menu_item"><%= link_to "Наука", root_url(subdomain: false) %></li>
-                <li class="header__menu_item"><%= link_to "Продукция", root_url(subdomain: false) %></li>
-                <li class="header__menu_item"><%= link_to "Документы", documents_url(subdomain: false) %></li>
-                <li class="header__menu_item"><%= link_to "Новости", posts_url(subdomain: false) %></li>
-                <li class="header__menu_item"><%= link_to "Карьера", root_url(subdomain: false) %></li>
-                <li class="header__menu_item"><%= link_to "Обратная свзяь", root_url(subdomain: false) %></li>
-
+            <ul class="nav">
+                <li class="nav__item"><%= link_to "О нас", root_url(subdomain: false), class: "nav__link" %></li>
+                <li class="nav__item"><%= link_to "Партнерам", root_url(subdomain: false), class: "nav__link" %></li>
+                <li class="nav__item"><%= link_to "Наука", root_url(subdomain: false), class: "nav__link" %></li>
+                <li class="nav__item"><%= link_to "Продукция", root_url(subdomain: false), class: "nav__link" %></li>
+                <li class="nav__item"><%= link_to "Документы", documents_url(subdomain: false), class: "nav__link" %></li>
+                <li class="nav__item"><%= link_to "Новости", posts_url(subdomain: false), class: "nav__link" %></li>
+                <li class="nav__item"><%= link_to "Карьера", root_url(subdomain: false), class: "nav__link" %></li>
+                <li class="nav__item"><%= link_to "Обратная свзяь", root_url(subdomain: false), class: "nav__link" %></li>
             </ul> 
         </div>
     </div>

@@ -1,14 +1,6 @@
 /*-------------------MAIN-PAGE-------------------*/
 
-/*-------------------General-------------------*/
-
-.slider__item_text p,
-.about-block p {
-    line-height: 28px;
-    margin-bottom: 25px;
-}
-
-/*-------------------Slider-top-------------------*/
+/*-------------------Slider-------------------*/
 
 .slider,
 .slider__item {
@@ -16,34 +8,39 @@
     padding: 0;
 }
 
-.slider__item_text {
-    max-width: 60%;
-    color: var(--amelie);
-    font-weight: 400;
-}
-
-.slider__item_text p {
-    max-width: 70%;
-}
-
 .slider__item {
     background-repeat: no-repeat;
     background-size: cover !important;
     background-position: center;
-
 }
+
+.slider__content {
+    max-width: 50%;
+    color: var(--amelie);
+}
+
+.slider__text {
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
 
 /*-------------------About-------------------*/
 
-.about-block {
+.b-about {
     width: 60%;
     margin-right: 30px;
+}
+
+.b-about__text {
+    line-height: 28px;
+    margin-bottom: 25px;
 }
 
 
 /*-------------------Activity-------------------*/
 
-.activity-block__item {
+.b-activity__item {
     width: 100%;
     height: 225px;
     background: var(--rocky);
@@ -55,25 +52,25 @@
     background-position: 150%;
 }
 
-#activity-block__item_1 {
+#b-activity__item_1 {
     background-image: image-url('atom_white.png'), linear-gradient(270deg, var(--alien) 0%, var(--rocky) 100%);
 }
 
-#activity-block__item_2 {
+#b-activity__item_2 {
     background-image: image-url('gears_white.png'), linear-gradient(270deg, var(--alien) 0%, var(--rocky) 100%);
 }
 
-#activity-block__item_3 {
+#b-activity__item_3 {
     background-image: image-url('idea_white.png'), linear-gradient(270deg, var(--alien) 0%, var(--rocky) 100%);
 }
 
 
-.activity-block__item .activity-block__item_title {
+.b-activity__item .b-activity__title {
     margin-bottom: 25px;
     max-width: 75%;
 }
 
-.activity-block__item .activity-block__item_text {
+.b-activity__item .b-activity__text {
     font-size: 18px;
     max-width: 70%;
 

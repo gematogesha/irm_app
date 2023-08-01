@@ -2,19 +2,17 @@
     <% (1..4).each do %>
         <div class="line">
             <% (1..2).each do %>
-                <div class="post-box-sceleton__item">
-                    <div class="post-sceleton__item_img loading">
+                <div class="post-sceleton__item">
+                    <div class="post-sceleton__img loading">
                         <div></div>
                     </div>
-                    <div class="post-sceleton__item_details loading">
-                        <div class="post-sceleton__item_title" style="width: <%= rand(70..100) %>%">
-                            <div></div>
+                    <div class="post-sceleton__content loading">
+                        <div class="post-sceleton__title" style="width: <%= rand(70..100) %>%">
                         </div>
                         <span style="margin-top: 16px;"></span>
                         <span></span>
                         <span style="width: <%= rand(60..85) %>%"></span>
-                        <div class="post-sceleton__item_date right">
-                            <div></div>
+                        <div class="post-sceleton__info right">
                         </div>
                     </div>
                 </div>

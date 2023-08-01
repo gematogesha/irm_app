@@ -1,27 +1,28 @@
 /*
-*= require normalize
-*= require reset
+*= require common/reset
+*= require common/root
+*= require common/layout
+*= require common/fonts
+
+*= require shared/header
+*= require shared/footer
+*= require shared/buttons
 
 *= require flickerplate
 
-*= require root
 
-*= require layout
-*= require fonts
 
-*= require header
-*= require footer
-*= require button
-*= require notification
-*= require page-error
+
+
 
 *= require main-page
 *= require post
 *= require document
-
 *= require actiontext
-*= require admin
 
+*= require admin/admin
+*= require admin/notifications
+*= require admin/errors
 */
 
 @import "font-awesome";

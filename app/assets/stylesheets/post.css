@@ -14,26 +14,23 @@
     margin-bottom: 12px;
 }
 
-.post-block__item_img a,
+.b-post__link-img,
 .post__item_img a {
     height: 100%;
     width: 100%;
 }
 
-.post-block__item_img a img,
+.b-post__img_inside,
 .post-index .post__item_img a img {
     min-height: 100%;
     min-width: 100%;
     -o-object-fit: cover;
     object-fit: cover;
     transition: all 0.1s ease-in-out;
+    border-radius: var(--border-radius);
 }
 
-.post-block__item_date {
-    padding-top: 12px;
-}
-
-.post-index .post-box__item_date,
+.post-index .post__item_date,
 .post-index .post__item_date,
 .content .post-details div {
     padding: 4px 12px;
@@ -46,13 +43,13 @@
 
 /*-------------------Main-Page-------------------*/
 
-.post-block {
+.b-post {
     width: 40%;
     padding: 16px 0 16px 30px;
     border-left: 2px solid var(--rocky);
 }
 
-.post-block__item {
+.b-post__item {
     width: 100%;
     margin-bottom: 16px;
     min-height: 84px;
@@ -61,22 +58,24 @@
     border-radius: var(--border-radius);
 }
 
-.post-block__item:last-of-type {
+.b-post__item:last-of-type {
     margin-bottom: 28px;
 }
 
-.post-block__item_info {
+.b-post__content {
     width: calc(100% - 76px);
     display: inline-block;
 }
 
-.post-block__item_img {
+.b-post__img {
     height: 60px;
     width: 60px;
-    border-radius: var(--border-radius);
     margin-right: 16px;
 }
 
+.b-post__date {
+    padding-top: 12px;
+}
 
 /*-------------------Post-Index-box-------------------*/
 
@@ -84,23 +83,23 @@
     width: 100%;
 }
 
-.post-index .post-box__item .post__item_title,
-.post-index .post-box-sceleton__item .post-sceleton__item_title {
+.post-index .post__item .post__item_title,
+.post-index .post-sceleton__item .post-sceleton__title {
     margin-bottom: 12px;
 }
 
-.post-index .post-box__item .post__item_img,
-.post-index .post-box-sceleton__item .post-sceleton__item_img {
+.post-index .post__item .post__item_img,
+.post-index .post-sceleton__item .post-sceleton__img {
     height: 225px;
-    width: 300px;
+    width: 283px;
 }
 
-.post-index .post-box__item .post__item_img a {
+.post-index .post__item .post__item_img a {
     height: 100%;
     width: 100%;
 }
 
-.post-index .post-box__item .post__item_img a img {
+.post-index .post__item .post__item_img a img {
     width: 100%;
     -o-object-fit: cover;
     object-fit: cover;
@@ -108,21 +107,21 @@
     border-radius: var(--border-radius-2x);
 }
 
-.post-index .post-box__item .post__item_details span {
+.post-index .post__item .post__item_details span {
     line-height: 1.25;
     width: 100%;
 }
 
-.post-index .post-box__item .post__item_details,
-.post-index .post-box-sceleton__item .post-sceleton__item_details {
+.post-index .post__item .post__item_details,
+.post-index .post-sceleton__item .post-sceleton__content {
     display: inline-block;
     width: 100%;
     padding-top: 16px;
 }
 
 
-.post-index .post-box__item,
-.post-index .post-box-sceleton__item {
+.post-index .post__item,
+.post-index .post-sceleton__item {
     min-height: 190px;
     margin-bottom: 20px;
     border-bottom: 1px solid var(--avengers);
@@ -144,44 +143,44 @@
     display: inline-block;
     width: 25%;
 }
+
+.post-index .post__item_date {
+    margin-top: 8px;
+}
+
 /*-------------------Sceleton-------------------*/
 
-.post-index .post-sceleton__item_img div {
+.post-sceleton__img{
     width: 100%;
     background-color: var(--django);
     height: 100%;
     border-radius: var(--border-radius-2x);
 }
 
-.post-index .post-sceleton__item_title div {
+.post-sceleton__title {
     height: 20px;
     width: 100%;
     border-radius: 20px;
     background-color: var(--django);
 }
 
-.post-index .post-sceleton__item_details span {
+.post-sceleton__content span {
     background-color: var(--django);
     height: 16px;
     border-radius: 16px;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 8px;
 }
 
-.post-index .post-sceleton__item_date {
-    padding-top: 10px;
-}
 
-.post-index .post-sceleton__item_date div {
+.post-sceleton__info {
+    margin-top: 8px;
     height: 20px;
     width: 130px;
     background-color: var(--django);
     border-radius: 20px;
 }
-
-.post-index .post__item_date {
-    margin-top: 8px;
-}
+/*-------------------Hot-Best-------------------*/
 
 .post__hot,
 .post__best {

@@ -1,54 +1,54 @@
-<footer>
+<footer class="footer">
     <section class="footer-top">
-        <div class="wrapper">
-            <div class="footer-top__item footer-top__item-main">
-                <%= link_to 'https://rosatom.ru', class: "footer-logo-link" do %>
-                    <%= image_tag("logo/logo-rosatom-white.png", alt: "Росатом", title: 'Росатом', class: "footer-logo-img") %>
+        <div class="wrapper flex_top_between">
+            <div class="footer-top__item">
+                <%= link_to 'https://rosatom.ru', class: "footer-top__link-logo" do %>
+                    <%= image_tag("logo/logo-rosatom_white.png", alt: "Росатом", title: 'Росатом', class: "footer-logo__img") %>
                 <% end %>
-                <%= link_to 'https://niirosatom.ru/', class: "footer-logo-link" do%>
-                    <%= image_tag("logo/logo-nii-white.png", alt: "Наука и инновации", title: 'Наука и инновации', class: "footer-logo-img") %>
+                <%= link_to 'https://niirosatom.ru/', class: "footer-top__link-logo" do%>
+                    <%= image_tag("logo/logo-nii_white.png", alt: "Наука и инновации", title: 'Наука и инновации', class: "footer-logo__img") %>
                 <% end %>
-                <span>624250, Свердловская область,<br>г. Заречный, ул. а/я 29</span>
-                <span>noreply@irmatom.ru</span>
+                <span class="footer-top__text">624250, Свердловская область,<br>г. Заречный, ул. а/я 29</span>
+                <span class="footer-top__text">noreply@irmatom.ru</span>
             </div>
             <div class="footer-top__item">
-                <ul> 
-                    <li><h5>Категории</h5></li>
-                    <li><%= link_to "Главная", root_url(subdomain: false) %></li>
-                    <li><%= link_to "О нас", root_url(subdomain: false) %></li>
-                    <li><%= link_to "Новости", posts_url(subdomain: false) %></li>
-                    <li><%= link_to "Контакты", root_url(subdomain: false) %></li>
+                <ul class="footer-top-list"> 
+                    <li class="footer-top-list__item"><h5 class="footer-top-list__title">Категории</h5></li>
+                    <li class="footer-top-list__item"><%= link_to "Главная", root_url(subdomain: false), class: "footer-top-list__link" %></li>
+                    <li class="footer-top-list__item"><%= link_to "О нас", root_url(subdomain: false), class: "footer-top-list__link" %></li>
+                    <li class="footer-top-list__item"><%= link_to "Новости", posts_url(subdomain: false), class: "footer-top-list__link" %></li>
+                    <li class="footer-top-list__item"><%= link_to "Контакты", root_url(subdomain: false), class: "footer-top-list__link" %></li>
                 </ul>
             </div>
             <div class="footer-top__item">
-                <ul>
-                    <li>
-                        <h5>Lorem, ipsum.</h5>
+                <ul class="footer-top-list">
+                    <li class="footer-top-list__item">
+                        <h5 class="footer-top-list__title">Lorem, ipsum.</h5>
                     </li>
-                    <li>Lorem, ipsum.</li>
-                    <li>Magnam, autem!</li>
+                    <li class="footer-top-list__item"><%= link_to "Главная", root_url(subdomain: false), class: "footer-top-list__link" %></li>
+                    <li class="footer-top-list__item"><%= link_to "Главная", root_url(subdomain: false), class: "footer-top-list__link" %></li>
                 </ul>
             </div>
             <div class="footer-top__item social">
-                <ul>
-                    <li>
-                        <h5>Социальные сети</h5>
+                <ul class="footer-top-list">
+                    <li class="footer-top-list__item">
+                        <h5 class="footer-top-list__title">Социальные сети</h5>
                     </li>
-                    <li>
-                        <%= link_to icon('fa-brands', 'vk'), "https://vk.com", title: "ВКонтакте", class: "social-link vk" %>
-                        <%= link_to icon('fa-brands', 'telegram'), "https://web.telegram.org", title: "Телеграм", class: "social-link telegram" %>
-                    </li>
+                    <li class="footer-top-list__item">
+                        <%= link_to icon('fa-brands', 'vk', class: "social-link__icon"), "https://vk.com", title: "ВКонтакте", class: "social-link vk" %>
+                        <%= link_to icon('fa-brands', 'telegram', class: "social-link__icon"), "https://web.telegram.org", title: "Телеграм", class: "social-link telegram" %>
+                    </li class="footer-top-list__item">
                 </ul>
             </div>
         </div>
     </section>
     <section class="footer-bot">
-        <div class="wrapper">
+        <div class="wrapper flex_center_between">
             <div>
-                <%= link_to "Политика конфиденциальности", root_url(subdomain: false) %>
-                <%= link_to "Карта сайта", root_url(subdomain: false) %>
+                <%= link_to "Политика конфиденциальности", root_url(subdomain: false), class: "footer-bot__link" %>
+                <%= link_to "Карта сайта", root_url(subdomain: false), class: "footer-bot__link" %>
             </div>
-        <span>&copy; 2023 АО "ИРМ"<br>НЕ Все права защищены</span>
+        <span class="copyright">&copy; 2023 АО "ИРМ"<br>НЕ Все права защищены</span>
         </div>
     </section>
 </footer>

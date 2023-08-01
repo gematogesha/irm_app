@@ -1,19 +1,19 @@
 <% @posts.each do |post| %>
-    <div class="post-block__item" id="post_id_<%= post.id %>">
-        <div class="post-block__item_img left flex-block">
-            <%= link_to post_url(post.number, subdomain: false), class: "left flex-block" do%>
+    <div class="b-post__item" id="post_id_<%= post.id %>">
+        <div class="b-post__img left">
+            <%= link_to post_url(post.number, subdomain: false), class: "b-post__link-img flex_center_center" do%>
                 <% if post.image.present? %>
-                    <%= image_tag(post.image, alt: post.title, title: post.title) %>
+                    <%= image_tag(post.image, alt: post.title, title: post.title, class: "b-post__img_inside") %>
                 <% else %>
-                    <%= image_tag("noimage.png", alt: "Нет изображения", title: 'Нет изображения') %>
+                    <%= image_tag("noimage.png", alt: "Нет изображения", title: 'Нет изображения', class: "b-post__img_inside") %>
                 <% end %>
             <% end %>
         </div>
-        <div class="post-block__item_info">
-            <div class="post-block__item_title">
-                <%= link_to post.title, post_url(post.number, subdomain: false)%>
+        <div class="b-post__content">
+            <div class="b-post__title">
+                <%= link_to post.title, post_url(post.number, subdomain: false), class: "b-post__link" %>
             </div>
-            <div class="post-block__item_date small right"><%= l(post.created_at, format: :long) %></div>
+            <div class="b-post__date small right"><%= l(post.created_at, format: :long) %></div>
         </div>
     </div>
 <% end %>

@@ -3,7 +3,7 @@
     <div class="line line_id_<%= ind %>">
         <% @posts.each_with_index do |post, i| %>
             <% if (i+1 - ind)%4==0 %>
-                <div class="post-box__item" id="post_id_<%= post.id %>">
+                <div class="post__item" id="post_id_<%= post.id %>">
                     <% if post.hot == true %>
                         <div class="post__hot small"><%= icon("fa-solid", "fire")%> Горячая новость</div>
                     <% end %>
