@@ -38,7 +38,7 @@ class ApplicationController < ActionController::Base
 		if session[:admin]
 			return
 		else
-			redirect_to root_path
+			not_found
 		end
 	end
 

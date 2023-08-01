@@ -8,17 +8,12 @@
 *= require shared/footer
 *= require shared/buttons
 
-*= require flickerplate
-
-
-
-
-
-
 *= require main-page
 *= require post
 *= require document
-*= require actiontext
+
+*= require plugin/flickerplate
+*= require plugin/actiontext
 
 *= require admin/admin
 *= require admin/notifications
