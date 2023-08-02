@@ -12,7 +12,7 @@
  * images in galleries will be squished by the max-width: 33%; rule.
 */
 .trix-content {
-    line-height: 1.25;
+    line-height: 1.5;
     min-height: 150px;
 }
 
@@ -36,7 +36,7 @@
     max-width: 100% !important;
     width: 100%;
 }
-
+.trix-editor blockquote, 
 .trix-content blockquote {
     position: relative;
     border: none;
@@ -60,9 +60,9 @@
 
 .trix-content .attachment__caption .attachment__link i {
     font-size: 32px;
-    color: var(--red);
+    color: var(--fargo);
 }
-
+.trix-editor blockquote::before,
 .trix-content blockquote::before {
     content: "";
     position: absolute;

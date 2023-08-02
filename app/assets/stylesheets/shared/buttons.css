@@ -16,10 +16,10 @@
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
-    cursor: pointer !important;
-    margin: 0 !important;
+    margin: 0;
     font-family: "Golos", Arial, Helvetica, sans-serif;
     border: none;
+    cursor: pointer;
 }
 
 .button:active {
@@ -54,4 +54,8 @@
 
 .button_secondary:active {
     background-color: var(--avengersPressed);
+}
+
+.button_form{
+    margin-top: 32px;
 }

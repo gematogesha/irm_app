@@ -2,25 +2,36 @@
     <%= form_with model: @post, url: url, data: {turbo: false} do |form| %>
         <div class="form">
 
-            <%= form.label :title %>
-            <%= form.text_area :title, class: "input" %>
+            <%= form.label :title, class: "form__item form__item_label" %>
+            <%= form.text_area :title, class: "form__item form__item_textarea" %>
 
-            <%= form.label :subtitle %>
-            <%= form.text_area :subtitle, class: "input"%>
+            <%= form.label :subtitle, class: "form__item form__item_label" %>
+            <%= form.text_area :subtitle, class: "form__item form__item_textarea" %>
 
-            <%= form.label :image %>
-            <%= form.file_field :image %>
+            <%= form.check_box :hot, class: "form__item form__item_checkbox" %>
+            <%= form.label :hot, class: "form__item form__item_label"  %>
 
-            <%= form.label :hot %>
-            <%= form.check_box :hot%>
+            <%= form.check_box :best, class: "form__item form__item_checkbox"  %>
+            <%= form.label :best, class: "form__item form__item_label"  %>
 
-            <%= form.label :best %>
-            <%= form.check_box :best %>
+            <div class="uploader form__item">
+                <label class="uploader__attach">
+                    <div class="uploader__content">
+                        <div class="uploader__title">
+                            <%= icon("fa-solid", "link") %>
+                            <span class="uploader__title_text">Загрузить файлы</span>
+                        </div>
+                        <div class="uploader__subtitle">Файлы должны быть в формате PNG/JPEG</div>
+                    </div>
+                    <%= form.file_field :image, accept: 'image/jpeg, image/gif, image/png' %>
+                </label>
+            </div>
 
-            <%= form.label :content %>
-            <%= form.rich_text_area :content %>
+            <%= form.label :content, class: "form__item form__item_label" %>
+            <%= form.rich_text_area :content, class: "form__item form__item_textarea", style: "width: 100%" %>
 
-            <%= form.submit class: "button button_primary"%>
+            <%= form.submit class: "button button_primary button_form"%>
         </div>
     <% end %>
 </div>
+

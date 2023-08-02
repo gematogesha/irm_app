@@ -3,10 +3,10 @@
 <section class="section-posts section_gray">
     <div class="wrapper">
         <div class="login">
-            <%= form_with scope: :sessions, url: sessions_path, data: {turbo: false}, class: 'login__form' do |form| %>
-                <%= form.email_field :email, class: "label", placeholder: "Логин" %>
-                <%= form.password_field :password, class: "label", placeholder: "Пароль" %>
-                <%= form.submit "Войти", class: "button button_primary", style: "width: 100%" %>
+            <%= form_with scope: :sessions, url: sessions_path, data: {turbo: false}, class: 'form' do |form| %>
+                <%= form.email_field :email, class: "form__item form__item_input form__item_login", placeholder: "Логин" %>
+                <%= form.password_field :password, class: "form__item form__item_input form__item_login", placeholder: "Пароль" %>
+                <%= form.submit "Войти", class: "button button_primary button_form", style: "width: 100%" %>
             <% end %>
         </div>
     </div>

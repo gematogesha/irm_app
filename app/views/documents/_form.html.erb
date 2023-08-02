@@ -14,11 +14,11 @@
                     <div class="uploader__content">
                         <div class="uploader__title">
                             <%= icon("fa-solid", "link") %>
-                            <span class="uploader__title--text">Загрузить файлы</span>
+                            <span class="uploader__title_text">Загрузить файлы</span>
                         </div>
-                        <div class="uploader__sub-title">Файлы должны быть в формате PDF</div>
+                        <div class="uploader__subtitle">Файлы должны быть в формате PDF</div>
                     </div>
-                    <%= form.file_field :file, accept: 'application/pdf, image/jpeg, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' %>
+                    <%= form.file_field :file, accept: 'application/pdf, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' %>
                 </label>
             </div>
 
