@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_29_091327) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_24_055158) do
   create_table "abouts", force: :cascade do |t|
     t.string "title"
     t.string "page_title"
@@ -64,6 +64,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_29_091327) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "leaders", force: :cascade do |t|
+    t.string "name"
+    t.text "post"
+    t.string "page_title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.string "number"
@@ -72,6 +80,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_29_091327) do
     t.integer "views", default: 0
     t.boolean "hot", default: false
     t.boolean "best", default: false
+    t.text "subtitle"
   end
 
   create_table "sliders", force: :cascade do |t|

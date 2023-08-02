@@ -1,0 +1,73 @@
+.notification {
+    position: absolute;
+    max-width: 360px;
+    top: 20px;
+    right: -350px;
+    z-index: 1000;
+    background-color: var(--amelie);
+    border-radius: var(--border-radius);
+    -webkit-animation: move 5s ease-in-out;
+    animation: move 5s ease-in-out;
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    box-shadow: 0 8px 32px 0 var(--hamilton);
+    transition: all 0.4s;
+}
+
+.notification .notification__icon {
+    margin-right: 16px;
+}
+
+@-webkit-keyframes move {
+    0,
+    5% {
+        right: -350px;
+    }
+    15%,
+    85% {
+        right: 24px;
+    }
+    95%,
+    100% {
+        right: -350px;
+    }
+}
+
+@keyframes move {
+    0,
+    5% {
+        right: -350px;
+    }
+    15%,
+    85% {
+        right: 24px;
+    }
+    95%,
+    100% {
+        right: -350px;
+    }
+}
+
+
+.notification .notification__icon i {
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.notification__error .notification__icon i {
+    color: var(--fargo) !important;
+}
+
+.notification__success .notification__icon i {
+    color: var(--matrix) !important;
+}
+
+.notification__info .notification__icon i {
+    color: var(--rocky) !important;
+}
+
+
+.module-head-alert {
+    color: var(--fargo) !important;
+}

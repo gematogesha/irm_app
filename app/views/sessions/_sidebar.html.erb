@@ -1,0 +1,47 @@
+<div class="sidebar">
+    <div class="menu">
+        <%= link_to control_panel_path(key: "posts") do %>
+            <div class="menu__item">
+                <div class="menu__body">
+                    <div class="menu__icon"><%= icon("fa-solid", "newspaper")%></div>
+                    <div class="menu__title">Новости</div>
+                </div>
+            </div>
+        <% end %>
+        <%= link_to control_panel_path(key: "documents") do %>
+            <div class="menu__item">
+                <div class="menu__body">
+                    <div class="menu__icon"><%= icon("fa-solid", "file")%></div>
+                    <div class="menu__title">Документы</div>
+                </div>
+            </div>
+        <% end %>
+        <%= link_to control_panel_path(key: "sliders") do %>
+            <div class="menu__item">
+                <div class="menu__body">
+                    <div class="menu__icon"><%= icon("fa-solid", "image")%></div>
+                    <div class="menu__title">Слайдеры</div>
+                </div>
+            </div>
+        <% end %>
+        <%= link_to control_panel_path(key: "leaders") do %>
+            <div class="menu__item">
+                <div class="menu__body">
+                    <div class="menu__icon"><%= icon("fa-solid", "user")%></div>
+                    <div class="menu__title">Руководство</div>
+                </div>
+            </div>
+        <% end %>
+        <%= link_to control_panel_path(key: "abouts") do %>
+            <div class="menu__item">
+                <div class="menu__body">
+                    <div class="menu__icon"><%= icon("fa-solid", "file-pdf")%></div>
+                    <div class="menu__title">Остальное</div>
+                </div>
+            </div>
+        <% end %>
+    </div>
+    <%= link_to logout_path, method: :delete, class: "button__link", style: "width: 100%" do %>
+        <div class="button button_primary" style="width: 100%">Выход</div>
+    <% end %>
+</div>

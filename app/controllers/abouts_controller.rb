@@ -1,6 +1,6 @@
 class AboutsController < ApplicationController
 
-    before_action :loggedin, only: [:create, :new, :update, :delete]
+    before_action :loggedin, only: %i[create new update delete edit destroy]
     before_action :model_name
     before_action :set_about, only: %i[update show destroy edit]
 
@@ -17,16 +17,13 @@ class AboutsController < ApplicationController
         
         @page_title_status = false
 
-        add_breadcrumb(@model_many, abouts_path)
+        add_breadcrumb(@model_many, abouts_url(subdomain: false))
     end
 
     def create
         add_breadcrumb(@model_many, abouts_path)
-
         @page_title_text = "Создать новость"
-
         @about = About.create(about_params)
-
         if @about.save
           redirect_to abouts_path, success: "Новость создана"
         else     
@@ -36,27 +33,21 @@ class AboutsController < ApplicationController
 
     def new
         @about = About.new
-
         add_breadcrumb(@model_many, abouts_path)
-
         @page_title_text = "Создать новость"
 
     end
 
     def edit
         add_breadcrumb(@model_many, abouts_path)
-
         @page_title_text = "Редактировать новость"  
     end
 
 
     def update
         add_breadcrumb(@model_many, abouts_path)
-
         @page_title_text = "Редактировать новость"  
-
         @about.update(about_params)
-        
         if @about.update(about_params)
             redirect_to about_path(@about.page_title), success: "Новость обновлена"
         else 
@@ -78,6 +69,5 @@ class AboutsController < ApplicationController
         @model_one = About.model_name.human
         @model_many = About.model_name.human(count: :many)
     end
-
 
 end

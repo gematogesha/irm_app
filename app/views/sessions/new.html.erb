@@ -1,21 +1,13 @@
-<div class="row">
-    <div class="module module-login">
-        <div class="module-head">
-            <h2>Вход</h2>
-        </div>
-        <%= form_with scope: :sessions, url: sessions_path, data: {turbo: false} do |form| %>
-            <div class="module-body module-body-login">
+<%- title @page_title_text %>
 
-                <div class="control-group">
-                    <div><%= form.email_field :email, class: "form-text-field", placeholder: "Логин" %></div>
-                </div>
-                <div class="control-group">
-                    <div><%= form.password_field :password, class: "form-text-field", placeholder: "Пароль" %></div>
-                </div>
-            </div>
-            <div class="module-foot">
-                <%= form.submit "Войти", class: "button right" %>
-            </div>
-        <% end %>
+<section class="section-posts section_gray">
+    <div class="wrapper">
+        <div class="login">
+            <%= form_with scope: :sessions, url: sessions_path, data: {turbo: false}, class: 'form' do |form| %>
+                <%= form.email_field :email, class: "form__item form__item_input form__item_login", placeholder: "Логин" %>
+                <%= form.password_field :password, class: "form__item form__item_input form__item_login", placeholder: "Пароль" %>
+                <%= form.submit "Войти", class: "button button_primary button_form", style: "width: 100%" %>
+            <% end %>
+        </div>
     </div>
-</div>
+</section>

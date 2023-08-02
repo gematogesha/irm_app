@@ -1,15 +1,17 @@
-<%= form_with model: @about, url: url, data: {turbo: false} do |form| %>
-  <div class="form">
+<div class="admin-form">
+    <%= form_with model: @about, url: url, data: {turbo: false} do |form| %>
+        <div class="form">
+            <%= form.label :title, class: "form__item form__item_label" %>
+            <%= form.text_area :title, class: "form__item form__item_textarea" %>
 
-    <%= form.label :title, class: "control-label" %>
-    <%= form.text_area :title, rows: 5 , cols: 45 %>
+            <%= form.label :page_title, class: "form__item form__item_label" %>
+            <%= form.text_field :page_title, class: "form__item form__item_input" %>
 
-    <%= form.label :content %>
-    <%= form.rich_text_area :content %>
+            <%= form.label :content, class: "form__item form__item_label" %>
+            <%= form.rich_text_area :content, class: "form__item form__item_textarea" %>
 
-    <%= form.label :page_title, class: "control-label" %>
-    <%= form.text_field :page_title %>
+            <%= form.submit class: "button button_primary button_form"%>
+        </div>
+    <% end %>
+</div>
 
-    <%= form.submit class: "button buttom__primary"%>
-  </div>
-<% end %>

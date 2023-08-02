@@ -1,15 +1,28 @@
-<%= form_with model: @document, url: url, data: {turbo: false} do |form| %>
-  <div class="form">
+<div class="admin-form">
+    <%= form_with model: @document, url: url, data: {turbo: false} do |form| %>
+        <div class="form">
 
-    <%= form.label :title%>
-    <%= form.text_area :title, rows: 5 , cols: 45 %>
+            <%= form.label :title, class: "form__item form__item_label" %>
+            <%= form.text_area :title, class: "form__item form__item_textarea" %>
 
-    <%= form.label :description %>
-    <%= form.text_area :description, rows: 5 , cols: 45 %>
+            <%= form.label :description, class: "form__item form__item_label" %>
+            <%= form.text_area :description, class: "form__item form__item_textarea" %>
 
-    <%= form.label :file %>
-    <%= form.file_field :file %>
 
-    <%= form.submit class: "button buttom__primary"%>
-  </div>
-<% end %>
+            <div class="uploader form__item">
+                <label class="uploader__attach">
+                    <div class="uploader__content">
+                        <div class="uploader__title">
+                            <%= icon("fa-solid", "link") %>
+                            <span class="uploader__title_text">Загрузить файлы</span>
+                        </div>
+                        <div class="uploader__subtitle">Файлы должны быть в формате PDF</div>
+                    </div>
+                    <%= form.file_field :file, accept: 'application/pdf, application/vnd.openxmlformats-officedocument.wordprocessingml.document, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' %>
+                </label>
+            </div>
+
+            <%= form.submit class: "button button_primary button_form"%>
+        </div>
+    <% end %>
+</div>

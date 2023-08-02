@@ -6,42 +6,48 @@
 
 
 <section>
-    <div class="wrapper wrapper__flex_center">
-        <div class="about-block left">
-            <h2 class="about-block__title title">АО "ИРМ"</h2>
-            <p align="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique adipisci, reiciendis, commodi quisquam saepe deserunt ducimus, veniam maiores excepturi ab iure ea repudiandae distinctio quos voluptatum necessitatibus? Doloribus, voluptas culpa reiciendis magnam necessitatibus consectetur dicta asperiores vel harum blanditiis voluptates modi fugit aliquam iure. Fugit optio molestias, cum explicabo consequuntur quae, nostrum officiis libero harum aut, animi tenetur assumenda excepturi quidem earum enim rerum expedita at. Fuga possimus beatae illo labore sit, consequuntur aliquam, sequi error impedit odit corporis non unde iusto similique dolorem ad fugiat iure eaque architecto! Nobis officia minus atque non in repellendus sunt accusamus, adipisci consequatur?</p>
-            <%= link_to root_path, class: "button__link" do %>
-                <div class="button button__secondary button__default">Подробнее</div>
+    <div class="wrapper flex_center_center">
+        <div class="b-about left">
+            <h2 class="about__title title">АО "ИРМ"</h2>
+            <p class="about__text text" align="justify">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique adipisci, reiciendis, commodi quisquam saepe deserunt ducimus, veniam maiores excepturi ab iure ea repudiandae distinctio quos voluptatum necessitatibus? Doloribus, voluptas culpa reiciendis magnam necessitatibus consectetur dicta asperiores vel harum blanditiis voluptates modi fugit aliquam iure. Fugit optio molestias, cum explicabo consequuntur quae, nostrum officiis libero harum aut, animi tenetur assumenda excepturi quidem earum enim rerum expedita at. Fuga possimus beatae illo labore sit, consequuntur aliquam, sequi error impedit odit corporis non unde iusto similique dolorem ad fugiat iure eaque architecto! Nobis officia minus atque non in repellendus sunt accusamus, adipisci consequatur?</p>
+            <%= link_to root_url(subdomain: false), class: "button__link" do %>
+                <div class="button button_secondary">Подробнее</div>
             <% end %>
         </div>
-        <div class="post-block left">
-            <div class="post-block__title title">
+        <div class="b-post left">
+            <div class="title">
                 <h4>Новости</h4>
-                <div class="spost-block__subtitle">Если не новсти, то события</div>
+                <p class="subtitle">Если не новсти, то события</p>
             </div>
             <%= render "post" %>
-            <%= link_to posts_path, class: "button__link" do %>
-                <div class="button button__secondary button__small">Все новости</div>
+            <%= link_to posts_url(subdomain: false), class: "button__link" do %>
+                <div class="button button_secondary">Все новости</div>
             <% end %>
         </div>
     </div>
 </section>
 
-<section class="section-gray">
+<section class="section_gray">
     <div class="wrapper">
         <h2 class="title" style="text-align: center;">Lorem, ipsum dolor.</h2>
-        <div class="activity-block wrapper__flex_around" style="gap: 20px;" ">
-            <div class="activity-block__item" id="activity-block__item_1">
-                <h4 class="activity-block__item_title">Lorem, ipsum dolor.</h4>
-                <p class="activity-block__item_text">Lorem ipsum dolor sit amet consectetur.</p>
+        <div class="b-activity flex_center_around" style="gap: 20px;" ">
+            <div class="activity__item" id="activity__item_1">
+                <div class="activity__content">                
+                    <h4 class="activity__title">Lorem, ipsum dolor.</h4>
+                    <p class="activity__text">Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
             </div>
-            <div class="activity-block__item" id="activity-block__item_2">
-                <h4 class="activity-block__item_title">Lorem, ipsum.</h4>
-                <p class="activity-block__item_text">Lorem ipsum dolor sit amet.</p>
+            <div class="activity__item" id="activity__item_2">
+                <div class="activity__content">                
+                    <h4 class="activity__title">Lorem, ipsum dolor.</h4>
+                    <p class="activity__text">Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
             </div>
-            <div class="activity-block__item" id="activity-block__item_3">
-                <h4 class="activity-block__item_title">Lorem, ipsum dolor.</h4>
-                <p class="activity-block__item_text">Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
+            <div class="activity__item" id="activity__item_3">
+                <div class="activity__content">                
+                    <h4 class="activity__title">Lorem, ipsum dolor.</h4>
+                    <p class="activity__text">Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
             </div>
         </div>
     </div>

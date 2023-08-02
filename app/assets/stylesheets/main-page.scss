@@ -1,87 +1,77 @@
 /*-------------------MAIN-PAGE-------------------*/
 
-/*-------------------General-------------------*/
+/*-------------------Slider-------------------*/
 
-.slider__item_title, 
-.about-block__title, 
-.post-block__item:last-of-type{
-    margin-bottom: 30px;
-
-}
-
-.slider__item_text p, 
-.about-block p{
-    line-height: 28px;
-    margin-bottom: 25px;
-}
-
-/*-------------------Slider-top-------------------*/
-
-.slider, 
-.slider__item{
+.slider,
+.slider__item {
     height: 600px;
     padding: 0;
 }
 
-.slider__item_text{
-    max-width: 60%;
-    color: var(--white);
-    font-weight: 400;
-}
-
-.slider__item_text p{
-    max-width: 70%;
-}
-
-.slider__item{
+.slider__item {
     background-repeat: no-repeat;
     background-size: cover !important;
     background-position: center;
-    background-image: url(slider-1.png);
-
 }
+
+.slider__content {
+    max-width: 50%;
+    color: var(--amelie);
+}
+
+.slider__text {
+    line-height: 28px;
+    margin-bottom: 25px;
+}
+
 
 /*-------------------About-------------------*/
 
-.about-block{
+.b-about {
     width: 60%;
     margin-right: 30px;
+}
+
+.about__text {
+    line-height: 28px;
+    margin-bottom: 25px;
 }
 
 
 /*-------------------Activity-------------------*/
 
-.activity-block__item{
+.activity__item {
     width: 100%;
     height: 225px;
-    background: var(--blue);
+    background: var(--rocky);
     border-radius: var(--border-radius);
     padding: 20px;
-    color: var(--white);
+    color: var(--amelie);
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position: 150%;
 }
 
-#activity-block__item_1{
-    background-image: image-url('atom_white.png'), linear-gradient(270deg, rgba(68,128,243,1) 0%, rgba(15,89,232,1) 100%);
+#activity__item_1 {
+    background-image: image-url('atom_white.png'), linear-gradient(270deg, var(--alien) 0%, var(--rocky) 100%);
 }
 
-#activity-block__item_2{
-    background-image: image-url('gears_white.png'), linear-gradient(270deg, rgba(68,128,243,1) 0%, rgba(15,89,232,1) 100%);
+#activity__item_2 {
+    background-image: image-url('gears_white.png'), linear-gradient(270deg, var(--alien) 0%, var(--rocky) 100%);
 }
 
-#activity-block__item_3{
-    background-image: image-url('idea_white.png'), linear-gradient(270deg, rgba(68,128,243,1) 0%, rgba(15,89,232,1) 100%);
+#activity__item_3 {
+    background-image: image-url('idea_white.png'), linear-gradient(270deg, var(--alien) 0%, var(--rocky) 100%);
 }
 
 
-.activity-block__item .activity-block__item_title {
+.activity__item .activity__title {
     margin-bottom: 25px;
     max-width: 75%;
 }
 
-.activity-block__item .activity-block__item_text{
+.activity__item .activity__text {
     font-size: 18px;
+    max-width: 70%;
 
 }

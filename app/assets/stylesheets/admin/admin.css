@@ -1,0 +1,448 @@
+.section-admin {
+    height: calc(100% - 121px);
+}
+
+.form blockquote {
+    position: relative;
+    border: none;
+    padding-left: 16px;
+    margin-left: 0;
+}
+
+.form blockquote::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    bottom: 2px;
+    left: 0;
+    border-radius: 2px;
+    border-left: 4px solid var(--rocky);
+}
+
+.form ul {
+    list-style: disc;
+}
+
+.form ol {
+    list-style: decemical;
+}
+
+.form li {
+    margin-left: 1em;
+}
+
+.form label:first-of-type{
+    margin-top: 0;
+}
+
+.form__item {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    width: 100%;
+    border-radius: var(--border-radius);
+    line-height: 20px;
+}
+
+.form__item_label {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 8px 0 12px 0;
+    display: block;
+    color: var(--troy);
+    transition: all 0.1s;
+}
+
+.form__item_label:hover {
+    color: var(--harakiri);
+}
+
+.uploader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+}
+
+.uploader__attach {
+    flex: 1 1 100%;
+    width: 100%;
+    cursor: pointer;
+    padding: 16px;
+    border-color: var(--metropolis);
+    border-style: dashed;
+    border-width: 1px;
+    margin-bottom: 0 !important;
+    border-radius: var(--border-radius);
+}
+
+.uploader__title {
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.uploader__title_text {
+    color: var(--harakiri);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    -webkit-line-clamp: 1
+}
+
+.uploader__subtitle,
+.uploader__title_text {
+    display: -webkit-box;
+    overflow: hidden;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical
+}
+
+.uploader__subtitle {
+    color: var(--metropolis);
+    font-size: 13px;
+    margin-top: 4px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 16px;
+    -webkit-line-clamp: 2
+}
+
+.uploader__title i {
+    color: var(--harakiri);
+    margin-right: 8px
+}
+
+.uploader__attach input {
+    display: none
+}
+
+.uploader__attach:hover {
+    border-color: var(--metropolisHover)
+}
+
+.uploader__attach:hover i,
+.uploader__attach:hover .uploader__title_text {
+    color: var(--harakiriHover)
+}
+
+.uploader__attach:hover .uploader__subtitle {
+    color: var(--metropolisHover)
+}
+
+.uploader:active .uploader__attach {
+    border-color: var(--metropolisPressed)
+}
+
+.uploader:active .uploader__attach i,
+.uploader:active .uploader__attach .uploader__title_text {
+    color: var(--harakiriPressed)
+}
+
+.uploader:active .uploader__attach .uploader__subtitle {
+    color: var(--metropolisPressed)
+}
+
+.form__item_checkbox {
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    width: 15px;
+}
+
+.form__item_checkbox+label {
+    height: -moz-max-content;
+    height: max-content;
+    display: flex;
+    margin-top: 2px;
+    transition: all 0.1s;
+    align-items: center;
+    border-radius: 4px;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+
+.form__item_checkbox+label::before {
+    width: 12px;
+    height: 12px;
+    content: "";
+    display: block;
+    box-sizing: content-box;
+    transition: all 0.1s;
+    border-color: var(--dangal);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 4px;
+    margin-right: 12px;
+    background-color: var(--amelie);
+    content: "\f00c";
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    color: var(--amelie);
+    font-size: 13px;
+    line-height: 13px;
+}
+
+.form__item_checkbox+label:hover::before {
+    box-shadow: 0 0 0 4px var(--avengers);
+    border-color: var(--dangalHover);
+}
+/* стили для активного состояния чекбокса (при нажатии на него) */
+.form__item_checkbox:not(:disabled):active+label::before {
+    background-color: var(--rockyHover);
+}
+
+.form__item_checkbox:checked+label::before {
+    background-color: var(--rocky);
+}
+
+/* стили для чекбокса, находящегося в фокусе и не находящегося в состоянии checked */
+.form__item_checkbox:focus:not(:checked)+label::before {
+    border-color: var(--dangal);
+    background-color: var(--amelie);
+}
+
+
+.form__item_textarea {
+    padding: 12px 16px;
+    box-shadow: none;
+    background-color: var(--django);
+    color: var(--troy);
+    cursor: text;
+    font-family: "Golos", Arial, Helvetica, sans-serif;
+    transition: color 0.1s;
+    min-height: 100px;
+    border: none;
+    max-width: 100%;
+}
+
+.form__item_input {
+    height: 40px;
+    padding: 0 16px;
+    box-shadow: none;
+    background-color: var(--django);
+    color: var(--troy);
+    cursor: text;
+    font-family: "Golos", Arial, Helvetica, sans-serif;
+    transition: color 0.1s;
+}
+
+.form__item_textarea:hover,
+.form__item_input:hover {
+    box-shadow: none;
+    background-color: var(--djangoHover);
+    color: var(--harakiri);
+}
+
+.form__item_textarea:focus-within,
+.form__item_input:focus-within {
+    box-shadow: none;
+    background-color: var(--djangoHover);
+    color: var(--harakiri);
+}
+
+.form__item_login {
+    width: 100%
+}
+
+.login {
+    width: 300px;
+    margin: 120px auto;
+    padding: 16px;
+    border-radius: var(--border-radius-2x);
+    background-color: var(--amelie);
+}
+
+.admin-form {
+    width: 900px;
+    margin: auto;
+}
+
+.admin-list,
+.admin-form {
+    padding: 16px;
+    background-color: var(--amelie);
+    border-radius: var(--border-radius-2x);
+}
+
+.admin-list {
+    height: 100%;
+}
+
+.admin-list {
+    overflow-y: auto;
+    width: calc(100% - 250px);
+}
+
+.admin-list__item {
+    width: 100%;
+    margin-bottom: 16px;
+    min-height: 84px;
+    padding: 12px 16px;
+    background: var(--django);
+    border-radius: var(--border-radius);
+}
+
+.admin-list__item:last-of-type {
+    margin-bottom: 0;
+}
+
+.admin-list__title {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.icon__create {
+    font-size: 24px;
+    color: var(--matrix)
+}
+
+.icon__create:hover {
+    color: var(--matrixHover)
+}
+
+.icon__create:focus {
+    color: var(--matrixPressed)
+}
+
+
+.icon__edit {
+    color: var(--lebowski);
+    margin-left: 4px;
+    font-size: 16px;
+}
+
+.icon__edit:hover {
+    color: var(--lebowskiHover);
+}
+
+.icon__edit:focus {
+    color: var(--lebowskiPressed);
+}
+
+.icon__delete {
+    color: var(--fargo);
+    margin-left: 4px;
+    font-size: 16px;
+}
+
+.icon__delete:hover {
+    color: var(--fargoHover);
+}
+
+.icon__delete:focus {
+    color: var(--fargoPressed);
+}
+
+
+.admin-list__item {
+    width: 100%;
+    margin-bottom: 16px;
+    min-height: 84px;
+    padding: 12px 16px;
+    background: var(--django);
+    border-radius: var(--border-radius);
+}
+
+.admin-list__content {
+    width: calc(100% - 76px);
+    display: inline-block;
+    padding: 0;
+}
+
+
+.admin-list__img {
+    height: 60px;
+    width: 60px;
+    margin-right: 16px;
+}
+
+.admin-list__link-img {
+    height: 100%;
+    width: 100%;
+    font-size: 60px;
+}
+
+.admin-list__img_inside {
+    height: 100%;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    transition: all 0.1s ease-in-out;
+    border-radius: var(--border-radius);
+}
+
+.admin-list__title {
+    margin: 0;
+}
+
+.admin-list__text {
+    line-height: 1.25;
+    width: 100%;
+}
+
+.admin-list__info {
+    padding-top: 8px;
+}
+
+.admin-list__date_padding {
+    padding: 4px 12px;
+    background-color: var(--arrival);
+    border-radius: var(--border-radius-2x);
+    color: var(--rocky);
+    font-weight: 400;
+}
+
+.menu {
+    width: 100%;
+    margin-bottom: 32px;
+}
+
+.sidebar {
+    margin-right: 16px;
+    width: 250px;
+}
+
+.menu__item {
+    margin-bottom: 2px;
+}
+
+.menu__body {
+    cursor: pointer;
+    height: 44px;
+    display: flex;
+    padding: 12px 16px;
+    align-items: center;
+    border-radius: var(--border-radius);
+    text-decoration: none;
+}
+
+.menu__body:hover {
+    background-color: var(--walleHover);
+}
+
+.menu__body:focus {
+    background-color: var(--wallePressed);
+}
+
+.menu__title {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+.menu__title,
+.menu__icon {
+    color: var(--troy) !important;
+}
+.menu__body:hover .menu__icon,
+.menu__body:hover .menu__title {
+    color: var(--harakiri) !important;
+}
+
+.menu__icon + .menu__title {
+    margin-left: 12px;
+}

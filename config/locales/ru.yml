@@ -7,10 +7,37 @@ ru:
       document:
         one: "Документ"
         other: "Документы"   
+      leader:
+        one: "Руководство"
+        other: "Руководство"  
+      slider:
+        one: "Слайдер"
+        other: "Слайдеры"  
     attributes:
       post:
         title: "Заголовок"
         content: "Содержание"
+        subtitle: "Подзаголовок"
+        image: "Изображение"
+        hot: "Горячая новость"
+        best: "Новость дня"
+      document:
+        title: "Наименование"
+        description: "Описание"
+        file: "Файл"
+      slider:
+        title: "Наименование"
+        description: "Описание"
+        image: "Изображение"
+        link: "Ссылка"
+      about:
+        title: "Наименование"
+        content: "Содержание"
+        page_title: "Наименование страницы"
+      leader:
+        name: "ФИО"
+        post: "Должность"
+        page_title: "Наименование страницы"
   errors:
     format: 'Поле "%{attribute}" %{message}'
     messages:

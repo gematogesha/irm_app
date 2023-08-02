@@ -1,0 +1,291 @@
+/*-------------------Layout-------------------*/
+
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body {
+    font-family: "Golos", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: var(--harakiri);
+    font-weight: 400;
+    background-color: var(--trainspotting);
+}
+
+h1 {
+    font-size: 96px;
+    letter-spacing: -1.5px;
+    font-weight: 700;
+    line-height: 96px;
+}
+
+h2 {
+    font-size: 60px;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+    line-height: 60px;
+}
+
+h3 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 48px;
+}
+
+h4 {
+    font-size: 32px;
+    letter-spacing: 0.25px;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+h5 {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 24px;
+}
+
+h6 {
+    font-size: 20px;
+    letter-spacing: 0.15px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+a {
+    color: var(--rocky);
+    text-decoration: none;
+    transition: all 0.1s ease-in-out;
+    font-weight: 500;
+}
+
+a:hover {
+    color: var(--rockyHover);
+    text-decoration: none;
+}
+
+a:active {
+    color: var(--rockyPressed);
+    text-decoration: none;
+}
+
+section {
+    padding: 48px 0;
+    min-width: 320px;
+}
+
+.page {
+    min-height: calc(100% - 332px);
+    margin-bottom: 332px;
+    background-color: var(--amelie);
+}
+
+.wrapper {
+    margin: auto;
+    max-width: 1360px;
+    width: 100%;
+    padding: 0 20px;
+    height: 100%;
+    display: flow-root;
+}
+
+
+.flex_center_start {
+    display: flex;
+    align-items: center;
+    Justify-content: flex-start;
+}
+
+.flex_top_start {
+    display: flex;
+    align-items: flex-start;
+    Justify-content: flex-start;
+}
+
+.flex_center_around {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.flex_top_between {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.flex_center_between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.flex_center_center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin-bottom: 20px;
+
+}
+
+.subtitle {
+    color: var(--metropolis);
+
+}
+
+.right {
+    float: right;
+}
+
+.left {
+    float: left;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.small {
+    font-size: 13px;
+    color: var(--metropolis);
+    line-height: 16px;
+}
+
+.page-title {
+    padding: 20px 0;
+    background-color: var(--avengers);
+}
+
+.page-title:first-child {
+    margin-top: none;
+}
+
+.page-title__title {
+    margin-bottom: 8px;
+}
+
+.breadcrumbs {
+    font-size: 13px;
+    color: var(--metropolis);
+}
+
+.breadcrumbs span {
+    margin-right: 38px;
+    position: relative;
+}
+
+.breadcrumbs span:last-child {
+    margin-right: 0;
+}
+
+
+.breadcrumbs span::after {
+    content: '';
+    position: absolute;
+    left: calc(100% + 10px);
+    width: 16px;
+    height: 1px;
+    background: var(--metropolis);
+    display: block;
+    top: 50%;
+}
+
+.breadcrumbs span:last-child::after {
+    content: none;
+}
+
+.content {
+    line-height: 1.25;
+    padding: 16px 0;
+    background-color: var(--amelie);
+    margin: auto;
+    max-width: 900px;
+}
+
+.content-wrapper {
+    margin: auto auto 20px;
+    max-width: 640px;
+    padding: 0 16px;
+}
+
+.content__title {
+    line-height: 32px;
+    word-wrap: break-word;
+    margin: 12px 0;
+    font-weight: 700;
+}
+
+.content__img {
+    position: relative;
+    margin: 16px 0;
+}
+
+.content__img_inside{
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    max-height: 900px;
+}
+
+.cookies {
+    padding: 20px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: var(--alien);
+    z-index: 1000;
+}
+
+.cookies__text {
+    width: calc(90% - 100px);
+    color: var(--amelie);
+    font-weight: 400;
+}
+
+.section_gray {
+    background-color: var(--trainspotting);
+}
+
+.disabled {
+    cursor: default;
+    opacity: .32;
+    pointer-events: none;
+}
+
+.loading {
+    -webkit-animation: keyframes-pulse 1.6s ease 0.4s infinite;
+    animation: keyframes-pulse 1.6s ease 0.4s infinite;
+}
+
+@-webkit-keyframes keyframes-pulse {
+    0% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .32
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes keyframes-pulse {
+    0% {
+        opacity: 1
+    }
+
+    50% {
+        opacity: .32
+    }
+
+    to {
+        opacity: 1
+    }
+}

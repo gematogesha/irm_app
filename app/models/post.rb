@@ -4,7 +4,7 @@ class Post < ApplicationRecord
 
   has_one_attached :image, dependent: :destroy
 
-  validates :title, :content, presence: true
+  validates :title, :subtitle, :content, presence: true
 
   before_create { self.number = "@" + SecureRandom.hex(3) }
 
@@ -12,6 +12,14 @@ class Post < ApplicationRecord
 
   def strip_ize
       title.strip!
+  end
+
+  def next
+    self.class.where("id > ?", id).first
+  end
+
+  def previous
+    self.class.where("id < ?", id).last
   end
 
 

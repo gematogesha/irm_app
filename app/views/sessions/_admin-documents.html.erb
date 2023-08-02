@@ -1,0 +1,23 @@
+<div class="admin-list__document admin-list">
+    <h4 class="title">Документы
+        <%= link_to icon('fa-regular', 'plus', class: "icon__create"), new_document_path, title: "Создать", class: "create" %></h4>
+    <% @documents.each do |document| %>
+        <div class="admin-list__item" id="document_id_<%= document.id %>">
+            <div class="admin-list__img left">
+                <%= link_to edit_document_path(document.page_title), class: "admin-list__link-img flex_cneter_center edit" do %>
+                    <%= icon("fa-solid", "file")%>
+                <% end %>
+            </div>
+            <div class="admin-list__title">
+                <%= link_to edit_document_path(document.page_title), class: "edit" do %>
+                    <%= document.title %>
+                    <%= icon("fa-regular", "pen-to-square", class: "icon__edit")%>
+                <% end %>
+                <%= button_to icon("fa-regular", "trash-can", class: "icon__delete"), document_path(document.page_title), 
+                    method: :delete, 
+                    form: {data: {turbo_confirm: "Вы точно хотите удалить документ?" }}, 
+                    class: "delete" %>
+            </div>
+        </div>
+    <% end %>
+</div>

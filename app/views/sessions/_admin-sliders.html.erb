@@ -1,0 +1,32 @@
+<div class="admin-list__slider admin-list">
+    <h4 class="title">Слайдеры
+        <%= link_to icon('fa-regular', 'plus', class: "icon__create"), new_slider_path, title: "Создать", class: "create" %></h4>
+    <% @sliders.each do |slider| %>
+        <div class="admin-list__item" id="slider_id_<%= slider.id %>">
+            <div class="admin-list__img left">
+                <%= link_to edit_slider_path(slider.id), class: "admin-list__link-img flex_cneter_center edit" do %>
+                    <% if slider.image.present? %>
+                        <%= image_tag(slider.image, alt: slider.title, title: slider.title, class: "admin-list__img_inside") %>
+                    <% else %>
+                        <%= image_tag("noimage.png", alt: "Нет изображения", title: 'Нет изображения', class: "admin-list__img_inside") %>
+                    <% end %>
+                <% end %>
+            </div>
+            <div class="admin-list__content">
+                <div class="admin-list__title">
+                    <%= link_to edit_slider_path(slider.id), class: "edit" do %>
+                        <%= slider.title %>
+                        <%= icon("fa-regular", "pen-to-square", class: "icon__edit")%>
+                    <% end %>
+                    <%= button_to icon("fa-regular", "trash-can", class: "icon__delete"), slider_path(slider.id), 
+                        method: :delete, 
+                        form: {data: {turbo_confirm: "Вы точно хотите удалить новость?" }}, 
+                        class: "delete" %>
+                </div>
+                <div class="admin-list__info">                
+                    <div class="admin-list__date small right"><%= l(slider.created_at, format: :long) %></div>
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>

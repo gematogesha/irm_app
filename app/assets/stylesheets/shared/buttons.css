@@ -1,0 +1,61 @@
+/*-------------------Button-------------------*/
+
+.button__link,
+.button__link:hover {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button {
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    height: 40px;
+    padding: 10px 16px !important;
+    border-radius: var(--border-radius);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0;
+    font-family: "Golos", Arial, Helvetica, sans-serif;
+    border: none;
+    cursor: pointer;
+}
+
+.button:active {
+    transition: none;
+}
+
+.button_primary {
+    background-color: var(--rocky);
+    color: var(--amelie) !important;
+}
+
+.button_primary:hover {
+    transition: background-color 0.1s linear;
+    box-shadow: var(--shadow);
+    background-color: var(--rockyHover);
+}
+
+.button_primary:active {
+    box-shadow: var(--shadow-inset);
+    background-color: var(--rockyPressed) !important;
+    color: var(--amelie) !important;
+}
+
+.button_secondary {
+    background-color: var(--avengers);
+    color: var(--rocky) !important;
+}
+
+.button_secondary:hover {
+    background-color: var(--avengersHover);
+}
+
+.button_secondary:active {
+    background-color: var(--avengersPressed);
+}
+
+.button_form{
+    margin-top: 32px;
+}

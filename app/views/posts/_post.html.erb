@@ -1,36 +1,40 @@
 <div class="post__flex">
-    <% (1..3).each do |ind|%>
-        <div class="line line_id_<%= ind %>">
-            <% @posts.each_with_index do |post, i| %>
-                <% if (i+1 - ind)%3==0 %>
-                    <div class="post-box__item" id="post_id_<%= post.id %>">
-                        <% if post.hot == true %>
-                            <div class="post__hot"><%= icon("fa-solid", "fire",  class: 'fa-beat')%></div>
+    <% (1..4).each do |ind|%>
+    <div class="line line_id_<%= ind %>">
+        <% @posts.each_with_index do |post, i| %>
+            <% if (i+1 - ind)%4==0 %>
+                <div class="post__item" id="post_id_<%= post.id %>">
+                    <% if post.hot == true %>
+                        <div class="tag tag_fargo small absolute"><%= icon("fa-solid", "fire", class: "tag__icon")%>
+                            Горячая новость</div>
+                    <% end %>
+                    <% if post.best == true %>
+                        <div class="tag tag_rocky small absolute"><%= icon("fa-solid", "star", class: "tag__icon")%>
+                            Новость недели</div>
+                    <% end %>
+                    <div class="post__img left">
+                        <%= link_to post_url(post.number, subdomain: false), class: "post__link-img flex_center_center" do%>
+                        <% if post.image.present? %>
+                            <%= image_tag(post.image, alt: post.title, title: post.title, class: "post__img_inside") %>
+                        <% else %>
+                            <%= image_tag("noimage.png", alt: "Нет изображения", title: 'Нет изображения', class: "post__img_inside") %>
                         <% end %>
-                        <% if post.best == true %>
-                            <div class="post__best"><%= icon("fa-solid", "star")%></div>
-                        <% end %>
-                        <div class="post__item_img left">
-                            <%= link_to post_path(post.number), class: "left flex-block" do%>
-                                <% if post.image.present? %>
-                                    <%= image_tag(post.image, alt: post.title, title: post.title) %>
-                                <% else %>
-                                    <%= image_tag("noimage.png", alt: "Нет изображения", title: 'Нет изображения') %>
-                                <% end %>
-                            <% end %>
-                        </div>
-                        <div class="post__item_details">
-                            <div class="post__item_title">
-                                <h5><%= link_to post.title, post_path(post.number)%></h5>
-                            </div>
-                            <span align="justify" class="left">
-                                <%= post.content.to_plain_text.truncate(200, separator: ' ').gsub(/\[.+?\]/, '') %>
-                            </span>
-                            <div class="post__item_date small right"><%= l(post.created_at, format: :long) %></div>
-                        </div>
+                    <% end %>
+                </div>
+                <div class="post__content">
+                    <div class="post__title">
+                        <h6><%= link_to post.title, post_url(post.number, subdomain: false) %></h5>
                     </div>
-                <% end %>
-            <% end %>
-        </div>
+                    <p class="post__text" align="justify" class="left">
+                        <% if !post.subtitle.nil? %>
+                            <%= post.subtitle.truncate(150, separator: ' ') %>
+                        <% end %>
+                    </p>
+                    <div class="post__info">
+                        <div class="post__date post__date_padding small right"><%= l(post.created_at, format: :long) %></div>
+                    </div>
+                </div>
+            </div>
+        <% end %>
     <% end %>
-</div>
+</div><% end %></div>

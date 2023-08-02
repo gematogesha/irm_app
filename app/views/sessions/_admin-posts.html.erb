@@ -1,0 +1,32 @@
+<div class="admin-list__post admin-list">
+    <h4 class="title">Новости
+        <%= link_to icon('fa-regular', 'plus', class: "icon__create"), new_post_path, title: "Создать", class: "create" %></h4>
+    <% @posts.each do |post| %>
+        <div class="admin-list__item" id="post_id_<%= post.id %>">
+            <div class="admin-list__img left">
+                <%= link_to edit_post_path(post.number), class: "admin-list__link-img flex_cneter_center edit" do %>
+                    <% if post.image.present? %>
+                        <%= image_tag(post.image, alt: post.title, title: post.title, class: "admin-list__img_inside") %>
+                    <% else %>
+                        <%= image_tag("noimage.png", alt: "Нет изображения", title: 'Нет изображения', class: "admin-list__img_inside") %>
+                    <% end %>
+                <% end %>
+            </div>
+            <div class="admin-list__content">
+                <div class="admin-list__title">
+                    <%= link_to edit_post_path(post.number), class: "edit" do %>
+                        <%= post.title %>
+                        <%= icon("fa-regular", "pen-to-square", class: "icon__edit")%>
+                    <% end %>
+                    <%= button_to icon("fa-regular", "trash-can", class: "icon__delete"), post_path(post.number), 
+                        method: :delete, 
+                        form: {data: {turbo_confirm: "Вы точно хотите удалить новость?" }}, 
+                        class: "delete" %>
+                </div>
+                <div class="admin-list__info">                
+                    <div class="admin-list__date small right"><%= l(post.created_at, format: :long) %></div>
+                </div>
+            </div>
+        </div>
+    <% end %>
+</div>

@@ -1,3 +1,13 @@
-<%= session.to_hash %>
-<%= session[:admin] %>
-<%= link_to "Выход", logout_path, method: :delete %>
+<%- title @page_title_text %>
+
+<section class="section-admin section_gray">
+    <div class="wrapper flex_top_start">
+        <%= render "sidebar" %>
+        <% if params[:key].nil? %>
+            <div class="admin-list">
+            </div>
+        <% else %>
+            <%= render "admin-" + params[:key].to_s %>
+        <% end %>
+    </div>
+</section>
