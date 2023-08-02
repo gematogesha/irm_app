@@ -1,6 +1,6 @@
 <div class="admin-list__about admin-list">
     <h4 class="title">Остальное
-        <%= link_to icon('fa-regular', 'plus', class: "icon__create"), new_about_path, title: "Создать", class: "create" %></h4>
+        <%= link_to icon('fa-solid', 'plus', class: "icon__create"), new_about_path, title: "Создать", class: "create" %></h4>
     <% @abouts.each do |about| %>
         <div class="admin-list__item" id="about_id_<%= about.id %>">
             <div class="admin-list__img left">
@@ -11,9 +11,9 @@
             <div class="admin-list__title">
                 <%= link_to edit_about_path(about.page_title), class: "edit" do %>
                     <%= about.title %>
-                    <%= icon("fa-regular", "pen-to-square", class: "icon__edit")%>
+                    <%= icon("fa-solid", "pen-to-square", class: "icon__edit")%>
                 <% end %>
-                <%= button_to icon("fa-regular", "trash-can", class: "icon__delete"), about_path(about.page_title), 
+                <%= button_to icon("fa-solid", "trash-can", class: "icon__delete"), about_path(about.page_title), 
                     method: :delete, 
                     form: {data: {turbo_confirm: "Вы точно хотите удалить документ?" }}, 
                     class: "delete" %>

@@ -1,0 +1,28 @@
+<div class="admin-form">
+    <%= form_with model: @leader, url: url, data: {turbo: false} do |form| %>
+        <div class="form">
+
+            <%= form.label :name, class: "form__item form__item_label" %>
+            <%= form.text_field :name, class: "form__item form__item_input" %>
+
+            <%= form.label :post, class: "form__item form__item_label" %>
+            <%= form.text_field :post, class: "form__item form__item_input" %>
+
+
+            <div class="uploader form__item">
+                <label class="uploader__attach">
+                    <div class="uploader__content">
+                        <div class="uploader__title">
+                            <%= icon("fa-solid", "link") %>
+                            <span class="uploader__title_text">Загрузить файлы</span>
+                        </div>
+                        <div class="uploader__subtitle">Файлы должны быть в формате PDF</div>
+                    </div>
+                    <%= form.file_field :image, accept: 'image/jpeg, image/gif, image/png' %>
+                </label>
+            </div>
+
+            <%= form.submit class: "button button_primary button_form"%>
+        </div>
+    <% end %>
+</div>

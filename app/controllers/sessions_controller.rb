@@ -19,6 +19,10 @@ class SessionsController < ApplicationController
   
     def admin
         @page_title_text = "Панель администратора"
+
+    end
+
+    def get_admin_list
         @posts = Post.all.order(created_at: :desc)  
         @documents = Document.all
         @sliders = Slider.all 

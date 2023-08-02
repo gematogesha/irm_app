@@ -37,6 +37,7 @@ ru:
       leader:
         name: "ФИО"
         post: "Должность"
+        image: "Изображение"
         page_title: "Наименование страницы"
   errors:
     format: 'Поле "%{attribute}" %{message}'

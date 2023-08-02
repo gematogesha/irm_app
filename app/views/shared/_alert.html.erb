@@ -1,5 +1,12 @@
-<% if variable.errors.any? %>
-    <% variable.errors.full_messages.each do |notification| %>
-        <div><%= notification %></div>
+<div class="notifications">
+    <% if variable.errors.any? %>
+        <% variable.errors.full_messages.each do |notification| %>
+        <div id="notification" class="notification notification__error">
+            <div class="notification__icon"><%= icon("fa-solid", "exclamation-circle")%></div>
+            <div class="notification__text">
+                <%= notification %>
+            </div>
+        </div>
+        <% end %>
     <% end %>
-<% end %>
+</div>

@@ -2,9 +2,9 @@
 
 <%- title @page_title_text %>
 
-<section class="section-leaders">
+<section class="section-leaders section_gray">
     <div class="wrapper">
-        <%= render "form", post: @leader, url: @leader %>
+        <%= render "form", post: @leader, url: leader_path(@leader.page_title) %>
     </div>
 </section>
 

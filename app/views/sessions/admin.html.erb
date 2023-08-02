@@ -7,7 +7,9 @@
             <div class="admin-list">
             </div>
         <% else %>
-            <%= render "admin-" + params[:key].to_s %>
+            <%= turbo_frame_tag "admin-lists", src: control_panel_get_admin_list_path, loading: :lazy do %>
+                <%= render "admin_list_sceleton" %>
+            <% end %>
         <% end %>
     </div>
 </section>

@@ -35,10 +35,10 @@ class LeadersController < ApplicationController
         if !session[:admin]
             add_breadcrumb(@model_many, leaders_path)
         end
-        @page_title_text = "Создать новость"
+        @page_title_text = "Создать руководителя"
         @leader = Leader.create(leader_params)
         if @leader.save
-          redirect_to admin_path, success: "Новость создана"
+          redirect_to admin_path, success: "Руководитель создан"
         else     
             render :new
         end
@@ -49,16 +49,16 @@ class LeadersController < ApplicationController
         if !session[:admin]
             add_breadcrumb(@model_many, leaders_path)
         end
-        add_breadcrumb("Создать новость")
-        @page_title_text = "Создать новость"
+        add_breadcrumb("Создать руководителя")
+        @page_title_text = "Создать руководителя"
     end
 
     def edit
         if !session[:admin]
             add_breadcrumb(@model_many, leaders_path)
         end
-        add_breadcrumb("Редактировать новость")
-        @page_title_text = "Редактировать новость"  
+        add_breadcrumb("Редактировать руководителя")
+        @page_title_text = "Редактировать руководителя"  
     end
 
 
@@ -66,11 +66,11 @@ class LeadersController < ApplicationController
         if !session[:admin]
             add_breadcrumb(@model_many, leaders_path)
         end
-        @page_title_text = "Редактировать новость" 
-        add_breadcrumb("Редактировать новость") 
+        @page_title_text = "Редактировать руководителя" 
+        add_breadcrumb("Редактировать руководителя") 
         @leader.update(leader_params)
         if @leader.update(leader_params)
-            redirect_to admin_path, success: "Новость обновлена"
+            redirect_to admin_path, success: "Руководитель обновлен"
         else 
             render :edit
         end
@@ -78,14 +78,14 @@ class LeadersController < ApplicationController
 
     def destroy 
         @leader.destroy
-        redirect_to admin_path, success: "Новость удалена"
+        redirect_to admin_path, success: "Руководитель удалена"
     end
     
 
     private
 
     def leader_params
-        params.require(:leader).permit(:title, :subtitle, :content, :image, :hot, :best)
+        params.require(:leader).permit(:name, :post, :image)
     end
   
     def set_leader

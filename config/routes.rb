@@ -14,9 +14,10 @@ Rails.application.routes.draw do
   constraints subdomain: 'admin' do
     resources :sessions, only: %i[new create destroy]
     root "sessions#new", as: 'admin'
-    get '/control-panel', to: "sessions#admin"
+    get '/control_panel', to: "sessions#admin"
     get '/logout', to: "sessions#destroy"
     get '/abouts/leaders', to: "leaders#index"
+    get "/control_panel/get_admin_list"
     resources :sliders
     resources :posts, param: :number
     resources :documents, param: :page_title

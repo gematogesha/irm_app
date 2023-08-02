@@ -4,7 +4,7 @@ class Post < ApplicationRecord
 
   has_one_attached :image, dependent: :destroy
 
-  validates :title, :subtitle, :content, presence: true
+  validates :title, :subtitle, :content, :image, presence: true
 
   before_create { self.number = "@" + SecureRandom.hex(3) }
 

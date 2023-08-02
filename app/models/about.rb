@@ -2,7 +2,7 @@ class About < ApplicationRecord
 
     has_rich_text :content
 
-    validates :title, presence: true
+    validates :title, :content, presence: true
 
     before_save :strip_ize
 

@@ -1,6 +1,6 @@
 <div class="admin-list__post admin-list">
     <h4 class="title">Новости
-        <%= link_to icon('fa-regular', 'plus', class: "icon__create"), new_post_path, title: "Создать", class: "create" %></h4>
+        <%= link_to icon('fa-solid', 'plus', class: "icon__create"), new_post_path, title: "Создать", class: "create" %></h4>
     <% @posts.each do |post| %>
         <div class="admin-list__item" id="post_id_<%= post.id %>">
             <div class="admin-list__img left">
@@ -16,9 +16,9 @@
                 <div class="admin-list__title">
                     <%= link_to edit_post_path(post.number), class: "edit" do %>
                         <%= post.title %>
-                        <%= icon("fa-regular", "pen-to-square", class: "icon__edit")%>
+                        <%= icon("fa-solid", "pen-to-square", class: "icon__edit")%>
                     <% end %>
-                    <%= button_to icon("fa-regular", "trash-can", class: "icon__delete"), post_path(post.number), 
+                    <%= button_to icon("fa-solid", "trash-can", class: "icon__delete"), post_path(post.number), 
                         method: :delete, 
                         form: {data: {turbo_confirm: "Вы точно хотите удалить новость?" }}, 
                         class: "delete" %>
