@@ -1,18 +1,32 @@
+<div class="admin-form">
 <%= form_with model: @slider, data: {turbo: false} do |form| %>
     <div class="form">
 
-        <%= form.label :title %>
-        <%= form.text_field :title, class: "input"  %>
+        <%= form.label :title, class: "form__item form__item_label" %>
+        <%= form.text_field :title, class: "form__item form__item_input"  %>
 
-        <%= form.label :description %>
-        <%= form.text_area :description, class: "input"  %>
+        <%= form.label :description, class: "form__item form__item_label" %>
+        <%= form.text_area :description, class: "form__item form__item_textarea"  %>
 
-        <%= form.label :link %>
-        <%= form.text_field :link, class: "input"  %>
+        <%= form.label :link, class: "form__item form__item_label" %>
+        <%= form.text_field :link, class: "form__item form__item_input"  %>
 
-        <%= form.label :image %>
-        <%= form.file_field :image, class: "input"  %>
-        
-        <%= form.submit class: "button button_primary"%>
+        <div class="uploader form__item">
+                <label class="uploader__attach">
+                    <div class="uploader__content">
+                        <div class="uploader__title">
+                            <%= icon("fa-solid", "link") %>
+                            <span class="uploader__title_text">Загрузить файлы</span>
+                        </div>
+                        <div class="uploader__subtitle">Файлы должны быть в формате PNG/JPEG</div>
+                    </div>
+                    <%= form.file_field :image, accept: 'image/jpeg, image/gif, image/png' %>
+                </label>
+            </div>
+                
+        <%= form.submit class: "button button_primary button_form"%>
         </div>
     <% end %>
+</div>
+
+

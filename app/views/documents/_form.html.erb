@@ -2,14 +2,14 @@
     <%= form_with model: @document, url: url, data: {turbo: false} do |form| %>
         <div class="form">
 
-            <%= form.label :title%>
-            <%= form.text_area :title, class: "input" %>
+            <%= form.label :title, class: "form__item form__item_label" %>
+            <%= form.text_area :title, class: "form__item form__item_textarea" %>
 
-            <%= form.label :description %>
-            <%= form.text_area :description, class: "input" %>
+            <%= form.label :description, class: "form__item form__item_label" %>
+            <%= form.text_area :description, class: "form__item form__item_textarea" %>
 
 
-            <div class="uploader">
+            <div class="uploader form__item">
                 <label class="uploader__attach">
                     <div class="uploader__content">
                         <div class="uploader__title">
@@ -22,7 +22,7 @@
                 </label>
             </div>
 
-            <%= form.submit class: "button button_primary"%>
+            <%= form.submit class: "button button_primary button_form"%>
         </div>
     <% end %>
 </div>

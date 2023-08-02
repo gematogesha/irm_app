@@ -30,6 +30,14 @@ ru:
         description: "Описание"
         image: "Изображение"
         link: "Ссылка"
+      about:
+        title: "Наименование"
+        content: "Содержание"
+        page_title: "Наименование страницы"
+      leader:
+        name: "ФИО"
+        post: "Должность"
+        page_title: "Наименование страницы"
   errors:
     format: 'Поле "%{attribute}" %{message}'
     messages:
