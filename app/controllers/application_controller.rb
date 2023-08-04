@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
 	helper_method :breadcrumbs
 	before_action :set_breadcrumbs
 
+	Cyrillizer.language = :russian
+
 	def breadcrumbs
 	  @breadcrumbs ||= []
 	end
