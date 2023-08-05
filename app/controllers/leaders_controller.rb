@@ -8,33 +8,18 @@ class LeadersController < ApplicationController
 
 
     def index
+        @leaders = Leader.all
         add_breadcrumb(@model_many)
         @page_title_text = @model_many
-
+        @abouts = About.all
         if session[:admin]
             redirect_to admin_path
         end
 
     end
 
-    def get_leaders
-        @leaders = Leader.all.order(created_at: :desc)    
-        add_breadcrumb(@model_many)
-        @page_title_text = @model_many
-    end
-
-    def show
-        add_breadcrumb(@model_many, leaders_url(subdomain: false))
-        @leader.update_attribute(:views, @leader.views +=1 )
-        @page_title_text = @leader.title
-        @page_title_status = false
-
-    end
-
     def create
-        if !session[:admin]
-            add_breadcrumb(@model_many, leaders_path)
-        end
+        add_breadcrumb("Создать руководителя")
         @page_title_text = "Создать руководителя"
         @leader = Leader.create(leader_params)
         if @leader.save
@@ -46,26 +31,17 @@ class LeadersController < ApplicationController
 
     def new
         @leader = Leader.new
-        if !session[:admin]
-            add_breadcrumb(@model_many, leaders_path)
-        end
         add_breadcrumb("Создать руководителя")
         @page_title_text = "Создать руководителя"
     end
 
     def edit
-        if !session[:admin]
-            add_breadcrumb(@model_many, leaders_path)
-        end
         add_breadcrumb("Редактировать руководителя")
         @page_title_text = "Редактировать руководителя"  
     end
 
 
     def update      
-        if !session[:admin]
-            add_breadcrumb(@model_many, leaders_path)
-        end
         @page_title_text = "Редактировать руководителя" 
         add_breadcrumb("Редактировать руководителя") 
         @leader.update(leader_params)

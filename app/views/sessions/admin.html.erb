@@ -1,15 +1,18 @@
 <%- title @page_title_text %>
 
 <section class="section-admin section_gray">
-    <div class="wrapper flex_top_start">
+    <div class="wrapper flex_stretch_start">
         <%= render "sidebar" %>
         <% if params[:key].nil? %>
             <div class="admin-list">
+                <%= render "admin_sceleton" %>
             </div>
         <% else %>
-            <%= turbo_frame_tag "admin-lists", src: control_panel_get_admin_list_path, loading: :lazy do %>
-                <%= render "admin_" + params[:key].to_s %>
+        <div class="admin-list__<%= params[:key]%> admin-list">
+            <%= turbo_frame_tag "admin_lists", src: sessions_get_admin_list_path(key: params[:key]), loading: :lazy, target: "_top" do %>
+                <%= render "admin_sceleton" %>
             <% end %>
+        </div>
         <% end %>
     </div>
 </section>

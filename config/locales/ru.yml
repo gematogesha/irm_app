@@ -13,6 +13,12 @@ ru:
       slider:
         one: "Слайдер"
         other: "Слайдеры"  
+      about:
+        one: "Всё обо всём"
+        other: "Всё обо всём" 
+      header:
+        one: "Колонтитул"
+        other: "Колонтитулы"
     attributes:
       post:
         title: "Заголовок"
@@ -39,6 +45,9 @@ ru:
         post: "Должность"
         image: "Изображение"
         page_title: "Наименование страницы"
+      header:
+        title: "Наименование"
+        link: "Ссылка"
   errors:
     format: 'Поле "%{attribute}" %{message}'
     messages:

@@ -10,22 +10,26 @@ class AboutsController < ApplicationController
     def index
         add_breadcrumb(@model_many)
         @page_title_text = @model_many
+
+        if session[:admin]
+            redirect_to admin_path
+        end
+
     end
 
     def show
+        @abouts = About.all
         @page_title_text = @about.title
-        
-        @page_title_status = false
-
-        add_breadcrumb(@model_many, abouts_url(subdomain: false))
+        @page_title_status = true
+        add_breadcrumb(@model_many)
     end
 
     def create
-        add_breadcrumb(@model_many, abouts_path)
-        @page_title_text = "Создать новость"
+        add_breadcrumb("Создать элемент")
+        @page_title_text = "Создать элемент"
         @about = About.create(about_params)
         if @about.save
-          redirect_to abouts_path, success: "Новость создана"
+            redirect_to abouts_path, success: "Элемент создан"
         else     
             render :new
         end
@@ -33,32 +37,37 @@ class AboutsController < ApplicationController
 
     def new
         @about = About.new
-        add_breadcrumb(@model_many, abouts_path)
-        @page_title_text = "Создать новость"
+        add_breadcrumb("Создать элемент")
+        @page_title_text = "Создать элемент"
 
     end
 
     def edit
-        add_breadcrumb(@model_many, abouts_path)
-        @page_title_text = "Редактировать новость"  
+        add_breadcrumb("Редактировать элемент")
+        @page_title_text = "Редактировать элемент"  
     end
 
 
     def update
-        add_breadcrumb(@model_many, abouts_path)
-        @page_title_text = "Редактировать новость"  
+        add_breadcrumb("Редактировать элемент")
+        @page_title_text = "Редактировать элемент"  
         @about.update(about_params)
         if @about.update(about_params)
-            redirect_to about_path(@about.page_title), success: "Новость обновлена"
+            redirect_to admin_path, success: "Элемент обновлен"
         else 
             render :edit
         end
     end
 
+    def destroy 
+        @about.destroy
+        redirect_to admin_path, success: "Документ удален"
+    end
+
     private
 
     def about_params
-        params.require(:about).permit(:title, :content, :page_title)
+        params.require(:about).permit(:title, :content)
     end
   
     def set_about

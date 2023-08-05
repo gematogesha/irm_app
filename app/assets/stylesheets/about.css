@@ -1,0 +1,19 @@
+.section-about {
+    padding: 0;
+}
+
+.sidebar-about {
+    padding: 48px 0;
+}
+
+.about-list {
+    padding: 48px 0;
+    background-color: var(--amelie);
+    height: 100%;
+    overflow-y: auto;
+    width: calc(100% - 250px);
+}
+
+.about-content{
+    max-width: 740px;
+}

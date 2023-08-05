@@ -134,7 +134,8 @@ button {
 
 button,
 input,
-textarea {
+textarea,
+select {
     border: none;
     outline: none;
 }

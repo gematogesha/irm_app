@@ -1,32 +1,30 @@
-<div class="admin-list__leader admin-list">
-    <h4 class="title">Руководство
-        <%= link_to icon('fa-solid', 'plus', class: "icon__create"), new_leader_path, title: "Создать", class: "create" %></h4>
-    <% @leaders.each do |leader| %>
-        <div class="admin-list__item" id="leader_id_<%= leader.id %>">
-            <div class="admin-list__img left">
-                <%= link_to edit_leader_path(leader.page_title), class: "admin-list__link-img flex_cneter_center edit" do %>
-                    <% if leader.image.present? %>
-                        <%= image_tag(leader.image, alt: leader.name, title: leader.name, class: "admin-list__img_inside") %>
-                    <% else %>
-                        <%= image_tag("noimage.png", alt: "Нет изображения", title: 'Нет изображения', class: "admin-list__img_inside") %>
-                    <% end %>
+<h4 class="title"><%= Leader.model_name.human(count: :many) %>
+    <%= link_to icon('fa-solid', 'plus', class: "icon__create"), new_leader_path, title: "Создать", class: "create" %></h4>
+<% @leaders.each do |leader| %>
+    <div class="admin-list__item" id="leader_id_<%= leader.id %>">
+        <div class="admin-list__img left">
+            <%= link_to edit_leader_path(leader.page_title), class: "admin-list__link-img flex_cneter_center edit" do %>
+                <% if leader.image.present? %>
+                    <%= image_tag(leader.image, alt: leader.name, title: leader.name, class: "admin-list__img_inside") %>
+                <% else %>
+                    <%= image_tag("noimage.png", alt: "Нет изображения", title: 'Нет изображения', class: "admin-list__img_inside") %>
                 <% end %>
-            </div>
-            <div class="admin-list__content">
-                <div class="admin-list__title">
-                    <%= link_to edit_leader_path(leader.page_title), class: "edit" do %>
-                        <%= leader.name %>
-                        <%= icon("fa-solid", "pen-to-square", class: "icon__edit")%>
-                    <% end %>
-                    <%= button_to icon("fa-solid", "trash-can", class: "icon__delete"), leader_path(leader.page_title), 
+            <% end %>
+        </div>
+        <div class="admin-list__content">
+            <div class="admin-list__title">
+                <%= link_to edit_leader_path(leader.page_title), class: "edit" do %>
+                    <%= leader.name %>
+                    <%= icon("fa-solid", "pen-to-square", class: "icon__edit")%>
+                <% end %>
+                <%= button_to icon("fa-solid", "trash-can", class: "icon__delete"), leader_path(leader.page_title), 
                         method: :delete, 
-                        form: {data: {turbo_confirm: "Вы точно хотите удалить новость?" }}, 
+                        form: {data: {turbo_confirm: "Вы точно хотите удалить руководство?" }}, 
                         class: "delete" %>
-                </div>
-                <div class="admin-list__info">                
-                    <div class="admin-list__date small right"><%= l(leader.created_at, format: :long) %></div>
-                </div>
+            </div>
+            <div class="admin-list__info">
+                <div class="admin-list__date small right"><%= l(leader.created_at, format: :long) %></div>
             </div>
         </div>
-    <% end %>
-</div>
+    </div>
+<% end %>

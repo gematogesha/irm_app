@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
 
 	helper_method :breadcrumbs
 	before_action :set_breadcrumbs
+	before_action :set_headers
 
 	Cyrillizer.language = :russian
 
@@ -44,5 +45,10 @@ class ApplicationController < ActionController::Base
 		end
 	end
 
+	private
+
+	def set_headers
+		@headers = Header.all
+	end
 
 end

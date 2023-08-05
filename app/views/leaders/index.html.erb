@@ -1,22 +1,26 @@
 <%- title @page_title_text %>
 
-<section class="section-leaders section_gray">
-    <div class="wrapper">
-        <% @leaders.each do |leader| %>
-            <div class="leader__item" id="leader__item-<%= leader.id %>">
-                <div class="leader__item_text">
-                    <h5 class="leader__item_title"><%= link_to leader.title, leader_url(leader.page_title, subdomain: false)%></h5>
-                    <p><%= leader.description %></p>
-                </div>
-                <div class="leader__item_file">
-                    <%= link_to leader.file do %>
-                        <%= icon("fa-solid", "file-pdf")%>
-                        <br>
-                        <span class="leader-file__name"><%= leader.file.filename %></span>
-                    <% end %>
-                    <span class="leader-file__size small"><%= number_to_human_size leader.file.byte_size %></span>
-                </div>
+<section class="section-about section_gray">
+    <div class="wrapper flex_stretch_start">
+        <%= render "shared/sidebar" %>
+        <div class="about-list">
+            <div class="content-wrapper">
+                <% @leaders.each do |leader| %>
+                    <div class="leader__item" id="leader_id_<%= leader.id %>">
+                        <div class="leader__img left">
+                            <% if leader.image.present? %>
+                                <%= image_tag(leader.image, alt: leader.name, title: leader.name, class: "leader__img_inside") %>
+                            <% else %>
+                                <%= image_tag("noimage.png", alt: "Нет изображения", title: 'Нет изображения', class: "leader__img_inside") %>
+                            <% end %>
+                        </div>
+                        <div class="leader__content">
+                            <div class="leader__title"></div>
+                            <div class="leader__info"></div>
+                        </div>
+                    </div>
+                <% end %>
             </div>
-        <% end %>
+        </div>
     </div>
 </section>

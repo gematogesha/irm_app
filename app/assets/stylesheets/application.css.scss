@@ -7,10 +7,12 @@
 *= require shared/header
 *= require shared/footer
 *= require shared/buttons
+*= require shared/page-error
 
 *= require main-page
 *= require post
 *= require document
+*= require about
 
 *= require plugin/flickerplate
 *= require plugin/actiontext

@@ -4,7 +4,7 @@
             <div class="menu__item">
                 <div class="menu__body">
                     <div class="menu__icon"><%= icon("fa-solid", "newspaper")%></div>
-                    <div class="menu__title">Новости</div>
+                    <div class="menu__title"><%= Post.model_name.human(count: :many) %></div>
                 </div>
             </div>
         <% end %>
@@ -12,7 +12,7 @@
             <div class="menu__item">
                 <div class="menu__body">
                     <div class="menu__icon"><%= icon("fa-solid", "file")%></div>
-                    <div class="menu__title">Документы</div>
+                    <div class="menu__title"><%= Document.model_name.human(count: :many) %></div>
                 </div>
             </div>
         <% end %>
@@ -20,7 +20,7 @@
             <div class="menu__item">
                 <div class="menu__body">
                     <div class="menu__icon"><%= icon("fa-solid", "image")%></div>
-                    <div class="menu__title">Слайдеры</div>
+                    <div class="menu__title"><%= Slider.model_name.human(count: :many) %></div>
                 </div>
             </div>
         <% end %>
@@ -28,15 +28,23 @@
             <div class="menu__item">
                 <div class="menu__body">
                     <div class="menu__icon"><%= icon("fa-solid", "user")%></div>
-                    <div class="menu__title">Руководство</div>
+                    <div class="menu__title"><%= Leader.model_name.human(count: :many) %></div>
                 </div>
             </div>
         <% end %>
         <%= link_to control_panel_path(key: "abouts") do %>
             <div class="menu__item">
                 <div class="menu__body">
-                    <div class="menu__icon"><%= icon("fa-solid", "file-pdf")%></div>
-                    <div class="menu__title">Остальное</div>
+                    <div class="menu__icon"><%= icon("fa-solid", "table-list")%></div>
+                    <div class="menu__title"><%= About.model_name.human(count: :many) %></div>
+                </div>
+            </div>
+        <% end %>
+        <%= link_to control_panel_path(key: "headers") do %>
+            <div class="menu__item">
+                <div class="menu__body">
+                    <div class="menu__icon"><%= icon("fa-solid", "heading")%></div>
+                    <div class="menu__title"><%= Header.model_name.human(count: :many) %></div>
                 </div>
             </div>
         <% end %>

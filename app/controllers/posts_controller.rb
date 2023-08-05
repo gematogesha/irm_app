@@ -32,13 +32,11 @@ class PostsController < ApplicationController
     end
 
     def create
-        if !session[:admin]
-            add_breadcrumb(@model_many, posts_path)
-        end
+        add_breadcrumb("Создать новость")
         @page_title_text = "Создать новость"
         @post = Post.create(post_params)
         if @post.save
-          redirect_to admin_path, success: "Новость создана"
+          redirect_to admin_path(key: "posts"), success: "Новость создана"
         else     
             render :new
         end
@@ -46,31 +44,22 @@ class PostsController < ApplicationController
 
     def new
         @post = Post.new
-        if !session[:admin]
-            add_breadcrumb(@model_many, posts_path)
-        end
         add_breadcrumb("Создать новость")
         @page_title_text = "Создать новость"
     end
 
     def edit
-        if !session[:admin]
-            add_breadcrumb(@model_many, posts_path)
-        end
         add_breadcrumb("Редактировать новость")
         @page_title_text = "Редактировать новость"  
     end
 
 
     def update      
-        if !session[:admin]
-            add_breadcrumb(@model_many, posts_path)
-        end
         @page_title_text = "Редактировать новость" 
         add_breadcrumb("Редактировать новость") 
         @post.update(post_params)
         if @post.update(post_params)
-            redirect_to admin_path, success: "Новость обновлена"
+            redirect_to admin_path(key: "posts"), success: "Новость обновлена"
         else 
             render :edit
         end

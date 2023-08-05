@@ -3,7 +3,7 @@
 <section class="section-posts section_gray">
     <div class="wrapper">
         <div class="post">
-            <%= turbo_frame_tag "posts", src: posts_get_posts_url(subdomain: false), loading: :lazy do %>
+            <%= turbo_frame_tag "posts", src: posts_get_posts_url(subdomain: false), loading: :lazy, target: "_top" do %>
                 <%= render "post_sceleton" %>
             <% end %>
         </div>

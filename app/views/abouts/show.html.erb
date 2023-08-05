@@ -1,13 +1,10 @@
 <%- title @page_title_text %>
 
-
-<section class="section-about section_gray" style="padding: 0;">
-    <div class="wrapper wrapper__content">
-        <div class="content">
-            <div class="content-wrapper">
-                <h5 class="content__title left"><%= @about.title %></h5>
-            </div>
-            <div class="content-wrapper">
+<section class="section-about section_gray">
+    <div class="wrapper flex_stretch_start">
+        <%= render "shared/sidebar" %>
+        <div class="about-list">
+            <div class="content-wrapper about-content">
                 <%= @about.content %>
             </div>
         </div>

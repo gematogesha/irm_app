@@ -1,8 +1,9 @@
+//= link jquery3.min.js
+//= link flickerplate
+
 //= link_tree ../fonts
 //= link_tree ../images
 //= link_directory ../stylesheets .css
 //= link_tree ../../javascript .js
 //= link_tree ../../../vendor/javascript .js
 
-//= link jquery3.min.js
-//= link flickerplate

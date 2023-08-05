@@ -17,8 +17,9 @@ Rails.application.routes.draw do
     get '/control_panel', to: "sessions#admin"
     get '/logout', to: "sessions#destroy"
     get '/abouts/leaders', to: "leaders#index"
-    get "/control_panel/get_admin_list"
+    get 'sessions/get_admin_list'
     resources :sliders
+    resources :headers
     resources :posts, param: :number
     resources :documents, param: :page_title
     resources :abouts, param: :page_title

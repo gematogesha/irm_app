@@ -1,12 +1,13 @@
 class SessionsController < ApplicationController
 
     before_action :loggedin, only: [:destroy, :admin]
+    before_action :set_all, only: %i[get_admin_list]
+    before_action :set_session, only: %i[index]
 
     add_flash_types :info, :error, :success
 
     def index
-        @posts = Post.all.order(created_at: :desc).first(3) 
-        @sliders = Slider.all 
+
     end
 
     def new
@@ -19,15 +20,11 @@ class SessionsController < ApplicationController
   
     def admin
         @page_title_text = "Панель администратора"
-
     end
 
     def get_admin_list
-        @posts = Post.all.order(created_at: :desc)  
-        @documents = Document.all
-        @sliders = Slider.all 
-        @abouts = About.all 
-        @leaders = Leader.all 
+        @page_title_text = "Панель администратора"
+
     end
 
     def create
@@ -62,5 +59,18 @@ class SessionsController < ApplicationController
 
     end
 
+    def set_all
+        @posts = Post.all.order(created_at: :desc)  
+        @documents = Document.all
+        @sliders = Slider.all 
+        @abouts = About.all 
+        @leaders = Leader.all 
+        @headers = Header.all 
+    end
+
+    def set_session
+        @posts = Post.all.order(created_at: :desc).first(3) 
+        @sliders = Slider.all 
+    end
 
 end

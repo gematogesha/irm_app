@@ -7,14 +7,10 @@
             <% end %>
             </div>
             <ul class="nav">
-                <li class="nav__item"><%= link_to "О нас", root_url(subdomain: false), class: "nav__link" %></li>
-                <li class="nav__item"><%= link_to "Партнерам", root_url(subdomain: false), class: "nav__link" %></li>
-                <li class="nav__item"><%= link_to "Наука", root_url(subdomain: false), class: "nav__link" %></li>
-                <li class="nav__item"><%= link_to "Продукция", root_url(subdomain: false), class: "nav__link" %></li>
-                <li class="nav__item"><%= link_to "Документы", documents_url(subdomain: false), class: "nav__link" %></li>
-                <li class="nav__item"><%= link_to "Новости", posts_url(subdomain: false), class: "nav__link" %></li>
-                <li class="nav__item"><%= link_to "Карьера", root_url(subdomain: false), class: "nav__link" %></li>
-                <li class="nav__item"><%= link_to "Обратная свзяь", root_url(subdomain: false), class: "nav__link" %></li>
+            <% @headers.each do |header| %>
+                <li class="nav__item"><%= link_to header.title, about_url(header.link, subdomain: false), class: "nav__link" %></li>
+            <% end %>
+            <li class="nav__item"><%= link_to "Документы", documents_url(subdomain: false), class: "nav__link" %></li>
             </ul> 
         </div>
     </div>

@@ -1,0 +1,17 @@
+<div class="admin-form">
+<%= form_with model: @header, data: {turbo: false} do |form| %>
+    <div class="form">
+
+        <%= form.label :title, class: "form__item form__item_label" %>
+        <%= form.text_field :title, class: "form__item form__item_input"  %>
+
+        <%= form.label :link, class: "form__item form__item_label" %>
+        <%= form.select :link, options_from_collection_for_select(@abouts, 'page_title', 'title'), {}, {class: "form__item form__item_select"} %>
+               
+        <%= form.submit class: "button button_primary button_form"%>
+
+        </div>
+    <% end %>
+</div>
+
+

@@ -1,0 +1,10 @@
+    <div class="admin-list-sceleton__main-title title loading"></div>
+<% (1..6).each do %>
+    <div class="admin-list-sceleton__item">
+        <div class="admin-list-sceleton__img loading left"></div>
+        <div class="admin-list-sceleton__content loading">
+            <div class="admin-list-sceleton__title" style="width: calc(<%= rand(70..100) %>% - 76px)"></div>
+            <div class="admin-list-sceleton__info right"></div>
+        </div>
+    </div>
+<% end %>
