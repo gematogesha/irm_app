@@ -11,8 +11,9 @@
     margin-bottom: 16px;
 }
 
-.document__item + .theme__title{
-    margin-top: 32px;
+.document__list{
+    margin-bottom: 32px;
+    display: none;
 }
 
 .document__item:last-child {
@@ -47,6 +48,15 @@
     width: 100%;
     height: 900px;
     border: none;
+}
+
+.theme__title{
+    cursor: pointer;
+}
+
+.theme__icon{
+    font-size: 24px;
+    color: var(--troy);
 }
 
 

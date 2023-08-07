@@ -306,3 +306,13 @@
 .plank:hover .plank__action * {
     color: var(--troy)
 }
+
+@media (max-width: 899px) {
+    
+    .b-post {
+        width: 100%;
+        padding: 0;
+        border-left: none;
+    }
+    
+}

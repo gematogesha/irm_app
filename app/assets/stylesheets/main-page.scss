@@ -29,7 +29,7 @@
 
 .b-about {
     width: 60%;
-    margin-right: 30px;
+    margin-right: 32px;
 }
 
 .about__text {
@@ -85,7 +85,6 @@
 
 .partners__item{
     display: flex;
-    margin-bottom: 28px;
     width: 50%;
 }
 
@@ -106,4 +105,56 @@
     font-size: 18px;
     line-height: 20px;
     color: var(--troy);
+}
+
+
+@media (max-width: 899px) {
+
+    .b-about{
+        width: 100%;
+        margin-right: 0;
+    }
+    
+    .slider,
+    .slider__item {
+        height: 400px;
+    }
+    
+    .slider__content {
+        max-width: 100%;
+    }
+    
+    .slider__text,
+    .about__text{
+    line-height: 24px;
+}
+
+    .activity__item {
+        background-position: 100%;
+    }
+
+    .partners{
+        flex-direction: column;
+    }
+
+    .partners__item {
+        flex-direction: column;
+        gap: 16px;
+        width: 100%;
+    }
+
+    .partners__img {
+        margin-right: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .partners__img_inside {
+        width: 250px;
+    }
+
+    .activity__item .activity__title {
+        max-width: 100%;
+    }
+
 }

@@ -49,3 +49,45 @@
     border-bottom: 4px solid var(--rocky);
     transition: all 0.1s ease-in-out;
 }
+
+.header__icon {
+    color: var(--amelie);
+    line-height: 20px;
+}
+
+.button__menu {
+    margin-top: 5px !important;
+    display: none !important;
+}
+
+.nav-small {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    background-color: var(--rocky);
+    border-bottom-left-radius: var(--border-radius);
+    border-bottom-right-radius: var(--border-radius);
+}
+
+.nav-small__item {
+    padding: 16px 16px;
+    text-align: right;
+
+}
+
+.nav-small__link {
+    color: var(--amelie);
+}
+
+@media (max-width: 1023px) {
+
+    .nav{
+        display: none;
+    }
+
+    .button__menu{
+        display: block !important;
+    }
+
+}
