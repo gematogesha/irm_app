@@ -2,21 +2,25 @@
 
 <section class="section-documents section_gray">
     <div class="wrapper">
-        <% @documents.each do |document| %>
-            <div class="document__item" id="document__item-<%= document.id %>">
-                <div class="document__item_text">
-                    <h5 class="document__item_title"><%= link_to document.title, document_url(document.page_title, subdomain: false)%></h5>
-                    <p><%= document.description %></p>
+        <% @themes.each do |theme| %>
+            <h4 class="theme__title title"><%= theme.title %></h4>
+
+            <% @documents.where(theme_id: theme.id).each do |document| %>
+                <div class="document__item" id="document__item-<%= document.id %>">
+                    <div class="document__content">
+                        <h5 class="document__title"><%= link_to document.title, document_url(document.page_title)%></h5>
+                        <p class="document__text"><%= document.description %></p>
+                    </div>
+                    <div class="document__file">
+                        <%= link_to document.file do %>
+                            <%= icon("fa-solid", "file-pdf", class: "document__icon")%>
+                            <br>
+                            <span class="document-file__name"><%= document.file.filename.to_s.truncate(17, separator: '') %></span>
+                        <% end %>
+                        <span class="document-file__size small"><%= number_to_human_size document.file.byte_size %></span>
+                    </div>
                 </div>
-                <div class="document__item_file">
-                    <%= link_to document.file do %>
-                        <%= icon("fa-solid", "file-pdf")%>
-                        <br>
-                        <span class="document-file__name"><%= document.file.filename.to_s.truncate(17, separator: '') %></span>
-                    <% end %>
-                    <span class="document-file__size small"><%= number_to_human_size document.file.byte_size %></span>
-                </div>
-            </div>
+            <% end %>
         <% end %>
     </div>
 </section>

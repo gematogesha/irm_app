@@ -32,7 +32,7 @@
                 <%= @post.content %>
                 <div class="post__nav">
                     <% if !@post.previous.nil? %>
-                        <%= link_to post_url(@post.previous.number, subdomain: false), class: 'post__nav_link' do %>
+                        <%= link_to post_url(@post.previous.number), class: 'post__nav_link' do %>
                             <div class="post__nav_prev">
                                 <div class="plank">
                                     <div class="plank__action">
@@ -56,7 +56,7 @@
                         <% end %>
                     <% end %>
                     <% if !@post.next.nil? %>
-                        <%= link_to post_url(@post.next.number, subdomain: false), class: 'post__nav_link' do %>
+                        <%= link_to post_url(@post.next.number), class: 'post__nav_link' do %>
                             <div class="post__nav_next">
                                 <div class="plank">
                                     <div class="plank__icon">

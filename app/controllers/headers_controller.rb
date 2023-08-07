@@ -1,10 +1,10 @@
 class HeadersController < ApplicationController
 
-    before_action :loggedin, only: %i[create new update delete edit destroy]
+    before_action :loggedin, only: %i[create new update edit destroy]
     before_action :model_name
     before_action :set_header, only: %i[update show destroy edit]
     before_action :redirect, only: %i[show index]
-    before_action :set_abouts
+    before_action :set_abouts, only: %i[update new create edit]
 
     add_flash_types :info, :error, :success
 
@@ -47,11 +47,10 @@ class HeadersController < ApplicationController
         redirect_to admin_path, success: "Колонтитул удален"
     end
     
-
     private
 
     def header_params
-        params.require(:header).permit(:title, :description, :link, :image)
+        params.require(:header).permit(:title, :about_id, :image)
     end
   
     def set_header

@@ -1,7 +1,7 @@
 <% @posts.each do |post| %>
     <div class="post__item post__item_style_small" id="post_id_<%= post.id %>">
         <div class="post__img post__img_style_small left">
-            <%= link_to post_url(post.number, subdomain: false), class: "post__link-img flex_center_center" do%>
+            <%= link_to post_url(post.number), class: "post__link-img flex_center_center" do%>
             <% if post.image.present? %>
                 <%= image_tag(post.image, alt: post.title, title: post.title, class: "post__img_inside") %>
             <% else %>
@@ -11,7 +11,7 @@
     </div>
     <div class="post__content post__content_style_small">
         <div class="post__title post__title_style_small">
-            <%= link_to post.title, post_url(post.number, subdomain: false), class: "post__link" %>
+            <%= link_to post.title, post_url(post.number), class: "post__link" %>
         </div>
         <div class="post__info">
             <div class="post__date small right"><%= l(post.created_at, format: :long) %></div>

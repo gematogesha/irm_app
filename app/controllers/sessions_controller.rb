@@ -66,6 +66,7 @@ class SessionsController < ApplicationController
         @abouts = About.all 
         @leaders = Leader.all 
         @headers = Header.all 
+        @themes = Theme.all 
     end
 
     def set_session

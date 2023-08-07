@@ -48,6 +48,14 @@
                 </div>
             </div>
         <% end %>
+        <%= link_to control_panel_path(key: "themes") do %>
+            <div class="menu__item">
+                <div class="menu__body">
+                    <div class="menu__icon"><%= icon("fa-solid", "heading")%></div>
+                    <div class="menu__title"><%= Theme.model_name.human(count: :many) %></div>
+                </div>
+            </div>
+        <% end %>
     </div>
     <%= link_to logout_path, method: :delete, class: "button__link", style: "width: 100%" do %>
         <div class="button button_primary" style="width: 100%">Выход</div>

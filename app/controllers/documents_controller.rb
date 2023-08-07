@@ -1,8 +1,9 @@
 class DocumentsController < ApplicationController
 
-    before_action :loggedin, only: %i[create new update delete edit destroy]
+    before_action :loggedin, only: %i[create new update edit destroy]
     before_action :model_name
     before_action :set_document, only: %i[update show destroy edit]
+    before_action :set_themes, only: %i[update new create edit index]
 
     add_flash_types :info, :error, :success
 
@@ -64,7 +65,7 @@ class DocumentsController < ApplicationController
     private
 
     def document_params
-        params.require(:document).permit(:title, :description, :file)
+        params.require(:document).permit(:title, :description, :theme_id, :file, :themes)
     end
   
     def set_document
@@ -74,6 +75,10 @@ class DocumentsController < ApplicationController
     def model_name
         @model_one = Document.model_name.human
         @model_many = Document.model_name.human(count: :many)
+    end
+
+    def set_themes
+        @themes = Theme.all
     end
 
 end

@@ -19,6 +19,9 @@ ru:
       header:
         one: "Колонтитул"
         other: "Колонтитулы"
+      theme:
+        one: "Тема документа"
+        other: "Темы документов"
     attributes:
       post:
         title: "Заголовок"
@@ -31,6 +34,7 @@ ru:
         title: "Наименование"
         description: "Описание"
         file: "Файл"
+        theme_id: "Тема документа"
       slider:
         title: "Наименование"
         description: "Описание"
@@ -47,7 +51,9 @@ ru:
         page_title: "Наименование страницы"
       header:
         title: "Наименование"
-        link: "Ссылка"
+        about_id: "Ссылка"
+      theme:
+        title: "Наименование"
   errors:
     format: 'Поле "%{attribute}" %{message}'
     messages:

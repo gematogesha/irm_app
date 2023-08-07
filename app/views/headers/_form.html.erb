@@ -5,8 +5,8 @@
         <%= form.label :title, class: "form__item form__item_label" %>
         <%= form.text_field :title, class: "form__item form__item_input"  %>
 
-        <%= form.label :link, class: "form__item form__item_label" %>
-        <%= form.select :link, options_from_collection_for_select(@abouts, 'page_title', 'title'), {}, {class: "form__item form__item_select"} %>
+        <%= form.label :about_id, class: "form__item form__item_label" %>
+        <%= form.select :about_id, options_from_collection_for_select(@abouts, 'id', 'title'), {}, {class: "form__item form__item_select"} %>
                
         <%= form.submit class: "button button_primary button_form"%>
 

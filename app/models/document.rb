@@ -1,7 +1,7 @@
 class Document < ApplicationRecord
 
     has_one_attached :file, dependent: :destroy
-
+    
     validates :title, :file, presence: true
     
     before_save :strip_ize

@@ -20,6 +20,7 @@ Rails.application.routes.draw do
     get 'sessions/get_admin_list'
     resources :sliders
     resources :headers
+    resources :themes
     resources :posts, param: :number
     resources :documents, param: :page_title
     resources :abouts, param: :page_title

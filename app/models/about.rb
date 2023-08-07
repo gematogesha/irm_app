@@ -2,6 +2,8 @@ class About < ApplicationRecord
 
     has_rich_text :content
 
+    has_one :header, dependent: :destroy
+
     validates :title, :content, presence: true
 
     before_save :strip_ize

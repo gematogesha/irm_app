@@ -13,7 +13,7 @@
                                 Новость недели</div>
                         <% end %>
                         <div class="post__img left">
-                            <%= link_to post_url(post.number, subdomain: false), class: "post__link-img flex_center_center" do%>
+                            <%= link_to post_url(post.number), class: "post__link-img flex_center_center" do%>
                                 <% if post.image.present? %>
                                     <%= image_tag(post.image, alt: post.title, title: post.title, class: "post__img_inside") %>
                                 <% else %>
@@ -23,7 +23,7 @@
                         </div>
                         <div class="post__content">
                             <div class="post__title">
-                                <h6><%= link_to post.title, post_url(post.number, subdomain: false) %></h5>
+                                <h6><%= link_to post.title, post_url(post.number) %></h5>
                             </div>
                             <p class="post__text" align="justify" class="left">
                                 <% if !post.subtitle.nil? %>

@@ -1,6 +1,6 @@
 /*-------------------Document-------------------*/
 
-.section-documents .document__item {
+.document__item {
     border-bottom: 1px solid var(--avengers);
     background-color: var(--amelie);
     border-radius: var(--border-radius);
@@ -11,27 +11,31 @@
     margin-bottom: 16px;
 }
 
-.section-documents .document__item:last-child {
+.document__item + .theme__title{
+    margin-top: 32px;
+}
+
+.document__item:last-child {
     margin-bottom: 0;
 }
 
-.section-documents .document__item .document__item_text,
-.section-documents .document__item .document__item_file {
+.document__content,
+.document__item_file {
     display: inline-block;
 }
 
-.section-documents .document__item .document__item_text .document__item_title + p {
+.document__title + .document__title {
     padding-top: 8px;
 }
 
-.section-documents .document__item .document__item_file {
+.document__file {
     max-width: 210px;
     min-width: 140px;
     border-left: 2px solid var(--trainspotting);
     padding-left: 16px;
 }
 
-.section-documents .document__item .document__item_file i {
+.document__icon {
     color: var(--fargo);
     font-size: 36px;
     width: 100%;
@@ -44,3 +48,5 @@
     height: 900px;
     border: none;
 }
+
+

@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
 
-    before_action :loggedin, only: %i[create new update delete edit destroy]
+    before_action :loggedin, only: %i[create new update edit destroy]
     before_action :model_name
     before_action :set_post, only: %i[update show destroy edit]
 
