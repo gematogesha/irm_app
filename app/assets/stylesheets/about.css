@@ -14,6 +14,10 @@
     width: calc(100% - 250px);
 }
 
+.about-list_gray{
+    background-color: var(--trainspotting);
+}
+
 .about-content{
     max-width: 740px;
 }

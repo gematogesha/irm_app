@@ -168,7 +168,7 @@ section {
 }
 
 .page-title:first-child {
-    margin-top: none;
+    margin-top: 0;
 }
 
 .page-title__title {

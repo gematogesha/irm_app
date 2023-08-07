@@ -3,10 +3,10 @@
 <section class="section-about section_gray">
     <div class="wrapper flex_stretch_start">
         <%= render "shared/sidebar" %>
-        <div class="about-list">
-            <div class="content-wrapper">
-                <% @leaders.each do |leader| %>
-                    <div class="leader__item" id="leader_id_<%= leader.id %>">
+        <div class="about-list about-list_gray">
+            <% @leaders.each do |leader| %>
+                <div class="leader__item left">
+                    <% @leaders.each do |leader| %>
                         <div class="leader__img left">
                             <% if leader.image.present? %>
                                 <%= image_tag(leader.image, alt: leader.name, title: leader.name, class: "leader__img_inside") %>
@@ -15,34 +15,16 @@
                             <% end %>
                         </div>
                         <div class="leader__content">
-                        <% @leaders.each_with_index do |leader, i| %>
-                            <% if (i+1 - ind)%4==0 %>
-                                    <div class="leader__img left">
-                                        <%= link_to leader_url(leader.number, subdomain: false), class: "leader__link-img flex_center_center" do%>
-                                            <% if leader.image.present? %>
-                                                <%= image_tag(leader.image, alt: leader.name, title: leader.name, class: "leader__img_inside") %>
-                                            <% else %>
-                                                <%= image_tag("noimage.png", alt: "Нет изображения", title: 'Нет изображения', class: "leader__img_inside") %>
-                                            <% end %>
-                                        <% end %>
-                                    </div>
-                                    <div class="leader__content">
-                                        <div class="leader__title">
-                                            <h6><%= link_to leader.name, leader_url(leader.number, subdomain: false) %></h5>
-                                        </div>
-                                        <p class="leader__text" class="left">
-                                            <%= leader.post %>
-                                        </p>
-                                        <div class="leader__info">
-                                            <div class="leader__date leader__date_padding small right"><%= l(leader.created_at, format: :long) %></div>
-                                        </div>
-                                    </div>
-                            <% end %>
-                        <% end %>
+                            <div class="leader__title">
+                                <h6><%= leader.name %></h5>
+                            </div>
+                            <p class="leader__text" class="left">
+                                <%= leader.post %>
+                            </p>
                         </div>
-                    </div>
-                <% end %>
-            </div>
+                    <% end %>
+                </div>
+            <% end %>
         </div>
     </div>
 </section>
