@@ -32,21 +32,59 @@
         <h2 class="title" style="text-align: center;">Lorem, ipsum dolor.</h2>
         <div class="b-activity flex_center_around" style="gap: 20px;" ">
             <div class="activity__item" id="activity__item_1">
-                <div class="activity__content">                
+                <div class="activity__content">
                     <h4 class="activity__title">Lorem, ipsum dolor.</h4>
                     <p class="activity__text">Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
             </div>
             <div class="activity__item" id="activity__item_2">
-                <div class="activity__content">                
+                <div class="activity__content">
                     <h4 class="activity__title">Lorem, ipsum dolor.</h4>
                     <p class="activity__text">Lorem ipsum dolor sit amet consectetur.</p>
                 </div>
             </div>
             <div class="activity__item" id="activity__item_3">
-                <div class="activity__content">                
+                <div class="activity__content">
                     <h4 class="activity__title">Lorem, ipsum dolor.</h4>
                     <p class="activity__text">Lorem ipsum dolor sit amet consectetur.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="wrapper">
+        <h2 class="title" style="text-align: center;">Партнеры</h2>
+        <div class="partners">
+            <div class="partners__item">
+                <%= link_to "http://www.souzop.ru/", class: "partners__link-img" do %>
+                    <div class="partners__img">
+                        <%= image_tag("logo/logo-souzop.png", alt: "Союз предприятий оборонных отраслей промышленности Свердловской области", title: 'Союз предприятий оборонных отраслей промышленности Свердловской области', class: "partners__img_inside") %>
+                    </div>
+                <% end %>
+                <div class="partners__contetn">
+                    <%= link_to "http://www.souzop.ru/", class: "partners__link" do %>
+                        <h5 class="partners__title">Союз предприятий оборонных отраслей промышленности Свердловской области</h5>
+                    <% end %>
+                    <p class="partners__text">
+                        Предприятия Союза участвуют в реализации федеральных целевых программ и технологических платформ для достижения лидерства в ведущих высокотехнологичных отраслях экономики
+                    </p>
+                </div>
+            </div>
+            <div class="partners__item">
+                <%= link_to "https://www.wipo.int/portal/ru/", class: "partners__link-img" do %>
+                    <div class="partners__img">
+                        <%= image_tag("logo/logo-wipo.jpg", alt: "Всемирная организация интеллектуальной собственности", title: 'Всемирная организация интеллектуальной собственности', class: "partners__img_inside") %>
+                    </div>
+                <% end %>
+                <div class="partners__contetn">
+                    <%= link_to "https://www.wipo.int/portal/ru/", class: "partners__link" do %>
+                        <h5 class="partners__title">Всемирная организация интеллектуальной собственности</h5>
+                    <% end %>
+                    <p class="partners__text">
+                        Всемирная организация интеллектуальной собственности (ВОИС) является глобальным форумом по вопросам оказания услуг, разработки политики, предоставления информации и организации сотрудничества в области интеллектуальной собственности (ИС)
+                    </p>
                 </div>
             </div>
         </div>

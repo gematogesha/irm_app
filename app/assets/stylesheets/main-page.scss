@@ -75,3 +75,35 @@
     max-width: 70%;
 
 }
+
+/*-------------------Partners-------------------*/
+
+.partners{
+    display: flex;
+    gap: 16px;
+}
+
+.partners__item{
+    display: flex;
+    margin-bottom: 28px;
+    width: 50%;
+}
+
+.partners__img{
+    margin-right: 20px;
+}
+
+.partners__img_inside{
+    width: 150px;
+    height: auto;
+}
+
+.partners__title{
+    margin-bottom: 16px;
+}
+
+.partners__text{
+    font-size: 18px;
+    line-height: 20px;
+    color: var(--troy);
+}
