@@ -209,14 +209,13 @@ section {
 
 .content {
     line-height: 1.25;
-    padding: 16px 0;
+    padding-top: 16px;
     background-color: var(--amelie);
     margin: auto;
     max-width: 900px;
 }
 
 .content-wrapper {
-    margin: auto auto 20px;
     max-width: 640px;
     padding: 0 16px;
 }
