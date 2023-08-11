@@ -86,6 +86,9 @@
 .partners__item{
     display: flex;
     width: 50%;
+    padding: 16px;
+    background-color: var(--django);
+    border-radius: var(--border-radius-2x);
 }
 
 .partners__img{

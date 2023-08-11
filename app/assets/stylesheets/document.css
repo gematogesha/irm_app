@@ -1,7 +1,6 @@
 /*-------------------Document-------------------*/
 
 .document__item {
-    border-bottom: 1px solid var(--avengers);
     background-color: var(--amelie);
     border-radius: var(--border-radius);
     padding: 16px;

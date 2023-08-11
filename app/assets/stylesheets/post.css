@@ -28,12 +28,12 @@
 .post-sceleton__item {
     min-height: 190px;
     margin-bottom: 20px;
-    border-bottom: 1px solid var(--avengers);
     border-radius: var(--border-radius-2x);
     float: left;
     padding: 16px;
     position: relative;
     background-color: var(--amelie);
+    width: 100%;
 }
 
 .post__item:last-of-type {
@@ -62,10 +62,9 @@
     padding: 0;
 }
 
-.post__img,
-.post-sceleton__img {
+.post__img {
     height: 225px;
-    width: 283px;
+    width: 100%;
 }
 
 .post__img_style_small {
@@ -119,6 +118,11 @@
 .post-sceleton__img {
     background-color: var(--django);
     border-radius: var(--border-radius-2x);
+}
+
+.post-sceleton__img {
+    height: 225px;
+    width: 100%;
 }
 
 .post-sceleton__title {
@@ -254,6 +258,7 @@
     margin-top: 32px;
     display: flex;
     justify-content: space-between;
+    padding-bottom: 32px;
 }
 
 .post__nav_prev {

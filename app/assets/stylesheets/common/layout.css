@@ -218,6 +218,7 @@ section {
 .content-wrapper {
     max-width: 640px;
     padding: 0 16px;
+    margin: auto;
 }
 
 .content__title {
@@ -354,15 +355,17 @@ section {
 @media (max-width: 899px) {
 
     h2 {
-        font-size: 48px;
+        font-size: 40px;
+        line-height: 40px;
     }
 
     .title {
-        margin-top: 20px;
+        margin-bottom: 16px;
     }
 
     .flex_center_center {
         flex-direction: column;
+        gap: 32px;
     }
 
     .flex_center_around {
