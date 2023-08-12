@@ -1,6 +1,6 @@
 require "test_helper"
 
-class SliderTest < ActiveSupport::TestCase
+class BannerTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

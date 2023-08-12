@@ -1,0 +1,13 @@
+<%= render "shared/alert", variable: @activity %>
+
+
+<%- title @page_title_text %>
+
+<section class="section-activity section_gray">
+    <div class="wrapper">
+        <%= render "form", activity: @activity, url: @activity %>
+    </div>
+</section>
+
+
+

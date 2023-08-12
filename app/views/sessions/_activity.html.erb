@@ -1,0 +1,9 @@
+<% @activities.each do |activity| %>
+    <%= link_to activity_url(activity.page_title), class: "activity__link" do %>
+    <div class="activity__item" id="activity__item_<%= activity.id %>" style="background-image: url(<%= url_for(activity.image) %>), linear-gradient(270deg, var(--alien) 0%, var(--rocky) 100%);">
+        <div class="activity__content">
+            <h4 class="activity__title"><%= activity.title %></h4>
+            <p class="activity__text"><%= activity.subtitle %></p>
+        </div>
+    </div>
+<% end %><% end %>

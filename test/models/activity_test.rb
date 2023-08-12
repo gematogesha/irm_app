@@ -1,6 +1,6 @@
 require "test_helper"
 
-class BannersControllerTest < ActionDispatch::IntegrationTest
+class ActivityTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

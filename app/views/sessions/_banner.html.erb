@@ -1,0 +1,15 @@
+<% @banners.each do |banner| %>
+    <li>
+        <div class="banner__item" id="banner__item_<%= banner.id %>" style="background: url(<%= url_for(banner.image) %>) center">
+            <div class="wrapper flex_center_start">
+                <div class="banner__content">
+                    <h2 class="banner__title title"><%= banner.title %></h2>
+                    <p class="banner__text text" align="justify"><%= banner.description %></p>
+                    <%= link_to banner.link, class: "button__link" do %>
+                        <div class="button button_primary">Подробнее</div>
+                    <% end %>
+                </div>
+            </div>
+        </div>
+    </li>
+<% end %>

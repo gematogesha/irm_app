@@ -20,17 +20,17 @@
     margin: 16px 0;
 }
 
-.trix-content .attachment-gallery > action-text-attachment,
-.trix-content .attachment-gallery > .attachment {
+.trix-content .attachment-gallery>action-text-attachment,
+.trix-content .attachment-gallery>.attachment {
     flex: 1 0 33%;
     padding: 0 0.5em;
     max-width: 33%;
 }
 
-.trix-content .attachment-gallery.attachment-gallery--2 > action-text-attachment,
-.trix-content .attachment-gallery.attachment-gallery--2 > .attachment,
-.trix-content .attachment-gallery.attachment-gallery--4 > action-text-attachment,
-.trix-content .attachment-gallery.attachment-gallery--4 > .attachment {
+.trix-content .attachment-gallery.attachment-gallery--2>action-text-attachment,
+.trix-content .attachment-gallery.attachment-gallery--2>.attachment,
+.trix-content .attachment-gallery.attachment-gallery--4>action-text-attachment,
+.trix-content .attachment-gallery.attachment-gallery--4>.attachment {
     flex-basis: 50%;
     max-width: 50%;
 }
@@ -40,7 +40,8 @@
     max-width: 100% !important;
     width: 100%;
 }
-.trix-editor blockquote, 
+
+.trix-editor blockquote,
 .trix-content blockquote {
     position: relative;
     border: none;
@@ -48,7 +49,7 @@
     margin-left: 0;
 }
 
-.trix-content .attachment__caption .attachment__name + .attachment__size::before {
+.trix-content .attachment__caption .attachment__name+.attachment__size::before {
     content: none;
 }
 
@@ -66,7 +67,8 @@
     font-size: 32px;
     color: var(--fargo);
 }
-.trix-editor blockquote::before,
+
+trix-editor blockquote::before,
 .trix-content blockquote::before {
     content: "";
     position: absolute;
@@ -89,19 +91,19 @@ figure .attachment__caption {
     text-align: center;
 }
 
-.trix-content .attachment-gallery > action-text-attachment,
-.trix-content .attachment-gallery > .attachment {
+.trix-content .attachment-gallery>action-text-attachment,
+.trix-content .attachment-gallery>.attachment {
     padding: 0 0.2em;
     max-width: none;
 }
 
-.trix-content .attachment-gallery > action-text-attachment:first-child,
-.trix-content .attachment-gallery > .attachment:first-child {
+.trix-content .attachment-gallery>action-text-attachment:first-child,
+.trix-content .attachment-gallery>.attachment:first-child {
     padding-left: 0;
 }
 
-.trix-content .attachment-gallery > action-text-attachment:last-child,
-.trix-content .attachment-gallery > .attachment:last-child {
+.trix-content .attachment-gallery>action-text-attachment:last-child,
+.trix-content .attachment-gallery>.attachment:last-child {
     padding-right: 0;
 }
 
@@ -111,4 +113,14 @@ figure .attachment__caption {
 
 .trix-content ul {
     list-style: disc;
+}
+
+trix-editor h1,
+.trix-content h1 {
+    word-wrap: break-word;
+    margin: 16px 0;
+    font-weight: 700;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 24px;
 }

@@ -1,25 +1,25 @@
 /*-------------------MAIN-PAGE-------------------*/
 
-/*-------------------Slider-------------------*/
+/*-------------------Banner-------------------*/
 
-.slider,
-.slider__item {
-    height: 600px;
+.banner,
+.banner__item {
+    height: 500px;
     padding: 0;
 }
 
-.slider__item {
+.banner__item {
     background-repeat: no-repeat;
     background-size: cover !important;
     background-position: center;
 }
 
-.slider__content {
+.banner__content {
     max-width: 50%;
     color: var(--amelie);
 }
 
-.slider__text {
+.banner__text {
     line-height: 28px;
     margin-bottom: 25px;
 }
@@ -40,6 +40,10 @@
 
 /*-------------------Activity-------------------*/
 
+.activity__link{
+    width: 100%;
+}
+
 .activity__item {
     width: 100%;
     height: 225px;
@@ -52,25 +56,13 @@
     background-position: 150%;
 }
 
-#activity__item_1 {
-    background-image: image-url('atom_white.png'), linear-gradient(270deg, var(--alien) 0%, var(--rocky) 100%);
-}
 
-#activity__item_2 {
-    background-image: image-url('gears_white.png'), linear-gradient(270deg, var(--alien) 0%, var(--rocky) 100%);
-}
-
-#activity__item_3 {
-    background-image: image-url('idea_white.png'), linear-gradient(270deg, var(--alien) 0%, var(--rocky) 100%);
-}
-
-
-.activity__item .activity__title {
-    margin-bottom: 25px;
+.activity__title {
+    margin-bottom: 24px;
     max-width: 75%;
 }
 
-.activity__item .activity__text {
+.activity__text {
     font-size: 18px;
     max-width: 70%;
 
@@ -78,12 +70,12 @@
 
 /*-------------------Partners-------------------*/
 
-.partners{
+.partners {
     display: flex;
     gap: 20px;
 }
 
-.partners__item{
+.partners__item {
     display: flex;
     width: 50%;
     padding: 16px;
@@ -91,20 +83,20 @@
     border-radius: var(--border-radius-2x);
 }
 
-.partners__img{
+.partners__img {
     margin-right: 20px;
 }
 
-.partners__img_inside{
+.partners__img_inside {
     width: 150px;
     height: auto;
 }
 
-.partners__title{
+.partners__title {
     margin-bottom: 16px;
 }
 
-.partners__text{
+.partners__text {
     font-size: 18px;
     line-height: 20px;
     color: var(--troy);
@@ -113,30 +105,30 @@
 
 @media (max-width: 899px) {
 
-    .b-about{
+    .b-about {
         width: 100%;
         margin-right: 0;
     }
-    
-    .slider,
-    .slider__item {
+
+    .banner,
+    .banner__item {
         height: 400px;
     }
-    
-    .slider__content {
+
+    .banner__content {
         max-width: 100%;
     }
-    
-    .slider__text,
-    .about__text{
-    line-height: 24px;
-}
+
+    .banner__text,
+    .about__text {
+        line-height: 24px;
+    }
 
     .activity__item {
         background-position: 100%;
     }
 
-    .partners{
+    .partners {
         flex-direction: column;
     }
 

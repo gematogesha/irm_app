@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   resources :posts, param: :number
   resources :documents, param: :page_title
   resources :abouts, param: :page_title
+  resources :activities, param: :page_title
   scope "/abouts" do
     resources :leaders, param: :page_title
   end
@@ -18,8 +19,9 @@ Rails.application.routes.draw do
     get '/logout', to: "sessions#destroy"
     get '/abouts/leaders', to: "leaders#index"
     get 'sessions/get_admin_list'
-    resources :sliders
+    resources :banners
     resources :headers
+    resources :activities, param: :page_title
     resources :themes
     resources :posts, param: :number
     resources :documents, param: :page_title

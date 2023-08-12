@@ -1,0 +1,12 @@
+<%- title @page_title_text %>
+
+<section class="section-show section_gray">
+    <div class="wrapper flex_stretch_start">
+        <%= render "shared/sidebar", controller: @activities %>
+        <div class="activity_show-list">
+            <div class="content-wrapper activity-content">
+                <%= @activity.content %>
+            </div>
+        </div>
+    </div>
+</section>

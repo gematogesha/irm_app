@@ -62,16 +62,18 @@ class SessionsController < ApplicationController
     def set_all
         @posts = Post.all.order(created_at: :desc)  
         @documents = Document.all
-        @sliders = Slider.all 
+        @banners = Banner.all 
         @abouts = About.all 
         @leaders = Leader.all 
         @headers = Header.all 
         @themes = Theme.all 
+        @activities = Activity.all
     end
 
     def set_session
         @posts = Post.all.order(created_at: :desc).first(3) 
-        @sliders = Slider.all 
+        @banners = Banner.all 
+        @activities = Activity.all 
     end
 
 end

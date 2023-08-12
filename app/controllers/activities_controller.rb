@@ -1,25 +1,15 @@
-class AboutsController < ApplicationController
+class ActivitiesController < ApplicationController
 
     before_action :loggedin, only: %i[create new update edit destroy]
     before_action :model_name
-    before_action :set_about, only: %i[update show destroy edit]
+    before_action :set_activity, only: %i[update show destroy edit]
 
     add_flash_types :info, :error, :success
 
 
-    def index
-        add_breadcrumb(@model_many)
-        @page_title_text = @model_many
-
-        if session[:admin]
-            redirect_to admin_path
-        end
-
-    end
-
     def show
-        @abouts = About.all
-        @page_title_text = @about.title
+        @activities = Activity.all
+        @page_title_text = @activity.title
         @page_title_status = true
         add_breadcrumb(@model_many)
     end
@@ -27,19 +17,18 @@ class AboutsController < ApplicationController
     def create
         add_breadcrumb("Создать элемент")
         @page_title_text = "Создать элемент"
-        @about = About.create(about_params)
-        if @about.save
-            redirect_to abouts_path, success: "Элемент создан"
+        @activity = Activity.create(activity_params)
+        if @activity.save
+            redirect_to activities_path, success: "Элемент создан"
         else     
             render :new
         end
     end
 
     def new
-        @about = About.new
+        @activity = Activity.new
         add_breadcrumb("Создать элемент")
         @page_title_text = "Создать элемент"
-
     end
 
     def edit
@@ -47,12 +36,11 @@ class AboutsController < ApplicationController
         @page_title_text = "Редактировать элемент"  
     end
 
-
     def update
         add_breadcrumb("Редактировать элемент")
         @page_title_text = "Редактировать элемент"  
-        @about.update(about_params)
-        if @about.update(about_params)
+        @activity.update(activity_params)
+        if @activity.update(activity_params)
             redirect_to admin_path, success: "Элемент обновлен"
         else 
             render :edit
@@ -60,23 +48,23 @@ class AboutsController < ApplicationController
     end
 
     def destroy 
-        @about.destroy
+        @activity.destroy
         redirect_to admin_path, success: "Документ удален"
     end
 
     private
 
-    def about_params
-        params.require(:about).permit(:title, :content, :icon)
+    def activity_params
+        params.require(:activity).permit(:title, :subtitle, :image, :content, :icon)
     end
   
-    def set_about
-        @about = About.find_by!(page_title: params[:page_title]) rescue not_found
+    def set_activity
+        @activity = Activity.find_by!(page_title: params[:page_title]) rescue not_found
     end
 
     def model_name
-        @model_one = About.model_name.human
-        @model_many = About.model_name.human(count: :many)
+        @model_one = Activity.model_name.human
+        @model_many = Activity.model_name.human(count: :many)
     end
 
 end

@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_07_111403) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_12_103924) do
   create_table "abouts", force: :cascade do |t|
     t.string "title"
     t.string "page_title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "icon"
   end
 
   create_table "action_text_rich_texts", force: :cascade do |t|
@@ -56,6 +57,23 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_07_111403) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "activities", force: :cascade do |t|
+    t.string "title"
+    t.string "subtitle"
+    t.string "page_title"
+    t.string "icon"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "banners", force: :cascade do |t|
+    t.string "title"
+    t.text "description"
+    t.string "link"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "documents", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -91,14 +109,6 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_07_111403) do
     t.boolean "hot", default: false
     t.boolean "best", default: false
     t.text "subtitle"
-  end
-
-  create_table "sliders", force: :cascade do |t|
-    t.string "title"
-    t.text "description"
-    t.string "link"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "themes", force: :cascade do |t|

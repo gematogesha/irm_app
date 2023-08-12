@@ -12,6 +12,7 @@ class DocumentsController < ApplicationController
         @documents = Document.all
         add_breadcrumb(@model_many)
         @page_title_text = @model_many
+        
         if session[:admin]
             redirect_to admin_path
         end

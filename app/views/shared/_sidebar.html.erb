@@ -1,22 +1,24 @@
-<div class="sidebar sidebar-about">
+<div class="sidebar">
     <div class="menu">
-        <% @abouts.each do |about| %>
-            <%= link_to about_path(about.page_title) do %>
+        <% controller.each do |controller| %>
+            <%= link_to controller.page_title do %>
                 <div class="menu__item">
                     <div class="menu__body">
                         <div class="menu__icon"><%= icon("fa-solid", "circle-info")%></div>
-                        <div class="menu__title"><%= about.title %></div>
+                        <div class="menu__title"><%= controller.title %></div>
                     </div>
                 </div>
             <% end %>
         <% end %>
-        <%= link_to leaders_path do %>
-            <div class="menu__item">
-                <div class="menu__body">
-                    <div class="menu__icon"><%= icon("fa-solid", "user")%></div>
-                    <div class="menu__title"><%= Leader.model_name.human(count: :many) %></div>
+        <% if controller == @abouts %>
+            <%= link_to leaders_path do %>
+                <div class="menu__item">
+                    <div class="menu__body">
+                        <div class="menu__icon"><%= icon("fa-solid", "user")%></div>
+                        <div class="menu__title"><%= Leader.model_name.human(count: :many) %></div>
+                    </div>
                 </div>
-            </div>
+            <% end %>
         <% end %>
     </div>
 </div>

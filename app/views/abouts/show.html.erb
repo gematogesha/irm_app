@@ -1,12 +1,13 @@
 <%- title @page_title_text %>
 
-<section class="section-about section_gray">
+<section class="section-show section_gray">
     <div class="wrapper flex_stretch_start">
-        <%= render "shared/sidebar" %>
-        <div class="about-list">
-            <div class="content-wrapper about-content">
+        <%= render "shared/sidebar", controller: @abouts %>
+        <div class="about_show-list">
+            <div class="content-wrapper about_show-content">
                 <%= @about.content %>
             </div>
         </div>
     </div>
 </section>
+ 

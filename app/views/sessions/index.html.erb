@@ -1,6 +1,6 @@
-<section class="slider">
+<section class="banner">
     <ul>
-        <%= render "slider" %>
+        <%= render "banner" %>
     </ul>
 </section>
 
@@ -16,7 +16,7 @@
         </div>
         <div class="b-post left">
             <div class="title">
-                <h2>Новости</h4>
+                <h2><%= Post.model_name.human(count: :many) %></h4>
                 <p class="subtitle">Если не новсти, то события</p>
             </div>
             <%= render "post" %>
@@ -29,25 +29,9 @@
 
 <section class="section_gray">
     <div class="wrapper">
+        <h2 class="title" style="text-align: center;"><%= Activity.model_name.human(count: :many) %></h2>
         <div class="b-activity flex_center_around" style="gap: 20px;" ">
-            <div class="activity__item" id="activity__item_1">
-                <div class="activity__content">
-                    <h4 class="activity__title">Научная деятельность</h4>
-                    <p class="activity__text">Lorem ipsum dolor sit amet consectetur.</p>
-                </div>
-            </div>
-            <div class="activity__item" id="activity__item_2">
-                <div class="activity__content">
-                    <h4 class="activity__title">Lorem, ipsum dolor.</h4>
-                    <p class="activity__text">Lorem ipsum dolor sit amet consectetur.</p>
-                </div>
-            </div>
-            <div class="activity__item" id="activity__item_3">
-                <div class="activity__content">
-                    <h4 class="activity__title">Lorem, ipsum dolor.</h4>
-                    <p class="activity__text">Lorem ipsum dolor sit amet consectetur.</p>
-                </div>
-            </div>
+            <%= render "activity" %>
         </div>
     </div>
 </section>

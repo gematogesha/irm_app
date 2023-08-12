@@ -431,3 +431,7 @@
     background-color: var(--django);
     border-radius: 20px;
 }
+
+.sidebar__admin{
+    padding: 0;
+}

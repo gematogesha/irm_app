@@ -1,0 +1,30 @@
+<h4 class="title"><%= Banner.model_name.human(count: :many) %>
+    <%= link_to icon('fa-solid', 'plus', class: "icon__create"), new_banner_path, title: "Создать", class: "create" %></h4>
+<% @banners.each do |banner| %>
+    <div class="admin-list__item" id="banner_id_<%= banner.id %>">
+        <div class="admin-list__img left">
+            <%= link_to edit_banner_path(banner.id), class: "admin-list__link-img flex_cneter_center edit" do %>
+                <% if banner.image.present? %>
+                    <%= image_tag(banner.image, alt: banner.title, title: banner.title, class: "admin-list__img_inside") %>
+                <% else %>
+                    <%= image_tag("noimage.png", alt: "Нет изображения", title: 'Нет изображения', class: "admin-list__img_inside") %>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="admin-list__content">
+            <div class="admin-list__title">
+                <%= link_to edit_banner_path(banner.id), class: "edit" do %>
+                    <%= banner.title %>
+                    <%= icon("fa-solid", "pen-to-square", class: "icon__edit")%>
+                <% end %>
+                <%= button_to icon("fa-solid", "trash-can", class: "icon__delete"), banner_path(banner.id), 
+                        method: :delete, 
+                        form: {data: {turbo_confirm: "Вы точно хотите удалить баннер??" }}, 
+                        class: "delete" %>
+            </div>
+            <div class="admin-list__info">
+                <div class="admin-list__date small right"><%= l(banner.created_at, format: :long) %></div>
+            </div>
+        </div>
+    </div>
+<% end %>

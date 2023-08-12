@@ -10,18 +10,21 @@ ru:
       leader:
         one: "Руководство"
         other: "Руководство"  
-      slider:
-        one: "Слайдер"
-        other: "Слайдеры"  
+      banner:
+        one: "Баннер"
+        other: "Баннеры"  
       about:
-        one: "Всё обо всём"
-        other: "Всё обо всём" 
+        one: "О предприятии"
+        other: "О предприятии" 
       header:
         one: "Колонтитул"
         other: "Колонтитулы"
       theme:
         one: "Тема документа"
         other: "Темы документов"
+      activity: 
+        one: "Направление деятельности"
+        other: "Направления деятельности"
     attributes:
       post:
         title: "Заголовок"
@@ -35,7 +38,7 @@ ru:
         description: "Описание"
         file: "Файл"
         theme_id: "Тема документа"
-      slider:
+      banner:
         title: "Наименование"
         description: "Описание"
         image: "Изображение"
@@ -43,12 +46,11 @@ ru:
       about:
         title: "Наименование"
         content: "Содержание"
-        page_title: "Наименование страницы"
+        icon: "Иконка"
       leader:
         name: "ФИО"
         post: "Должность"
         image: "Изображение"
-        page_title: "Наименование страницы"
       header:
         title: "Наименование"
         about_id: "Ссылка"
