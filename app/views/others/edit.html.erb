@@ -1,0 +1,12 @@
+<%= render "shared/alert", variable: @other %>
+
+<%- title @page_title_text %>
+
+<section class="section-other section_gray">
+    <div class="wrapper">
+        <%= render "form", other: @other, url: other_path(@other.page_title) %>
+    </div>
+</section>
+
+
+

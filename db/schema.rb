@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_12_103924) do
+ActiveRecord::Schema[7.0].define(version: 2023_08_13_105656) do
   create_table "abouts", force: :cascade do |t|
     t.string "title"
     t.string "page_title"
@@ -74,6 +74,14 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_12_103924) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "careers", force: :cascade do |t|
+    t.string "title"
+    t.string "page_title"
+    t.string "icon"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "documents", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -88,14 +96,21 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_12_103924) do
     t.string "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.integer "about_id"
-    t.index ["about_id"], name: "index_headers_on_about_id"
+    t.string "link"
   end
 
   create_table "leaders", force: :cascade do |t|
     t.string "name"
     t.text "post"
     t.string "page_title"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "others", force: :cascade do |t|
+    t.string "title"
+    t.string "page_title"
+    t.string "icon"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -111,6 +126,22 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_12_103924) do
     t.text "subtitle"
   end
 
+  create_table "products", force: :cascade do |t|
+    t.string "title"
+    t.string "page_title"
+    t.string "icon"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sciences", force: :cascade do |t|
+    t.string "title"
+    t.string "page_title"
+    t.string "icon"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "themes", force: :cascade do |t|
     t.string "title"
     t.datetime "created_at", null: false
@@ -120,5 +151,4 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_12_103924) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "documents", "themes"
-  add_foreign_key "headers", "abouts"
 end

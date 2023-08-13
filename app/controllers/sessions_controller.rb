@@ -68,6 +68,10 @@ class SessionsController < ApplicationController
         @headers = Header.all 
         @themes = Theme.all 
         @activities = Activity.all
+        @sciences = Science.all
+        @products = Product.all
+        @careers = Career.all
+        @others = Other.all
     end
 
     def set_session

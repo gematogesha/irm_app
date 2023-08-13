@@ -1,0 +1,30 @@
+<h4 class="title"><%= Product.model_name.human(count: :many) %>
+    <%= link_to icon('fa-solid', 'plus', class: "icon__create"), new_product_path, title: "Создать", class: "create" %></h4>
+<% @products.each do |product| %>
+    <div class="admin-list__item" id="product_id_<%= product.id %>">
+        <div class="admin-list__img left">
+            <% if product.icon.blank? %>
+                <%= link_to edit_product_path(product.page_title), class: "admin-list__link-img flex_cneter_center edit" do %>
+                    <%= icon("fa-solid", "file")%>
+                <% end %>
+            <% else %>
+                <%= link_to edit_product_path(product.page_title), class: "admin-list__link-img flex_cneter_center edit" do %>
+                    <%= icon("fa-solid", product.icon)%>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="admin-list__title">
+            <%= link_to edit_product_path(product.page_title), class: "edit" do %>
+                <%= product.title %>
+                <%= icon("fa-solid", "pen-to-square", class: "icon__edit")%>
+            <% end %>
+            <%= button_to icon("fa-solid", "trash-can", class: "icon__delete"), product_path(product.page_title), 
+                    method: :delete, 
+                    form: {data: {turbo_confirm: "Вы точно хотите удалить элемент?" }}, 
+                    class: "delete" %>
+        </div>
+        <div class="admin-list__info">
+            <div class="admin-list__date small right"><%= l(product.created_at, format: :long) %></div>
+        </div>
+    </div>
+<% end %>

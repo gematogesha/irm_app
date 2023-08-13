@@ -3,8 +3,14 @@
 <% @abouts.each do |about| %>
     <div class="admin-list__item" id="about_id_<%= about.id %>">
         <div class="admin-list__img left">
-            <%= link_to edit_about_path(about.page_title), class: "admin-list__link-img flex_cneter_center edit" do %>
-                <%= icon("fa-solid", "file")%>
+            <% if about.icon.blank? %>
+                <%= link_to edit_about_path(about.page_title), class: "admin-list__link-img flex_cneter_center edit" do %>
+                    <%= icon("fa-solid", "file")%>
+                <% end %>
+            <% else %>
+                <%= link_to edit_about_path(about.page_title), class: "admin-list__link-img flex_cneter_center edit" do %>
+                    <%= icon("fa-solid", about.icon)%>
+                <% end %>
             <% end %>
         </div>
         <div class="admin-list__title">

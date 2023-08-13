@@ -1,8 +1,6 @@
 class Header < ApplicationRecord
 
-    validates :title, presence: true
-
-    belongs_to :about
+    validates :title, :link, presence: true
 
     before_save :strip_ize
 

@@ -4,7 +4,6 @@ class HeadersController < ApplicationController
     before_action :model_name
     before_action :set_header, only: %i[update show destroy edit]
     before_action :redirect, only: %i[show index]
-    before_action :set_abouts, only: %i[update new create edit]
 
     add_flash_types :info, :error, :success
 
@@ -50,7 +49,7 @@ class HeadersController < ApplicationController
     private
 
     def header_params
-        params.require(:header).permit(:title, :about_id, :image)
+        params.require(:header).permit(:title, :link, :image)
     end
   
     def set_header
@@ -64,10 +63,6 @@ class HeadersController < ApplicationController
 
     def redirect
         redirect_to admin_path
-    end
-
-    def set_abouts
-        @abouts = About.all
     end
 
 end

@@ -15,11 +15,11 @@ class ActivitiesController < ApplicationController
     end
 
     def create
-        add_breadcrumb("Создать элемент")
-        @page_title_text = "Создать элемент"
+        add_breadcrumb("Создать деятельность")
+        @page_title_text = "Создать деятельность"
         @activity = Activity.create(activity_params)
         if @activity.save
-            redirect_to activities_path, success: "Элемент создан"
+            redirect_to admin_path, success: "Деятельность создан"
         else     
             render :new
         end
@@ -27,21 +27,21 @@ class ActivitiesController < ApplicationController
 
     def new
         @activity = Activity.new
-        add_breadcrumb("Создать элемент")
-        @page_title_text = "Создать элемент"
+        add_breadcrumb("Создать деятельность")
+        @page_title_text = "Создать деятельность"
     end
 
     def edit
-        add_breadcrumb("Редактировать элемент")
-        @page_title_text = "Редактировать элемент"  
+        add_breadcrumb("Редактировать деятельность")
+        @page_title_text = "Редактировать деятельность"  
     end
 
     def update
-        add_breadcrumb("Редактировать элемент")
-        @page_title_text = "Редактировать элемент"  
+        add_breadcrumb("Редактировать деятельность")
+        @page_title_text = "Редактировать деятельность"  
         @activity.update(activity_params)
         if @activity.update(activity_params)
-            redirect_to admin_path, success: "Элемент обновлен"
+            redirect_to admin_path, success: "Деятельность обновлен"
         else 
             render :edit
         end
@@ -49,7 +49,7 @@ class ActivitiesController < ApplicationController
 
     def destroy 
         @activity.destroy
-        redirect_to admin_path, success: "Документ удален"
+        redirect_to admin_path, success: "Деятельность удалена"
     end
 
     private

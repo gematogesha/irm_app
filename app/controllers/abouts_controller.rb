@@ -29,7 +29,7 @@ class AboutsController < ApplicationController
         @page_title_text = "Создать элемент"
         @about = About.create(about_params)
         if @about.save
-            redirect_to abouts_path, success: "Элемент создан"
+            redirect_to admin_path, success: "Элемент создан"
         else     
             render :new
         end
@@ -61,7 +61,7 @@ class AboutsController < ApplicationController
 
     def destroy 
         @about.destroy
-        redirect_to admin_path, success: "Документ удален"
+        redirect_to admin_path, success: "Элемент удален"
     end
 
     private

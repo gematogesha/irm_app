@@ -1,0 +1,13 @@
+<%- title @page_title_text %>
+
+<section class="section-show section_gray">
+    <div class="wrapper flex_stretch_start">
+        <%= render "shared/sidebar", controller: @others %>
+        <div class="other_show-list">
+            <div class="content-wrapper other_show-content">
+                <%= @other.content %>
+            </div>
+        </div>
+    </div>
+</section>
+ 

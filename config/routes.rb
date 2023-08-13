@@ -7,6 +7,10 @@ Rails.application.routes.draw do
   resources :posts, param: :number
   resources :documents, param: :page_title
   resources :abouts, param: :page_title
+  resources :sciences, param: :page_title
+  resources :products, param: :page_title
+  resources :careers, param: :page_title
+  resources :others, param: :page_title
   resources :activities, param: :page_title
   scope "/abouts" do
     resources :leaders, param: :page_title
@@ -21,8 +25,12 @@ Rails.application.routes.draw do
     get 'sessions/get_admin_list'
     resources :banners
     resources :headers
-    resources :activities, param: :page_title
     resources :themes
+    resources :activities, param: :page_title
+    resources :sciences, param: :page_title
+    resources :products, param: :page_title
+    resources :careers, param: :page_title
+    resources :others, param: :page_title
     resources :posts, param: :number
     resources :documents, param: :page_title
     resources :abouts, param: :page_title

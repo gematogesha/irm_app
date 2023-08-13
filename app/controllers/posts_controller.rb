@@ -36,7 +36,7 @@ class PostsController < ApplicationController
         @page_title_text = "Создать новость"
         @post = Post.create(post_params)
         if @post.save
-          redirect_to admin_path(key: "posts"), success: "Новость создана"
+          redirect_to admin_path, success: "Новость создана"
         else     
             render :new
         end

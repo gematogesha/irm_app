@@ -8,7 +8,7 @@
             </div>
             <ul class="nav">
                 <% @headers.each do |header| %>
-                    <li class="nav__item"><%= link_to header.title, about_path(header.about.page_title), class: "nav__link" %></li>
+                    <li class="nav__item"><%= link_to header.title, header.link, class: "nav__link" %></li>
                 <% end %>
                 <li class="nav__item"><%= link_to "Документы", documents_url(subdomain: false), class: "nav__link" %></li>
             </ul>
@@ -20,7 +20,7 @@
 </header>
 <ul class="nav-small">
     <% @headers.each do |header| %>
-        <li class="nav-small__item"><%= link_to header.title, about_path(header.about.page_title), class: "nav-small__link" %></li>
+        <li class="nav-small__item"><%= link_to header.title, header.link, class: "nav-small__link" %></li>
     <% end %>
     <li class="nav-small__item"><%= link_to "Документы", documents_url(subdomain: false), class: "nav-small__link" %></li>
 </ul>

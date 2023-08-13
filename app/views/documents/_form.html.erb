@@ -9,7 +9,7 @@
             <%= form.text_area :description, class: "form__item form__item_textarea" %>
 
             <%= form.label :theme_id, class: "form__item form__item_label" %>
-            <%= form.select :theme_id, options_from_collection_for_select(@themes, 'id', 'title'), {}, {class: "form__item form__item_select"} %>
+            <%= form.select :theme_id, options_from_collection_for_select(@themes, 'id', 'title'), {prompt: "Выберите"}, {class: "form__item form__item_select"} %>
 
             <div class="uploader form__item">
                 <label class="uploader__attach">

@@ -1,0 +1,12 @@
+<%= render "shared/alert", variable: @product %>
+
+<%- title @page_title_text %>
+
+<section class="section-product section_gray">
+    <div class="wrapper">
+        <%= render "form", product: @product, url: product_path(@product.page_title) %>
+    </div>
+</section>
+
+
+

@@ -1,0 +1,30 @@
+<h4 class="title"><%= Other.model_name.human(count: :many) %>
+    <%= link_to icon('fa-solid', 'plus', class: "icon__create"), new_other_path, title: "Создать", class: "create" %></h4>
+<% @others.each do |other| %>
+    <div class="admin-list__item" id="other_id_<%= other.id %>">
+        <div class="admin-list__img left">
+            <% if other.icon.blank? %>
+                <%= link_to edit_other_path(other.page_title), class: "admin-list__link-img flex_cneter_center edit" do %>
+                    <%= icon("fa-solid", "file")%>
+                <% end %>
+            <% else %>
+                <%= link_to edit_other_path(other.page_title), class: "admin-list__link-img flex_cneter_center edit" do %>
+                    <%= icon("fa-solid", other.icon)%>
+                <% end %>
+            <% end %>
+        </div>
+        <div class="admin-list__title">
+            <%= link_to edit_other_path(other.page_title), class: "edit" do %>
+                <%= other.title %>
+                <%= icon("fa-solid", "pen-to-square", class: "icon__edit")%>
+            <% end %>
+            <%= button_to icon("fa-solid", "trash-can", class: "icon__delete"), other_path(other.page_title), 
+                    method: :delete, 
+                    form: {data: {turbo_confirm: "Вы точно хотите удалить элемент?" }}, 
+                    class: "delete" %>
+        </div>
+        <div class="admin-list__info">
+            <div class="admin-list__date small right"><%= l(other.created_at, format: :long) %></div>
+        </div>
+    </div>
+<% end %>

@@ -16,6 +16,18 @@ ru:
       about:
         one: "О предприятии"
         other: "О предприятии" 
+      science:
+        one: "Наука"
+        other: "Наука" 
+      product:
+        one: "Продукт"
+        other: "Продукция" 
+      career:
+        one: "Карьера"
+        other: "Карьера" 
+      other:
+        one: "Другое"
+        other: "Другое" 
       header:
         one: "Колонтитул"
         other: "Колонтитулы"
@@ -47,13 +59,29 @@ ru:
         title: "Наименование"
         content: "Содержание"
         icon: "Иконка"
+      science:
+        title: "Наименование"
+        content: "Содержание"
+        icon: "Иконка"
+      product:
+        title: "Наименование"
+        content: "Содержание"
+        icon: "Иконка"
+      career:
+        title: "Наименование"
+        content: "Содержание"
+        icon: "Иконка"
+      other:
+        title: "Наименование"
+        content: "Содержание"
+        icon: "Иконка"
       leader:
         name: "ФИО"
         post: "Должность"
         image: "Изображение"
       header:
         title: "Наименование"
-        about_id: "Ссылка"
+        link: "Ссылка"
       theme:
         title: "Наименование"
   errors:

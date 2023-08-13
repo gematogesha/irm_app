@@ -1,0 +1,12 @@
+<%= render "shared/alert", variable: @career %>
+
+<%- title @page_title_text %>
+
+<section class="section-career section_gray">
+    <div class="wrapper">
+        <%= render "form", career: @career, url: @career %>
+    </div>
+</section>
+
+
+

@@ -3,13 +3,11 @@
 <% @activities.each do |activity| %>
     <div class="admin-list__item" id="activity_id_<%= activity.id %>">
         <div class="admin-list__img left">
-            <% if activity.icon.nil? %>
-                <%= link_to edit_activity_path(activity.page_title), class: "admin-list__link-img flex_cneter_center edit" do %>
-                    <%= icon("fa-solid", "file")%>
-                <% end %>
-            <% else %>
-                <%= link_to edit_activity_path(activity.page_title), class: "admin-list__link-img flex_cneter_center edit" do %>
-                    <%= icon("fa-solid", activity.icon)%>
+            <%= link_to edit_activity_path(activity.page_title), class: "admin-list__link-img flex_cneter_center edit" do %>
+                <% if activity.image.present? %>
+                    <%= image_tag(activity.image, alt: activity.title, title: activity.title, class: "admin-list__img_inside") %>
+                <% else %>
+                    <%= image_tag("noimage.png", alt: "Нет изображения", title: 'Нет изображения', class: "admin-list__img_inside") %>
                 <% end %>
             <% end %>
         </div>

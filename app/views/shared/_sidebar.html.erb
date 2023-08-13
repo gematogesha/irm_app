@@ -4,7 +4,11 @@
             <%= link_to controller.page_title do %>
                 <div class="menu__item">
                     <div class="menu__body">
-                        <div class="menu__icon"><%= icon("fa-solid", "circle-info")%></div>
+                        <% if controller.icon.blank? %>
+                            <div class="menu__icon"><%= icon("fa-solid", "circle-info")%></div>
+                        <% else %>
+                            <div class="menu__icon"><%= icon("fa-solid", controller.icon)%></div>
+                        <% end %>
                         <div class="menu__title"><%= controller.title %></div>
                     </div>
                 </div>

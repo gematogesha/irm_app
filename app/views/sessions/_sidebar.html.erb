@@ -40,6 +40,38 @@
                 </div>
             </div>
         <% end %>
+        <%= link_to control_panel_path(key: "sciences") do %>
+            <div class="menu__item">
+                <div class="menu__body">
+                    <div class="menu__icon"><%= icon("fa-solid", "atom")%></div>
+                    <div class="menu__title"><%= Science.model_name.human(count: :many) %></div>
+                </div>
+            </div>
+        <% end %>
+        <%= link_to control_panel_path(key: "products") do %>
+            <div class="menu__item">
+                <div class="menu__body">
+                    <div class="menu__icon"><%= icon("fa-solid", "box")%></div>
+                    <div class="menu__title"><%= Product.model_name.human(count: :many) %></div>
+                </div>
+            </div>
+        <% end %>
+        <%= link_to control_panel_path(key: "careers") do %>
+            <div class="menu__item">
+                <div class="menu__body">
+                    <div class="menu__icon"><%= icon("fa-solid", "id-card")%></div>
+                    <div class="menu__title"><%= Career.model_name.human(count: :many) %></div>
+                </div>
+            </div>
+        <% end %>
+        <%= link_to control_panel_path(key: "others") do %>
+            <div class="menu__item">
+                <div class="menu__body">
+                    <div class="menu__icon"><%= icon("fa-solid", "globe")%></div>
+                    <div class="menu__title"><%= Other.model_name.human(count: :many) %></div>
+                </div>
+            </div>
+        <% end %>
         <%= link_to control_panel_path(key: "documents") do %>
             <div class="menu__item">
                 <div class="menu__body">
@@ -59,7 +91,7 @@
         <%= link_to control_panel_path(key: "activities") do %>
             <div class="menu__item">
                 <div class="menu__body">
-                    <div class="menu__icon"><%= icon("fa-solid", "heading")%></div>
+                    <div class="menu__icon"><%= icon("fa-solid", "briefcase")%></div>
                     <div class="menu__title"><%= Activity.model_name.human(count: :many) %></div>
                 </div>
             </div>

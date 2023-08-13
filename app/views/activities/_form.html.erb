@@ -7,7 +7,9 @@
             <%= form.label :subtitle, class: "form__item form__item_label" %>
             <%= form.text_field :subtitle, class: "form__item form__item_input" %>
 
-            <%= form.label :icon, class: "form__item form__item_label" %>
+            <%= form.label :icon, class: "form__item form__item_label" do %>
+                Иконка <%= link_to "Fontawesome", "https://fontawesome.com/search", class: "font_link", target: :_blank %>
+            <% end %>
             <%= form.text_field :icon, class: "form__item form__item_input" %>
 
             <div class="uploader form__item">

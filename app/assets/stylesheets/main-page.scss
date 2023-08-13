@@ -53,7 +53,7 @@
     color: var(--amelie);
     background-repeat: no-repeat;
     background-size: auto 100%;
-    background-position: 150%;
+    background-position: 100%;
 }
 
 
@@ -124,10 +124,6 @@
         line-height: 24px;
     }
 
-    .activity__item {
-        background-position: 100%;
-    }
-
     .partners {
         flex-direction: column;
     }
@@ -148,7 +144,7 @@
         width: 250px;
     }
 
-    .activity__item .activity__title {
+    .activity__title {
         max-width: 100%;
     }
 
