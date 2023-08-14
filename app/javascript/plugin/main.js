@@ -33,4 +33,19 @@ document.addEventListener("turbo:load", () => {
     });
 
     console.log("turbo loaded");
+
+    $.ajax({
+        url: "/posts",
+        type: "GET",
+        data: { width: JSON.stringify($(window).width()) },
+        success: function(response){ 
+            console.log("send width")
+          },
+          error: function(response){ 
+            console.log('error:' + response) 
+          }
+    });
+
+    console.log($(window).width());
+
 });
