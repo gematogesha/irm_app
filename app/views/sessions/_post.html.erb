@@ -3,7 +3,7 @@
         <div class="post__img post__img_style_small left">
             <%= link_to post_url(post.number), class: "post__link-img flex_center_center" do%>
             <% if post.image.present? %>
-                <%= image_tag(post.image, alt: post.title, title: post.title, class: "post__img_inside") %>
+                <%= image_tag(post.image, alt: post.title, title: post.title, class: "post__img_inside", height: "60px") %>
             <% else %>
                 <%= image_tag("noimage.png", alt: "Нет изображения", title: 'Нет изображения', class: "post__img_inside") %>
             <% end %>

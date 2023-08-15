@@ -215,6 +215,10 @@ section {
     margin: auto;
 }
 
+.tags + .content__title{
+    margin-top: 12px;
+}
+
 .content__title {
     word-wrap: break-word;
     margin-bottom: 16px;

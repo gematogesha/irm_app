@@ -45,9 +45,9 @@
                                     <div class="plank__icon flex_center_center">
                                         <div class="plank__img flex_center_center">
                                             <% if @post.previous.image.present? %>
-                                                <%= image_tag(@post.previous.image, alt: @post.previous.title, title: @post.previous.title, class: "plank__img_inside") %>
+                                                <%= image_tag(@post.previous.image, alt: @post.previous.title, title: @post.previous.title, class: "plank__img_inside", height: "32px") %>
                                             <% else %>
-                                                <%= image_tag("noimage.png", alt: "Нет изображения", title: 'Нет изображения', class: "plank__img_inside") %>
+                                                <%= image_tag("noimage.png", alt: "Нет изображения", title: 'Нет изображения', class: "plank__img_inside", height: "32px") %>
                                             <% end %>
                                         </div>
                                     </div>
@@ -62,9 +62,9 @@
                                     <div class="plank__icon">
                                         <div class="plank__img flex_center_center">
                                             <% if @post.next.image.present? %>
-                                                <%= image_tag(@post.next.image, alt: @post.next.title, title: @post.next.title, class: "plank__img_inside") %>
+                                                <%= image_tag(@post.next.image, alt: @post.next.title, title: @post.next.title, class: "plank__img_inside", height: "32px") %>
                                             <% else %>
-                                                <%= image_tag("noimage.png", alt: "Нет изображения", title: 'Нет изображения', class: "plank__img_inside") %>
+                                                <%= image_tag("noimage.png", alt: "Нет изображения", title: 'Нет изображения', class: "plank__img_inside", height: "32px") %>
                                             <% end %>
                                         </div>
                                     </div>
