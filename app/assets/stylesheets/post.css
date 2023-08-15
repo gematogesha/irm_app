@@ -312,6 +312,15 @@
     color: var(--troy)
 }
 
+@media (max-width: 1023px) {
+
+    .line{
+        width: 50%;
+    }
+
+}
+
+
 @media (max-width: 899px) {
 
     .b-post {
@@ -322,6 +331,15 @@
 
     .wrapper__content {
         padding: 0;
+    }
+
+}
+
+
+@media (max-width: 549px) {
+
+    .line{
+        width: 100%;
     }
 
 }

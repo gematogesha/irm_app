@@ -1,8 +1,8 @@
 <div class="post__flex">
-    <% (1..4).each do |ind|%>
+    <% (1..line_ind).each do |ind|%>
         <div class="line line_id_<%= ind %>">
             <% @posts.each_with_index do |post, i| %>
-                <% if (i+1 - ind)%4==0 %>
+                <% if (i+1 - ind)%line_ind==0 %>
                     <div class="post__item" id="post_id_<%= post.id %>">
                         <% if post.hot == true %>
                             <div class="tag tag_fargo small absolute"><%= icon("fa-solid", "fire", class: "tag__icon")%>
@@ -27,7 +27,7 @@
                             </div>
                             <p class="post__text" align="justify" class="left">
                                 <% if !post.subtitle.nil? %>
-                                    <%= post.subtitle.truncate(150, separator: ' ') %>
+                                    <%= post.subtitle%>
                                 <% end %>
                             </p>
                             <div class="post__info">

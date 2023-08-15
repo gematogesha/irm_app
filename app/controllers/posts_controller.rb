@@ -3,6 +3,7 @@ class PostsController < ApplicationController
     before_action :loggedin, only: %i[create new update edit destroy]
     before_action :model_name
     before_action :set_post, only: %i[update show destroy edit]
+    before_action :set_width, only: %i[index get_posts]
 
     add_flash_types :info, :error, :success
 
@@ -84,6 +85,16 @@ class PostsController < ApplicationController
     def model_name
         @model_one = Post.model_name.human
         @model_many = Post.model_name.human(count: :many)
+    end
+
+    def set_width
+        if cookies[:width].to_i < 549
+            @line_ind = 1
+        elsif cookies[:width].to_i < 1023
+            @line_ind = 2
+        else
+            @line_ind = 4
+        end
     end
 
 end
