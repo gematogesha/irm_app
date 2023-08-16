@@ -3,6 +3,7 @@ class ApplicationController < ActionController::Base
 	helper_method :breadcrumbs
 	before_action :set_breadcrumbs
 	before_action :set_headers
+	before_action :set_theme
 
 	Cyrillizer.language = :russian
 
@@ -42,6 +43,12 @@ class ApplicationController < ActionController::Base
 			return
 		else
 			not_found
+		end
+	end
+
+	def set_theme	
+		if cookies[:theme].nil?
+			cookies[:theme] = "default"
 		end
 	end
 

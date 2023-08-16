@@ -1,74 +1,121 @@
 /*-------------------ROOT-------------------*/
 
-:root {
-
-    /*-------------------Color-------------------*/
-
-    --harakiri: #1D222A;
-    --harakiriLight: #EAECF0;
-    --harakiriHover: #0D2F7C;
-    --harakiriPressed: #164CC0;
-    --troy: #525760;
-    --troyHover: #0D2F7C;
-    --troyPressed: #164CC0;
-    --metropolis: #80858E;
-    --metropolisHover: #6482C4;
-    --metropolisPressed: #406CD0;
-    --metropolisOpacity: #80858EA3;
-    --inception: #D4D5D9;
-    --inceptionHover: #C9CACF;
-    --inceptionPressed: #DFDFE2;
-    --rocky: #4480F3;
-    --rockyHover: #578DF4;
-    --rockyPressed: #3173F2;
-    --rockyOpacity: #4480F3A3;
-    --matrix: #5FAD05;
-    --matrixHover: #6AC106;
+:root[theme=dark] {
+    --jaws: #1d222a;
+    --leon: #1d222a;
+    --troy: #aaaeb6;
+    --alien: #7daffc;
+    --black: #000;
+    --drive: #8cce5a;
+    --fargo: #e35454;
+    --mummy: #e7cd50;
+    --rocky: #4480f3;
+    --seven: #b79ff3;
+    --walle: #ffffff14;
+    --white: #fff;
+    --amelie: #1d222a;
+    --dangal: #4480f366;
+    --django: #ffffff1f;
+    --matrix: #5fad05;
+    --oldboy: #ffffff1f;
+    --snatch: #f5ab61;
+    --amadeus: #1d222a;
+    --aquaman: #1fafc1;
+    --arrival: #1d222a;
+    --indiana: #fb9898;
+    --memento: #bcd6fe;
+    --romance: #1d222a;
+    --avengers: #4480f333;
+    --departed: #1d222a;
+    --hamilton: #0c1018cc;
+    --harakiri: #eaecf0;
+    --lebowski: #e78018;
+    --fightclub: #cf54b6;
+    --gentlemen: #9867f9;
+    --greenmile: #1d222a;
+    --inception: #525760;
+    --jawsHover: #212730;
+    --leonHover: #212730;
+    --schindler: #fb989829;
+    --shershaah: #76cedb;
+    --troyHover: #bcd6fe;
+    --alienHover: #4480f3;
+    --apocalypse: #1d222a;
+    --casablanca: #00000014;
+    --citylights: #1d222a;
+    --fargoHover: #e66666;
+    --goodfellas: #d1ae00;
+    --metropolis: #80858e;
+    --rockyHover: #578df4;
+    --terminator: #00000000;
+    --walleHover: #ffffff0d;
+    --dangalHover: #4480f3a3;
+    --djangoHover: #ffffff29;
+    --jawsPressed: #191d24;
+    --leonPressed: #191d24;
+    --matrixHover: #6ac106;
+    --pulpfiction: #ef8edb;
+    --troyPressed: #7daffc;
+    --amadeusHover: #212730;
+    --aquamanHover: #22bfd3;
+    --arrivalHover: #212730;
+    --fargoOpacity: #e35454a3;
+    --fargoPressed: #e04343;
+    --rockyOpacity: #4480f3a3;
+    --rockyPressed: #3173f2;
+    --romanceHover: #212730;
+    --wallePressed: #ffffff0d;
+    --avengersHover: #4480f329;
+    --departedHover: #212730;
+    --djangoPressed: #ffffff29;
+    --hamiltonHover: #0c1018f5;
+    --harakiriHover: #bcd6fe;
+    --lebowskiHover: #e98a2a;
+    --matrixOpacity: #5fad05a3;
     --matrixPressed: #549905;
-    --matrixOpacity: #5FAD05A3;
-    --lebowski: #E78018;
-    --lebowskiHover: #E98A2A;
-    --lebowskiPressed: #D57616;
-    --lebowskiOpacity: #E78018A3;
-    --fargo: #E35454;
-    --fargoHover: #E66666;
-    --fargoPressed: #E04343;
-    --fargoOpacity: #E35454A3;
-    --alien: #7DAFFC;
-    --alienHover: #4480F3;
-    --drive: #8CCE5A;
-    --snatch: #F5AB61;
-    --indiana: #FB9898;
+    --trainspotting: #121721;
+    --amadeusPressed: #191d24;
+    --aquamanOpacity: #1fafc1a3;
+    --aquamanPressed: #1d9faf;
+    --arrivalPressed: #ecf2fe;
+    --blackOpacity16: #00000029;
+    --blackOpacity24: #0000003d;
+    --blackOpacity32: #00000052;
+    --fightclubHover: #d364bd;
+    --gentlemenHover: #a57bfa;
+    --greenmileHover: #212730;
+    --inceptionHover: #595f69;
+    --romancePressed: #191d24;
+    --schindlerHover: #fb98983d;
+    --whiteOpacity24: #ffffff3d;
+    --whiteOpacity80: #ffffffcc;
+    --amelieOpacity80: #1d222acc;
+    --apocalypseHover: #212730;
+    --avengersPressed: #4480f33d;
+    --citylightsHover: #212730;
+    --departedPressed: #191d24;
+    --goodfellasHover: #e5bf00;
+    --hamiltonPressed: #0c1018a3;
+    --harakiriPressed: #7daffc;
+    --lebowskiOpacity: #e78018a3;
+    --lebowskiPressed: #d57616;
+    --metropolisHover: #6e84b5;
+    --fightclubOpacity: #cf54b6a3;
+    --fightclubPressed: #ca44b0;
+    --gentlemenOpacity: #9867f9a3;
+    --gentlemenPressed: #8b53f8;
+    --greenmilePressed: #191d24;
+    --inceptionPressed: #494d55;
+    --schindlerPressed: #fb98983d;
+    --apocalypsePressed: #191d24;
+    --citylightsPressed: #191d24;
+    --goodfellasOpacity: #d1ae00a3;
+    --goodfellasPressed: #bd9d00;
+    --metropolisOpacity: #80858ea3;
+    --metropolisPressed: #5476c2;
+    --footer: #0b111c;
+    --footer-bot: #060c16;
 
-    /*-------------------Background-------------------*/
-
-    --amelie: #FFFFFF;
-    --amelieDark: #1D222A;
-    --apocalypse: #EAECF0;
-    --trainspotting: #F5F6F8;
-    --trainspottingDark: #121721;
-    --arrival: #E2ECFD;
-    --amadeus: #E3F3D8;
-    --romance: #FDE7E7;
-    --jaws: #F8EADB;
-    --avengers: #4480F31F;
-    --avengersHover: #4480F314;
-    --avengersPressed: #4480F329;
-    --walle: #AAAEB61F;
-    --django: #D4D5D952;
-    --djangoHover: #D4D5D97A;
-    --djangoPressed: #D4D5D97A;
-    --walle: #AAAEB61F;
-    --walleHover: #AAAEB614;
-    --wallePressed: #AAAEB61F;
-    --dangal: #4480F352;
-    --dangalHover: #4480F38F;
-
-    /*-------------------Shadow-------------------*/
-
-    --hamilton: #0C10181F;
-
-    /*-------------------Size------------------*/
 
     --border-radius: 8px;
     --border-radius-2x: 16px;
@@ -78,5 +125,141 @@
     --vk: #2787F5;
     --telegram: #2AABEE;
 
+    --invert: invert(1)
+
 
 }
+
+:root[theme=default] {
+    --jaws: #f8eadb;
+    --leon: #fae4f7;
+    --troy: #525760;
+    --alien: #7daffc;
+    --black: #000;
+    --drive: #8cce5a;
+    --fargo: #e35454;
+    --mummy: #e7cd50;
+    --rocky: #4480f3;
+    --seven: #b79ff3;
+    --walle: #aaaeb61f;
+    --white: #fff;
+    --amelie: #fff;
+    --dangal: #4480f352;
+    --django: #d4d5d952;
+    --matrix: #5fad05;
+    --oldboy: #ffffff1f;
+    --snatch: #f5ab61;
+    --amadeus: #e3f3d8;
+    --aquaman: #1fafc1;
+    --arrival: #e2ecfd;
+    --indiana: #fb9898;
+    --memento: #bcd6fe;
+    --romance: #fde7e7;
+    --avengers: #4480f31f;
+    --departed: #ece9fc;
+    --hamilton: #0c10181f;
+    --harakiri: #1d222a;
+    --lebowski: #e78018;
+    --fightclub: #cf54b6;
+    --gentlemen: #9867f9;
+    --greenmile: #dff3f6;
+    --inception: #d4d5d9;
+    --jawsHover: #f7e6d4;
+    --leonHover: #f9ddf5;
+    --schindler: #fb989829;
+    --shershaah: #76cedb;
+    --troyHover: #0d2f7c;
+    --alienHover: #4480f3;
+    --apocalypse: #eaecf0;
+    --casablanca: #00000014;
+    --citylights: #f5f0d6;
+    --fargoHover: #e66666;
+    --goodfellas: #d1ae00;
+    --metropolis: #80858e;
+    --rockyHover: #578df4;
+    --terminator: #00000000;
+    --walleHover: #aaaeb614;
+    --dangalHover: #4480f38f;
+    --djangoHover: #d4d5d97a;
+    --jawsPressed: #faf0e5;
+    --leonPressed: #fceefa;
+    --matrixHover: #6ac106;
+    --pulpfiction: #ef8edb;
+    --troyPressed: #164cc0;
+    --amadeusHover: #ddf1d0;
+    --aquamanHover: #22bfd3;
+    --arrivalHover: #d9e6fc;
+    --fargoOpacity: #e35454a3;
+    --fargoPressed: #e04343;
+    --rockyOpacity: #4480f3a3;
+    --rockyPressed: #3173f2;
+    --romanceHover: #fcdede;
+    --wallePressed: #aaaeb61f;
+    --avengersHover: #4480f314;
+    --departedHover: #e8e4fb;
+    --djangoPressed: #d4d5d97a;
+    --hamiltonHover: #0c101829;
+    --harakiriHover: #0d2f7c;
+    --lebowskiHover: #e98a2a;
+    --matrixOpacity: #5fad05a3;
+    --matrixPressed: #549905;
+    --trainspotting: #f5f6f8;
+    --amadeusPressed: #e9f5e0;
+    --aquamanOpacity: #1fafc1a3;
+    --aquamanPressed: #1d9faf;
+    --arrivalPressed: #ecf2fe;
+    --blackOpacity16: #00000029;
+    --blackOpacity24: #0000003d;
+    --blackOpacity32: #00000052;
+    --fightclubHover: #d364bd;
+    --gentlemenHover: #a57bfa;
+    --greenmileHover: #d7f0f4;
+    --inceptionHover: #c9cacf;
+    --romancePressed: #fef1f1;
+    --schindlerHover: #fb98983d;
+    --whiteOpacity24: #ffffff3d;
+    --whiteOpacity80: #ffffffcc;
+    --amelieOpacity80: #ffffffcc;
+    --apocalypseHover: #edeff2;
+    --avengersPressed: #4480f329;
+    --citylightsHover: #f3edce;
+    --departedPressed: #efedfd;
+    --goodfellasHover: #e5bf00;
+    --hamiltonPressed: #0c101814;
+    --harakiriPressed: #164cc0;
+    --lebowskiOpacity: #e78018a3;
+    --lebowskiPressed: #d57616;
+    --metropolisHover: #6482c4;
+    --fightclubOpacity: #cf54b6a3;
+    --fightclubPressed: #ca44b0;
+    --gentlemenOpacity: #9867f9a3;
+    --gentlemenPressed: #8b53f8;
+    --greenmilePressed: #e7f6f8;
+    --inceptionPressed: #dfdfe2;
+    --schindlerPressed: #fb98983d;
+    --apocalypsePressed: #e7eaee;
+    --citylightsPressed: #f7f3de;
+    --goodfellasOpacity: #d1ae00a3;
+    --goodfellasPressed: #bd9d00;
+    --metropolisOpacity: #80858ea3;
+    --metropolisPressed: #406cd0;
+    --footer: #0b111c;
+    --footer-bot: #060c16;
+
+
+    --border-radius: 8px;
+    --border-radius-2x: 16px;
+
+    /*-------------------Brands------------------*/
+
+    --vk: #2787F5;
+    --telegram: #2AABEE;
+
+    --invert: invert(0)
+
+
+
+}
+
+
+

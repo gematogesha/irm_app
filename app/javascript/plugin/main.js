@@ -34,5 +34,18 @@ document.addEventListener("turbo:load", () => {
 
     document.cookie = "width=" + $(window).width();
 
+    $(function () {
+        $('.icon__theme').click(function () {
+            if ( $('html').attr('theme') == "default") {
+                $('.icon__theme').toggleClass('fa-moon fa-sun');
+                document.cookie = "theme=dark";
+                $('html').attr('theme', "dark")
+            } else {
+                $('.icon__theme').toggleClass('fa-sun fa-moon');
+                document.cookie = "theme=default";
+                $('html').attr('theme', "default")
+            }
+        });
+    });
 
 });

@@ -124,3 +124,21 @@ trix-editor h1,
     font-weight: 700;
     line-height: 24px;
 }
+
+trix-toolbar .trix-button-group {
+    border: 1px solid var(--django);
+    border-top-color: var(--django);
+    border-bottom-color: var(--django);
+}
+
+trix-toolbar .trix-button {
+    border-bottom: none;
+}
+
+trix-toolbar .trix-button:not(:first-child) {
+    border-left: 1px solid var(--django);
+}
+
+trix-toolbar .trix-button--icon::before {
+    filter: var(--invert);
+}

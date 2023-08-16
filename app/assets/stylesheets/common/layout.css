@@ -70,8 +70,8 @@ section {
 }
 
 .page {
-    min-height: calc(100% - 332px);
-    margin-bottom: 332px;
+    min-height: calc(100% - 328px);
+    margin-bottom: 328px;
     background-color: var(--amelie);
 }
 
