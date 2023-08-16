@@ -12,15 +12,21 @@
                 <% end %>
                 <li class="nav__item"><%= link_to "Документы", documents_url(subdomain: false), class: "nav__link" %></li>
             </ul>
-            <div class="button button_primary button__link button__menu right">
+            <div class="button__link button__menu right">
                 <%= icon("fa-solid", "bars", class: "header__icon")%>
             </div>
         </div>
     </div>
 </header>
 <ul class="nav-small">
-    <% @headers.each do |header| %>
-        <li class="nav-small__item"><%= link_to header.title, header.link, class: "nav-small__link" %></li>
-    <% end %>
-    <li class="nav-small__item"><%= link_to "Документы", documents_url(subdomain: false), class: "nav-small__link" %></li>
+    <div class="button__link button__menu active right">
+        <%= icon("fa-solid", "xmark", class: "header__icon")%>
+    </div>
+    <div class="nav-small__list">
+    <li class="nav-small__item" style="background-color: var(--avengers);"><h5>Меню</h5></li>
+        <% @headers.each do |header| %>
+            <li class="nav-small__item"><%= link_to header.title, header.link, class: "nav-small__link" %></li>
+        <% end %>
+        <li class="nav-small__item"><%= link_to "Документы", documents_url(subdomain: false), class: "nav-small__link" %></li>
+    </div>
 </ul>

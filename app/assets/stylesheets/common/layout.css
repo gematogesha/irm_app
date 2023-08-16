@@ -17,26 +17,26 @@ body {
 h2 {
     font-size: 48px;
     letter-spacing: -0.5px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 48px;
 }
 
 h3 {
     font-size: 48px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 48px;
 }
 
 h4 {
     font-size: 32px;
     letter-spacing: 0.25px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 32px;
 }
 
 h1, h5 {
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 700;
     line-height: 24px;
 }
 
@@ -211,7 +211,7 @@ section {
 
 .content-wrapper {
     max-width: 640px;
-    padding: 0 16px;
+    padding: 0 20px;
     margin: auto;
 }
 
@@ -373,6 +373,15 @@ div[class$="_show-list"] {
     width: calc(100% - 250px);
 }
 
+@media (max-width: 1023px) {
+
+    .page{
+        margin-top: 80px;
+    }
+
+}
+
+
 @media (max-width: 899px) {
 
     section {
@@ -401,4 +410,27 @@ div[class$="_show-list"] {
         flex-direction: column;
         gap: 32px
     }
+
+    .flex_stretch_start{
+        flex-direction: column; 
+    }
+
+    div[class$="_show-list"]{
+        width: 100%;
+    }
+
+    .sidebar {
+        width: 100%;
+        margin-right: 0;
+        padding: 16px 0;
+    }
+
+    .menu{
+        margin-bottom: 0;
+    }
+
+    .menu__body {
+        padding: 12px 20px;
+    }
+
 }
