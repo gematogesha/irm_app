@@ -30,7 +30,7 @@
 <section class="section_gray">
     <div class="wrapper">
         <h2 class="title" style="text-align: center;"><%= Activity.model_name.human(count: :many) %></h2>
-        <div class="b-activity flex_center_around" style="gap: 20px;" ">
+        <div class="b-activity flex_center_around" style="gap: 20px;">
             <%= render "activity" %>
         </div>
     </div>
@@ -39,7 +39,7 @@
 <section>
     <div class="wrapper">
         <h2 class="title" style="text-align: center;">Партнеры</h2>
-        <div class="partners">
+        <div class="partners flex_center_evenly">
             <div class="partners__item">
                 <%= link_to "http://www.souzop.ru/", class: "partners__link-img" do %>
                     <div class="partners__img">

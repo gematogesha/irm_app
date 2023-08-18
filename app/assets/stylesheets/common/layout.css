@@ -110,6 +110,12 @@ section {
     justify-content: space-around;
 }
 
+.flex_center_evenly {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
 .flex_top_between {
     display: flex;
     align-items: flex-start;
