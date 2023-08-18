@@ -4,7 +4,7 @@ class Activity < ApplicationRecord
 
     has_one_attached :image, dependent: :destroy
 
-    validates :title, :subtitle, :image, :content, presence: true
+    validates :title, :subtitle, :content, presence: true
 
     before_save :strip_ize
 
