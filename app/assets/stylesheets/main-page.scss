@@ -73,23 +73,24 @@
 .partners {
     display: flex;
     gap: 20px;
+    justify-content: center;
 }
 
 .partners__item {
     display: flex;
-    width: 50%;
     padding: 16px;
     background-color: var(--django);
     border-radius: var(--border-radius-2x);
 }
 
 .partners__img {
-    margin-right: 20px;
+    /*margin-right: 20px;*/
 }
 
 .partners__img_inside {
-    width: 150px;
-    height: auto;
+    width: auto;
+    height: 150px;
+    border-radius: var(--border-radius);
 }
 
 .partners__title {
