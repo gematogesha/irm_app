@@ -121,7 +121,7 @@
         position: fixed;
         width: 100%;
         background-color: var(--amelie);
-        z-index: 100;
+        z-index: 900;
         margin-top: -80px;
     }
 
