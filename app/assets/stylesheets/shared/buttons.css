@@ -20,6 +20,7 @@
     font-family: "Golos", Arial, Helvetica, sans-serif;
     border: none;
     cursor: pointer;
+    line-height: 20px;
 }
 
 .button:active {
