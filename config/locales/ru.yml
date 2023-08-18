@@ -45,6 +45,12 @@ ru:
         image: "Изображение"
         hot: "Горячая новость"
         best: "Новость недели"
+      activity:
+        title: "Заголовок"
+        subtitle: "Подзаголовок"
+        content: "Содержание"
+        icon: "Иконка"
+        image: "Изображение"
       document:
         title: "Наименование"
         description: "Описание"
