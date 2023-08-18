@@ -29,7 +29,6 @@
 }
 
 .document__file {
-    max-width: 210px;
     min-width: 140px;
     border-left: 2px solid var(--trainspotting);
     padding-left: 16px;

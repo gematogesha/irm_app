@@ -48,7 +48,7 @@ class ApplicationController < ActionController::Base
 
 	def set_theme	
 		if cookies[:theme].nil?
-			cookies[:theme] = "default"
+			cookies[:theme] = { value: "default", domain: :all }
 		end
 	end
 
