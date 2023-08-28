@@ -20,7 +20,6 @@ class OthersController < ApplicationController
         @others = Other.all
         @page_title_text = @other.title
         @page_title_status = false
-        add_breadcrumb(@model_many)
     end
 
     def create

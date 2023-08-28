@@ -121,11 +121,11 @@
 
     .partners {
         flex-direction: column;
+        gap: 16px;
     }
 
     .partners__item {
         flex-direction: column;
-        gap: 16px;
         width: 100%;
     }
 
@@ -136,7 +136,7 @@
     }
 
     .partners__img_inside {
-        width: 250px;
+        max-width: 250px;
     }
 
     .activity__title {
