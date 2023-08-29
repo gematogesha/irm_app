@@ -216,6 +216,7 @@
     min-height: 100px;
     border: none;
     max-width: 100%;
+    min-width: 100%;
 }
 
 .form__item_input {
