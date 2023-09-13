@@ -4,11 +4,14 @@ class Banner < ApplicationRecord
 
     validates :title, :description, :link, :image, presence: true
 
-    before_save :strip_ize
+    before_save :strip_ize, :chomp
 
     def strip_ize
         title.strip!
     end
 
+    def chomp
+        self.link = self.link.chomp("/")
+    end
 
 end
