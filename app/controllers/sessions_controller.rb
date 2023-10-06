@@ -47,6 +47,12 @@ class SessionsController < ApplicationController
         redirect_back(fallback_location: root_path)
 	end
 
+    def privacy
+        add_breadcrumb("Политика конфиденциальности")
+        @page_title_text = "Политика конфиденциальности"
+        render file: "#{Rails.root}/public/privacy_policy.html"
+    end
+
     private
 
     def authenticate?

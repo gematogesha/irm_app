@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get "/posts/get_posts"
   post "sessions/accept_cookies"
   get '/abouts/leaders', to: "leaders#index"
+  get "/privacy", to: "sessions#privacy"
 
   resources :sessions, only: %i[accept_cookies]
   resources :posts, param: :number
