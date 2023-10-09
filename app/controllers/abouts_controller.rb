@@ -10,6 +10,7 @@ class AboutsController < ApplicationController
     def index
         add_breadcrumb(@model_many)
         @page_title_text = @model_many
+        redirect_to about_path(About.first.page_title)
 
         if session[:admin]
             redirect_to admin_path

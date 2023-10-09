@@ -11,6 +11,8 @@ class CareersController < ApplicationController
         add_breadcrumb(@model_many)
         @page_title_text = @model_many
 
+        redirect_to career_path(Career.first.page_title)
+
         if session[:admin]
             redirect_to admin_path
         end

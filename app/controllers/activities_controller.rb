@@ -6,6 +6,10 @@ class ActivitiesController < ApplicationController
 
     add_flash_types :info, :error, :success
 
+    def index
+        redirect_to activity_path(Activity.first.page_title)
+    end
+
 
     def show
         @activities = Activity.all
