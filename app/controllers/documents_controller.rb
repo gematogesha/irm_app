@@ -38,7 +38,7 @@ class DocumentsController < ApplicationController
 
     def show
         @page_title_text = @document.title
-        add_breadcrumb(@model_many, documents_url(subdomain: false))
+        add_breadcrumb(@model_many, documents_path)
     end
 
     def edit

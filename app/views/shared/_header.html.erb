@@ -3,11 +3,11 @@
         <div class="b-header">
             <div class="logo left">
                 <% if cookies[:theme] == "default" %>
-                    <%= link_to root_url(subdomain: false), class: "logo__link" do %>
+                    <%= link_to root_path, class: "logo__link" do %>
                         <%= image_tag("logo/logo-irm.png", alt: "Лого ИРМ", title: 'ИРМ', class: "header__logo", height: "58px") %>
                     <% end %>
                 <% else %>
-                    <%= link_to root_url(subdomain: false), class: "logo__link" do %>
+                    <%= link_to root_path, class: "logo__link" do %>
                         <%= image_tag("logo/logo-irm_white.png", alt: "Лого ИРМ", title: 'ИРМ', class: "header__logo", height: "58px") %>
                     <% end %>
                 <% end %>
@@ -16,7 +16,7 @@
                 <% @headers.each do |header| %>
                     <li class="nav__item"><%= link_to header.title, header.link, class: "nav__link" %></li>
                 <% end %>
-                <li class="nav__item"><%= link_to "Документы", documents_url(subdomain: false), class: "nav__link" %></li>
+                <li class="nav__item"><%= link_to "Документы", documents_path, class: "nav__link" %></li>
                 <li class="nav-small__item"><%= icon("fa-solid", "moon", class: "header__icon icon__theme")%></li>
             </ul>
             <div class="button__link button__menu right">
@@ -37,7 +37,7 @@
         <% @headers.each do |header| %>
           <%= link_to header.title, header.link, class: "nav-small__link nav-small__item" %>
         <% end %>
-       <%= link_to "Документы", documents_url(subdomain: false), class: "nav-small__item nav-small__link" %>
+       <%= link_to "Документы", documents_path, class: "nav-small__item nav-small__link" %>
 
     </div>
 </div>

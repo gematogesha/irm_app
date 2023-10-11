@@ -25,7 +25,7 @@ class PostsController < ApplicationController
     end
 
     def show
-        add_breadcrumb(@model_many, posts_url(subdomain: false))
+        add_breadcrumb(@model_many, posts_path)
         @post.update_attribute(:views, @post.views +=1 )
         @page_title_text = @post.title
         @page_title_status = false

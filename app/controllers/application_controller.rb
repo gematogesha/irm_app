@@ -17,7 +17,7 @@ class ApplicationController < ActionController::Base
 
     def set_breadcrumbs
 		add_breadcrumb("Панель админитсратора", control_panel_path) if session[:admin]
-		add_breadcrumb("Главная", root_url(subdomain: false)) if !session[:admin]
+		add_breadcrumb("Главная", root_path) if !session[:admin]
 	end
 
 	def not_found
