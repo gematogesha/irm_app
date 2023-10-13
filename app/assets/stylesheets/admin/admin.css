@@ -263,7 +263,7 @@
 
 .login {
     width: 300px;
-    margin: 120px auto;
+    margin: 60px auto;
     padding: 16px;
     border-radius: var(--border-radius-2x);
     background-color: var(--amelie);
