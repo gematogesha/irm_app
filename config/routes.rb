@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+
+  match "*unmatched", to: "application#not_found", via: :all
+  match "*unmatched", to: "application#unprocessable_entity", via: :all
+  match "*unmatched", to: "application#internal_server_error", via: :all
+  
   get "/posts/get_posts"
   post "sessions/accept_cookies"
   get '/abouts/leaders', to: "leaders#index"
