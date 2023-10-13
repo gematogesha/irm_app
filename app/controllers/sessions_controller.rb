@@ -14,7 +14,7 @@ class SessionsController < ApplicationController
         add_breadcrumb("Вход")
         @page_title_text = "Вход"
         if session[:admin]
-          redirect_to control_panel_url(subdomain: "admin")
+          redirect_to control_panel_path
         end 
     end
   
@@ -29,8 +29,8 @@ class SessionsController < ApplicationController
 
     def create
         if authenticate?
-            session[:admin] = { value: true, domain: :all }
-            redirect_to control_panel_url(subdomain: "admin"), info: "Вы вошли на сайт"
+            session[:admin] = true
+            redirect_to control_panel_path, info: "Вы вошли на сайт"
         else
             redirect_to admin_path, error: "Неправельный email или пароль"
     
@@ -43,7 +43,7 @@ class SessionsController < ApplicationController
     end
 
     def accept_cookies
-		cookies[:cookie_policy] = { value: true, expires: 1.month, domain: :all }
+		cookies[:cookie_policy] = { value: true, expires: 1.month}
         redirect_back(fallback_location: root_path)
 	end
 
