@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-
-  get "*unmatched_route", to: "application#not_found"
   
   get "/posts/get_posts"
   post "sessions/accept_cookies"
@@ -30,5 +28,9 @@ Rails.application.routes.draw do
   end
 
   root "sessions#index"
+
+ get "*unmatched", to: "application#not_found", constraints: lambda{ |req|
+    req.path.exclude? 'rails/active_storage'
+  }
 
 end

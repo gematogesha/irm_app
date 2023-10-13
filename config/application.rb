@@ -16,8 +16,7 @@ module IrmApp
     config.time_zone = 'Asia/Yekaterinburg'
 
     config.active_storage.variant_processor = :mini_magick
-
-    config.action_dispatch.tld_length = 0
+    
 
     # Configuration for the application, engines, and railties goes here.
     #
